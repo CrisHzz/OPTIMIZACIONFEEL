@@ -23,6 +23,6 @@ find . -name "__pycache__" -type d -exec rm -rf {} +
 find . -name "*.pyc" -delete
 find . -name ".DS_Store" -delete
 
-# Iniciar la aplicación con límite de memoria para uvicorn workers
-echo "Starting application with optimized settings..."
-reflex run --env prod 
+# Iniciar la aplicación con uvicorn directamente
+echo "Starting application with uvicorn..."
+uvicorn create_app:asgi_app --host 0.0.0.0 --port $PORT 

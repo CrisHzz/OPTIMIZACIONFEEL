@@ -9,7 +9,7 @@ import rxconfig
 from FeelTheDistribution.FeelTheDistribution import app
 
 # Exponer la aplicación ASGI directamente para que Uvicorn/Gunicorn la use
-asgi_app = app.prepare_app()
+asgi_app = app.asgi_app
 
 # Esta función es para uso con Gunicorn
 def create_app():
