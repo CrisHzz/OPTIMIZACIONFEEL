@@ -5,9 +5,13 @@ numpy
 matplotlib
 openpyxl
 pillow
+scikit-learn
+scipy
+seaborn
 
 # Servidor web
 uvicorn>=0.23.0
+gunicorn>=23.0.0
 
 # Optimización
 psutil
