@@ -2,7 +2,7 @@ services:
   - type: web
     name: feel-the-distribution
     env: static
-    buildCommand: python optimize_media.py && python -m reflex init && python -m reflex export --frontend-only
+    buildCommand: pip install -r requirements.txt && python optimize_media.py && python -m reflex init && python -m reflex export --frontend-only
     staticPublishPath: .web/_static
     headers:
       - path: /*
