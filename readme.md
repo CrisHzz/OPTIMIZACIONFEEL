@@ -1,45 +1,62 @@
-# Feel the Distribution
+# Feel The Distribution - Static Site
 
-## Ejecución local
+Este proyecto es una aplicación web estática construida con Reflex para mostrar distribuciones estadísticas de manera interactiva.
 
-Para ejecutar el proyecto localmente:
+## Despliegue en Render
 
-```bash
-reflex run
+Para desplegar este sitio estático en Render:
+
+1. Crea una cuenta en [Render](https://render.com) si aún no tienes una.
+2. Conecta tu repositorio de GitHub/GitLab/Bitbucket.
+3. Selecciona "New Web Service" o "Blueprint" en el dashboard de Render.
+4. Selecciona este repositorio.
+5. Render detectará automáticamente el archivo `render.yaml` y configurará el despliegue como un sitio estático.
+6. Confirma la configuración y haz clic en "Create".
+
+El sitio se desplegará automáticamente y Render proporcionará una URL para acceder a tu sitio.
+
+## Estructura del Proyecto
+
+- `FeelTheDistribution/`: Contiene la aplicación principal de Reflex
+- `pages/`: Componentes de página para cada sección
+- `styles/`: Estilos CSS personalizados
+- `media/`: Archivos multimedia originales
+- `media_optimized/`: Versiones optimizadas de los archivos multimedia (generadas durante el despliegue)
+- `assets/`: Otros recursos estáticos
+
+## Desarrollo Local
+
+Para ejecutar este proyecto localmente:
+
+1. Instala las dependencias:
+   ```
+   pip install -r requirements.txt
+   ```
+
+2. Inicializa Reflex:
+   ```
+   python -m reflex init
+   ```
+
+3. Ejecuta en modo desarrollo:
+   ```
+   python -m reflex run
+   ```
+
+4. Para generar una versión estática:
+   ```
+   python -m reflex export --frontend-only
+   ```
+   
+   Los archivos estáticos se generarán en la carpeta `.web/_static/`.
+
+## Optimización de Imágenes
+
+Durante el despliegue, todas las imágenes se optimizan automáticamente usando el script `optimize_media.py`. Si deseas optimizar las imágenes localmente, ejecuta:
+
 ```
-
-## Despliegue optimizado en Render
-
-Este proyecto está optimizado para consumir menos de 515MB de memoria en Render. Las siguientes optimizaciones se han aplicado:
-
-1. **Optimización de requisitos**: Solo se instalan las dependencias necesarias.
-2. **Optimización de procesamiento de imágenes**: Se utiliza `optimize_media.py` para reducir el tamaño de los activos multimedia.
-3. **Carga perezosa de datos**: Los datasets se cargan solo cuando son necesarios.
-4. **Optimización de memoria para Pandas y NumPy**: Se utilizan dtypes más eficientes y se liberan recursos no utilizados.
-5. **Monitorización de memoria en tiempo real**: Se verifica periódicamente el uso de memoria.
-
-### Para desplegar en Render:
-
-1. Crea un nuevo Web Service en Render
-2. Configura el entorno Python 3.9
-3. Usa el siguiente comando de construcción: `pip install -r requirements.txt`
-4. Usa el siguiente comando de inicio: `PYTHON_ENV=production python optimize_media.py && PYTHONMALLOC=malloc MALLOC_TRIM_THRESHOLD_=100000 reflex run --env prod`
-
-Alternativamente, Render detectará el Procfile incluido y lo usará automáticamente.
-
-## Variables de entorno importantes
-
-- `PYTHON_ENV=production`: Activa las optimizaciones de memoria
-- `MAX_WORKERS=1`: Limita el número de workers para reducir el consumo de memoria
-- `WEB_CONCURRENCY=1`: Limita la concurrencia web para reducir el consumo de memoria
-
-## Solución de problemas
-
-Si experimentas problemas de memoria:
-
-1. Ejecuta el script de optimización de media: `python optimize_media.py`
-2. Asegúrate de que `memory_optimization.py` se importa correctamente
-3. Ajusta los umbrales de memoria en `memory_optimization.py` si es necesario
+python optimize_media.py
+```
 
 ```bash
 reflex run

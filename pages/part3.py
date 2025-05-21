@@ -1,7 +1,5 @@
 import reflex as rx
 from rxconfig import config
-from data_processing.point3Titanic import dataset_original_titanic
-from data_processing.point3Titanic import dataset_cleaned_titanic
 class State(rx.State):
     """The app state."""
     ...
@@ -204,30 +202,184 @@ def part3() -> rx.Component:
                         rx.table.root(
                             rx.table.header(
                                 rx.table.row(
-                                    *[
-                                        rx.table.column_header_cell(
-                                            col,
-                                            class_name="text-white"
-                                        )
-                                        for col in dataset_original_titanic.columns
-                                    ]
+                                    rx.table.column_header_cell("pclass", class_name="text-white"),
+                                    rx.table.column_header_cell("survived", class_name="text-white"), 
+                                    rx.table.column_header_cell("name", class_name="text-white"),
+                                    rx.table.column_header_cell("sex", class_name="text-white"),
+                                    rx.table.column_header_cell("age", class_name="text-white"),
+                                    rx.table.column_header_cell("sibsp", class_name="text-white"),
+                                    rx.table.column_header_cell("parch", class_name="text-white"),
+                                    rx.table.column_header_cell("ticket", class_name="text-white"),
+                                    rx.table.column_header_cell("fare", class_name="text-white"),
+                                    rx.table.column_header_cell("cabin", class_name="text-white"),
+                                    rx.table.column_header_cell("embarked", class_name="text-white"),
+                                    rx.table.column_header_cell("boat", class_name="text-white"),
+                                    rx.table.column_header_cell("body", class_name="text-white"),
+                                    rx.table.column_header_cell("home.dest", class_name="text-white")
                                 )
                             ),
                             rx.table.body(
-                                *[
-                                    rx.table.row(
-                                        *[
-                                            rx.table.cell(
-                                                str(value),
-                                                class_name="text-white"
-                                            )
-                                            for value in row
-                                        ]
-                                    )
-                                    for row in dataset_original_titanic.values
-                                ]
+                                rx.table.row(
+                                    rx.table.cell("1", class_name="text-white"),
+                                    rx.table.cell("1", class_name="text-white"),
+                                    rx.table.cell("Allen, Miss. Elisabeth Walton", class_name="text-white"),
+                                    rx.table.cell("female", class_name="text-white"),
+                                    rx.table.cell("29.0", class_name="text-white"),
+                                    rx.table.cell("0", class_name="text-white"),
+                                    rx.table.cell("0", class_name="text-white"),
+                                    rx.table.cell("24160", class_name="text-white"),
+                                    rx.table.cell("211.3375", class_name="text-white"),
+                                    rx.table.cell("B5", class_name="text-white"),
+                                    rx.table.cell("S", class_name="text-white"),
+                                    rx.table.cell("2", class_name="text-white"),
+                                    rx.table.cell("nan", class_name="text-white"),
+                                    rx.table.cell("St Louis, MO", class_name="text-white")
+                                ),
+                                rx.table.row(
+                                    rx.table.cell("1", class_name="text-white"),
+                                    rx.table.cell("1", class_name="text-white"),
+                                    rx.table.cell("Allison, Master. Hudson Trevor", class_name="text-white"),
+                                    rx.table.cell("male", class_name="text-white"),
+                                    rx.table.cell("0.9167", class_name="text-white"),
+                                    rx.table.cell("1", class_name="text-white"),
+                                    rx.table.cell("2", class_name="text-white"),
+                                    rx.table.cell("113781", class_name="text-white"),
+                                    rx.table.cell("151.55", class_name="text-white"),
+                                    rx.table.cell("C22 C26", class_name="text-white"),
+                                    rx.table.cell("S", class_name="text-white"),
+                                    rx.table.cell("11", class_name="text-white"),
+                                    rx.table.cell("nan", class_name="text-white"),
+                                    rx.table.cell("Montreal, PQ / Chesterville, ON", class_name="text-white")
+                                ),
+                                rx.table.row(
+                                    rx.table.cell("1", class_name="text-white"),
+                                    rx.table.cell("0", class_name="text-white"),
+                                    rx.table.cell("Allison, Miss. Helen Loraine", class_name="text-white"),
+                                    rx.table.cell("female", class_name="text-white"),
+                                    rx.table.cell("2.0", class_name="text-white"),
+                                    rx.table.cell("1", class_name="text-white"),
+                                    rx.table.cell("2", class_name="text-white"),
+                                    rx.table.cell("113781", class_name="text-white"),
+                                    rx.table.cell("151.55", class_name="text-white"),
+                                    rx.table.cell("C22 C26", class_name="text-white"),
+                                    rx.table.cell("S", class_name="text-white"),
+                                    rx.table.cell("nan", class_name="text-white"),
+                                    rx.table.cell("nan", class_name="text-white"),
+                                    rx.table.cell("Montreal, PQ / Chesterville, ON", class_name="text-white")
+                                ),
+                                rx.table.row(
+                                    rx.table.cell("1", class_name="text-white"),
+                                    rx.table.cell("0", class_name="text-white"),
+                                    rx.table.cell("Allison, Mr. Hudson Joshua Creighton", class_name="text-white"),
+                                    rx.table.cell("male", class_name="text-white"),
+                                    rx.table.cell("30.0", class_name="text-white"),
+                                    rx.table.cell("1", class_name="text-white"),
+                                    rx.table.cell("2", class_name="text-white"),
+                                    rx.table.cell("113781", class_name="text-white"),
+                                    rx.table.cell("151.55", class_name="text-white"),
+                                    rx.table.cell("C22 C26", class_name="text-white"),
+                                    rx.table.cell("S", class_name="text-white"),
+                                    rx.table.cell("nan", class_name="text-white"),
+                                    rx.table.cell("135.0", class_name="text-white"),
+                                    rx.table.cell("Montreal, PQ / Chesterville, ON", class_name="text-white")
+                                ),
+                                rx.table.row(
+                                    rx.table.cell("1", class_name="text-white"),
+                                    rx.table.cell("0", class_name="text-white"),
+                                    rx.table.cell("Allison, Mrs. Hudson J C (Bessie Waldo Daniels)", class_name="text-white"),
+                                    rx.table.cell("female", class_name="text-white"),
+                                    rx.table.cell("25.0", class_name="text-white"),
+                                    rx.table.cell("1", class_name="text-white"),
+                                    rx.table.cell("2", class_name="text-white"),
+                                    rx.table.cell("113781", class_name="text-white"),
+                                    rx.table.cell("151.55", class_name="text-white"),
+                                    rx.table.cell("C22 C26", class_name="text-white"),
+                                    rx.table.cell("S", class_name="text-white"),
+                                    rx.table.cell("nan", class_name="text-white"),
+                                    rx.table.cell("nan", class_name="text-white"),
+                                    rx.table.cell("Montreal, PQ / Chesterville, ON", class_name="text-white")
+                                ),
+                                rx.table.row(
+                                    rx.table.cell("1", class_name="text-white"),
+                                    rx.table.cell("1", class_name="text-white"),
+                                    rx.table.cell("Anderson, Mr. Harry", class_name="text-white"),
+                                    rx.table.cell("male", class_name="text-white"),
+                                    rx.table.cell("48.0", class_name="text-white"),
+                                    rx.table.cell("0", class_name="text-white"),
+                                    rx.table.cell("0", class_name="text-white"),
+                                    rx.table.cell("19952", class_name="text-white"),
+                                    rx.table.cell("26.55", class_name="text-white"),
+                                    rx.table.cell("E12", class_name="text-white"),
+                                    rx.table.cell("S", class_name="text-white"),
+                                    rx.table.cell("3", class_name="text-white"),
+                                    rx.table.cell("nan", class_name="text-white"),
+                                    rx.table.cell("New York, NY", class_name="text-white")
+                                ),
+                                rx.table.row(
+                                    rx.table.cell("1", class_name="text-white"),
+                                    rx.table.cell("1", class_name="text-white"),
+                                    rx.table.cell("Andrews, Miss. Kornelia Theodosia", class_name="text-white"),
+                                    rx.table.cell("female", class_name="text-white"),
+                                    rx.table.cell("63.0", class_name="text-white"),
+                                    rx.table.cell("1", class_name="text-white"),
+                                    rx.table.cell("0", class_name="text-white"),
+                                    rx.table.cell("13502", class_name="text-white"),
+                                    rx.table.cell("77.9583", class_name="text-white"),
+                                    rx.table.cell("D7", class_name="text-white"),
+                                    rx.table.cell("S", class_name="text-white"),
+                                    rx.table.cell("10", class_name="text-white"),
+                                    rx.table.cell("nan", class_name="text-white"),
+                                    rx.table.cell("Hudson, NY", class_name="text-white")
+                                ),
+                                rx.table.row(
+                                    rx.table.cell("1", class_name="text-white"),
+                                    rx.table.cell("0", class_name="text-white"),
+                                    rx.table.cell("Andrews, Mr. Thomas Jr", class_name="text-white"),
+                                    rx.table.cell("male", class_name="text-white"),
+                                    rx.table.cell("39.0", class_name="text-white"),
+                                    rx.table.cell("0", class_name="text-white"),
+                                    rx.table.cell("0", class_name="text-white"),
+                                    rx.table.cell("112050", class_name="text-white"),
+                                    rx.table.cell("0.0", class_name="text-white"),
+                                    rx.table.cell("A36", class_name="text-white"),
+                                    rx.table.cell("S", class_name="text-white"),
+                                    rx.table.cell("nan", class_name="text-white"),
+                                    rx.table.cell("nan", class_name="text-white"),
+                                    rx.table.cell("Belfast, NI", class_name="text-white")
+                                ),
+                                rx.table.row(
+                                    rx.table.cell("1", class_name="text-white"),
+                                    rx.table.cell("1", class_name="text-white"),
+                                    rx.table.cell("Appleton, Mrs. Edward Dale (Charlotte Lamson)", class_name="text-white"),
+                                    rx.table.cell("female", class_name="text-white"),
+                                    rx.table.cell("53.0", class_name="text-white"),
+                                    rx.table.cell("2", class_name="text-white"),
+                                    rx.table.cell("0", class_name="text-white"),
+                                    rx.table.cell("11769", class_name="text-white"),
+                                    rx.table.cell("51.4792", class_name="text-white"),
+                                    rx.table.cell("C101", class_name="text-white"),
+                                    rx.table.cell("S", class_name="text-white"),
+                                    rx.table.cell("D", class_name="text-white"),
+                                    rx.table.cell("nan", class_name="text-white"),
+                                    rx.table.cell("Bayside, Queens, NY", class_name="text-white")
+                                ),
+                                rx.table.row(
+                                    rx.table.cell("1", class_name="text-white"),
+                                    rx.table.cell("0", class_name="text-white"),
+                                    rx.table.cell("Artagaveytia, Mr. Ramon", class_name="text-white"),
+                                    rx.table.cell("male", class_name="text-white"),
+                                    rx.table.cell("71.0", class_name="text-white"),
+                                    rx.table.cell("0", class_name="text-white"),
+                                    rx.table.cell("0", class_name="text-white"),
+                                    rx.table.cell("PC 17609", class_name="text-white"),
+                                    rx.table.cell("49.5042", class_name="text-white"),
+                                    rx.table.cell("nan", class_name="text-white"),
+                                    rx.table.cell("C", class_name="text-white"),
+                                    rx.table.cell("nan", class_name="text-white"),
+                                    rx.table.cell("22.0", class_name="text-white"),
+                                    rx.table.cell("Montevideo, Uruguay", class_name="text-white")
+                                )
                             ),
-
                             variant="surface",
                             class_name="bg-black mb-8 w-full",
                         ),
@@ -481,30 +633,140 @@ def part3() -> rx.Component:
                         rx.table.root(
                             rx.table.header(
                                 rx.table.row(
-                                    *[
-                                        rx.table.column_header_cell(
-                                            col,
-                                            class_name="text-white"
-                                        )
-                                        for col in dataset_cleaned_titanic.columns
-                                    ]
+                                    rx.table.column_header_cell("pclass", class_name="text-white"),
+                                    rx.table.column_header_cell("survived", class_name="text-white"),
+                                    rx.table.column_header_cell("name", class_name="text-white"), 
+                                    rx.table.column_header_cell("sex", class_name="text-white"),
+                                    rx.table.column_header_cell("age", class_name="text-white"),
+                                    rx.table.column_header_cell("ticket", class_name="text-white"),
+                                    rx.table.column_header_cell("fare", class_name="text-white"),
+                                    rx.table.column_header_cell("cabin", class_name="text-white"),
+                                    rx.table.column_header_cell("embarked", class_name="text-white"),
+                                    rx.table.column_header_cell("boat", class_name="text-white")
                                 )
                             ),
                             rx.table.body(
-                                *[
-                                    rx.table.row(
-                                        *[
-                                            rx.table.cell(
-                                                str(value),
-                                                class_name="text-white"
-                                            )
-                                            for value in row
-                                        ]
-                                    )
-                                    for row in dataset_cleaned_titanic.values
-                                ]
+                                rx.table.row(
+                                    rx.table.cell("1", class_name="text-white"),
+                                    rx.table.cell("1", class_name="text-white"),
+                                    rx.table.cell("Allen, Miss. Elisabeth Walton", class_name="text-white"),
+                                    rx.table.cell("female", class_name="text-white"),
+                                    rx.table.cell("29.0", class_name="text-white"),
+                                    rx.table.cell("24160", class_name="text-white"),
+                                    rx.table.cell("211.3375", class_name="text-white"),
+                                    rx.table.cell("B5", class_name="text-white"),
+                                    rx.table.cell("S", class_name="text-white"),
+                                    rx.table.cell("2", class_name="text-white")
+                                ),
+                                rx.table.row(
+                                    rx.table.cell("1", class_name="text-white"),
+                                    rx.table.cell("1", class_name="text-white"),
+                                    rx.table.cell("Allison, Master. Hudson Trevor", class_name="text-white"),
+                                    rx.table.cell("male", class_name="text-white"),
+                                    rx.table.cell("0.92", class_name="text-white"),
+                                    rx.table.cell("113781", class_name="text-white"),
+                                    rx.table.cell("151.55", class_name="text-white"),
+                                    rx.table.cell("C22 C26", class_name="text-white"),
+                                    rx.table.cell("S", class_name="text-white"),
+                                    rx.table.cell("11", class_name="text-white")
+                                ),
+                                rx.table.row(
+                                    rx.table.cell("1", class_name="text-white"),
+                                    rx.table.cell("0", class_name="text-white"),
+                                    rx.table.cell("Allison, Miss. Helen Loraine", class_name="text-white"),
+                                    rx.table.cell("female", class_name="text-white"),
+                                    rx.table.cell("2.0", class_name="text-white"),
+                                    rx.table.cell("113781", class_name="text-white"),
+                                    rx.table.cell("151.55", class_name="text-white"),
+                                    rx.table.cell("C22 C26", class_name="text-white"),
+                                    rx.table.cell("S", class_name="text-white"),
+                                    rx.table.cell("1000", class_name="text-white")
+                                ),
+                                rx.table.row(
+                                    rx.table.cell("1", class_name="text-white"),
+                                    rx.table.cell("0", class_name="text-white"),
+                                    rx.table.cell("Allison, Mr. Hudson Joshua Creighton", class_name="text-white"),
+                                    rx.table.cell("male", class_name="text-white"),
+                                    rx.table.cell("30.0", class_name="text-white"),
+                                    rx.table.cell("113781", class_name="text-white"),
+                                    rx.table.cell("151.55", class_name="text-white"),
+                                    rx.table.cell("C22 C26", class_name="text-white"),
+                                    rx.table.cell("S", class_name="text-white"),
+                                    rx.table.cell("1001", class_name="text-white")
+                                ),
+                                rx.table.row(
+                                    rx.table.cell("1", class_name="text-white"),
+                                    rx.table.cell("0", class_name="text-white"),
+                                    rx.table.cell("Allison, Mrs. Hudson J C (Bessie Waldo Daniels)", class_name="text-white"),
+                                    rx.table.cell("female", class_name="text-white"),
+                                    rx.table.cell("25.0", class_name="text-white"),
+                                    rx.table.cell("113781", class_name="text-white"),
+                                    rx.table.cell("151.55", class_name="text-white"),
+                                    rx.table.cell("C22 C26", class_name="text-white"),
+                                    rx.table.cell("S", class_name="text-white"),
+                                    rx.table.cell("1002", class_name="text-white")
+                                ),
+                                rx.table.row(
+                                    rx.table.cell("1", class_name="text-white"),
+                                    rx.table.cell("1", class_name="text-white"),
+                                    rx.table.cell("Anderson, Mr. Harry", class_name="text-white"),
+                                    rx.table.cell("male", class_name="text-white"),
+                                    rx.table.cell("48.0", class_name="text-white"),
+                                    rx.table.cell("19952", class_name="text-white"),
+                                    rx.table.cell("26.55", class_name="text-white"),
+                                    rx.table.cell("E12", class_name="text-white"),
+                                    rx.table.cell("S", class_name="text-white"),
+                                    rx.table.cell("3", class_name="text-white")
+                                ),
+                                rx.table.row(
+                                    rx.table.cell("1", class_name="text-white"),
+                                    rx.table.cell("1", class_name="text-white"),
+                                    rx.table.cell("Andrews, Miss. Kornelia Theodosia", class_name="text-white"),
+                                    rx.table.cell("female", class_name="text-white"),
+                                    rx.table.cell("63.0", class_name="text-white"),
+                                    rx.table.cell("13502", class_name="text-white"),
+                                    rx.table.cell("77.9583", class_name="text-white"),
+                                    rx.table.cell("D7", class_name="text-white"),
+                                    rx.table.cell("S", class_name="text-white"),
+                                    rx.table.cell("10", class_name="text-white")
+                                ),
+                                rx.table.row(
+                                    rx.table.cell("1", class_name="text-white"),
+                                    rx.table.cell("0", class_name="text-white"),
+                                    rx.table.cell("Andrews, Mr. Thomas Jr", class_name="text-white"),
+                                    rx.table.cell("male", class_name="text-white"),
+                                    rx.table.cell("39.0", class_name="text-white"),
+                                    rx.table.cell("112050", class_name="text-white"),
+                                    rx.table.cell("0.0", class_name="text-white"),
+                                    rx.table.cell("A36", class_name="text-white"),
+                                    rx.table.cell("S", class_name="text-white"),
+                                    rx.table.cell("1003", class_name="text-white")
+                                ),
+                                rx.table.row(
+                                    rx.table.cell("1", class_name="text-white"),
+                                    rx.table.cell("1", class_name="text-white"),
+                                    rx.table.cell("Appleton, Mrs. Edward Dale (Charlotte Lamson)", class_name="text-white"),
+                                    rx.table.cell("female", class_name="text-white"),
+                                    rx.table.cell("53.0", class_name="text-white"),
+                                    rx.table.cell("11769", class_name="text-white"),
+                                    rx.table.cell("51.4792", class_name="text-white"),
+                                    rx.table.cell("C101", class_name="text-white"),
+                                    rx.table.cell("S", class_name="text-white"),
+                                    rx.table.cell("D", class_name="text-white")
+                                ),
+                                rx.table.row(
+                                    rx.table.cell("1", class_name="text-white"),
+                                    rx.table.cell("0", class_name="text-white"),
+                                    rx.table.cell("Astor, Col. John Jacob", class_name="text-white"),
+                                    rx.table.cell("male", class_name="text-white"),
+                                    rx.table.cell("47.0", class_name="text-white"),
+                                    rx.table.cell("PC 17757", class_name="text-white"),
+                                    rx.table.cell("227.525", class_name="text-white"),
+                                    rx.table.cell("C62 C64", class_name="text-white"),
+                                    rx.table.cell("C", class_name="text-white"),
+                                    rx.table.cell("1005", class_name="text-white")
+                                )
                             ),
-
                             variant="surface",
                             class_name="bg-black mb-8 w-full",
                         ),

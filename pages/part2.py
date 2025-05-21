@@ -1,6 +1,5 @@
 import reflex as rx
 from rxconfig import config
-from data_processing.point2 import dataset_2_short, dataset_dispersion2, dataset_dispersion2, dataset_form2
 
 class State(rx.State):
     """The app state."""
@@ -71,28 +70,71 @@ def part2() -> rx.Component:
                 rx.table.root(
                     rx.table.header(
                         rx.table.row(
-                            *[
-                                rx.table.column_header_cell(
-                                    col,
-                                    class_name="text-white"
-                                )
-                                for col in dataset_2_short.columns
-                            ]
+                            rx.table.column_header_cell(
+                                "jornada",
+                                class_name="text-white"
+                            ),
+                            rx.table.column_header_cell(
+                                "velocidad_produccion", 
+                                class_name="text-white"
+                            ),
+                            rx.table.column_header_cell(
+                                "consumo_energia",
+                                class_name="text-white" 
+                            )
                         )
                     ),
                     rx.table.body(
-                        *[
-                            rx.table.row(
-                                *[
-                                    rx.table.cell(
-                                        str(value),
-                                        class_name="text-white"
-                                    )
-                                    for value in row
-                                ]
-                            )
-                            for row in dataset_2_short.values
-                        ]
+                        rx.table.row(
+                            rx.table.cell("1.0", class_name="text-white"),
+                            rx.table.cell("92.0", class_name="text-white"),
+                            rx.table.cell("126.1", class_name="text-white")
+                        ),
+                        rx.table.row(
+                            rx.table.cell("2.0", class_name="text-white"),
+                            rx.table.cell("97.0", class_name="text-white"), 
+                            rx.table.cell("127.3", class_name="text-white")
+                        ),
+                        rx.table.row(
+                            rx.table.cell("3.0", class_name="text-white"),
+                            rx.table.cell("123.0", class_name="text-white"),
+                            rx.table.cell("148.0", class_name="text-white")
+                        ),
+                        rx.table.row(
+                            rx.table.cell("4.0", class_name="text-white"),
+                            rx.table.cell("101.0", class_name="text-white"),
+                            rx.table.cell("144.5", class_name="text-white")
+                        ),
+                        rx.table.row(
+                            rx.table.cell("5.0", class_name="text-white"),
+                            rx.table.cell("102.0", class_name="text-white"),
+                            rx.table.cell("129.3", class_name="text-white")
+                        ),
+                        rx.table.row(
+                            rx.table.cell("6.0", class_name="text-white"),
+                            rx.table.cell("126.0", class_name="text-white"),
+                            rx.table.cell("166.0", class_name="text-white")
+                        ),
+                        rx.table.row(
+                            rx.table.cell("7.0", class_name="text-white"),
+                            rx.table.cell("107.0", class_name="text-white"),
+                            rx.table.cell("120.1", class_name="text-white")
+                        ),
+                        rx.table.row(
+                            rx.table.cell("8.0", class_name="text-white"),
+                            rx.table.cell("81.0", class_name="text-white"),
+                            rx.table.cell("120.6", class_name="text-white")
+                        ),
+                        rx.table.row(
+                            rx.table.cell("9.0", class_name="text-white"),
+                            rx.table.cell("90.0", class_name="text-white"),
+                            rx.table.cell("123.2", class_name="text-white")
+                        ),
+                        rx.table.row(
+                            rx.table.cell("10.0", class_name="text-white"),
+                            rx.table.cell("93.0", class_name="text-white"),
+                            rx.table.cell("126.6", class_name="text-white")
+                        )
                     ),
                     variant="surface",
                     class_name="bg-black",
@@ -117,28 +159,27 @@ def part2() -> rx.Component:
                     rx.table.root(
                         rx.table.header(
                             rx.table.row(
-                                *[
-                                    rx.table.column_header_cell(
-                                        col,
-                                        class_name="text-white"
-                                    )
-                                    for col in dataset_dispersion2.columns
-                                ]
+                                rx.table.column_header_cell("Medida", class_name="text-white"),
+                                rx.table.column_header_cell("Velocidad de producción", class_name="text-white"),
+                                rx.table.column_header_cell("Consumo de energía", class_name="text-white")
                             )
                         ),
                         rx.table.body(
-                            *[
-                                rx.table.row(
-                                    *[
-                                        rx.table.cell(
-                                            str(value),
-                                            class_name="text-white"
-                                        )
-                                        for value in row
-                                    ]
-                                )
-                                for row in dataset_dispersion2.values
-                            ]
+                            rx.table.row(
+                                rx.table.cell("Media", class_name="text-white"),
+                                rx.table.cell("100.56", class_name="text-white"),
+                                rx.table.cell("131.91", class_name="text-white")
+                            ),
+                            rx.table.row(
+                                rx.table.cell("Mediana", class_name="text-white"),
+                                rx.table.cell("99.0", class_name="text-white"),
+                                rx.table.cell("131.7", class_name="text-white")
+                            ),
+                            rx.table.row(
+                                rx.table.cell("Moda", class_name="text-white"),
+                                rx.table.cell("93.0", class_name="text-white"),
+                                rx.table.cell("136.7", class_name="text-white")
+                            )
                         ),
                         variant="surface",
                         class_name="bg-black",
@@ -157,28 +198,32 @@ def part2() -> rx.Component:
                     rx.table.root(
                         rx.table.header(
                             rx.table.row(
-                                *[
-                                    rx.table.column_header_cell(
-                                        col,
-                                        class_name="text-white"
-                                    )
-                                    for col in dataset_dispersion2.columns
-                                ]
+                                rx.table.column_header_cell("Medida", class_name="text-white"),
+                                rx.table.column_header_cell("Velocidad de producción", class_name="text-white"),
+                                rx.table.column_header_cell("Consumo de energía", class_name="text-white")
                             )
                         ),
                         rx.table.body(
-                            *[
-                                rx.table.row(
-                                    *[
-                                        rx.table.cell(
-                                            str(value),
-                                            class_name="text-white"
-                                        )
-                                        for value in row
-                                    ]
-                                )
-                                for row in dataset_dispersion2.values
-                            ]
+                            rx.table.row(
+                                rx.table.cell("Desviación estándar", class_name="text-white"),
+                                rx.table.cell("13.83", class_name="text-white"),
+                                rx.table.cell("14.04", class_name="text-white")
+                            ),
+                            rx.table.row(
+                                rx.table.cell("Varianza", class_name="text-white"), 
+                                rx.table.cell("191.23", class_name="text-white"),
+                                rx.table.cell("197.05", class_name="text-white")
+                            ),
+                            rx.table.row(
+                                rx.table.cell("Rango", class_name="text-white"),
+                                rx.table.cell("62.0", class_name="text-white"),
+                                rx.table.cell("61.5", class_name="text-white")
+                            ),
+                            rx.table.row(
+                                rx.table.cell("Coeficiente de variación", class_name="text-white"),
+                                rx.table.cell("0.138", class_name="text-white"),
+                                rx.table.cell("0.106", class_name="text-white")
+                            )
                         ),
                         variant="surface",
                         class_name="bg-black",
@@ -196,28 +241,22 @@ def part2() -> rx.Component:
                     rx.table.root(
                         rx.table.header(
                             rx.table.row(
-                                *[
-                                    rx.table.column_header_cell(
-                                        col,
-                                        class_name="text-white"
-                                    )
-                                    for col in dataset_form2.columns
-                                ]
+                                rx.table.column_header_cell("Medida", class_name="text-white"),
+                                rx.table.column_header_cell("Velocidad de producción", class_name="text-white"),
+                                rx.table.column_header_cell("Consumo de energía", class_name="text-white")
                             )
                         ),
                         rx.table.body(
-                            *[
-                                rx.table.row(
-                                    *[
-                                        rx.table.cell(
-                                            str(value),
-                                            class_name="text-white"
-                                        )
-                                        for value in row
-                                    ]
-                                )
-                                for row in dataset_form2.values
-                            ]
+                            rx.table.row(
+                                rx.table.cell("Asimetría", class_name="text-white"),
+                                rx.table.cell("0.197", class_name="text-white"),
+                                rx.table.cell("0.149", class_name="text-white")
+                            ),
+                            rx.table.row(
+                                rx.table.cell("Curtosis", class_name="text-white"),
+                                rx.table.cell("-0.299", class_name="text-white"), 
+                                rx.table.cell("-0.547", class_name="text-white")
+                            )
                         ),
                         variant="surface",
                         class_name="bg-black",

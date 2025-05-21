@@ -5,26 +5,6 @@ from pages.part2 import part2
 from pages.part3 import part3
 from pages.bibliografias import bibliografias
 
-# Importar optimizaciones de memoria
-import sys
-import os
-
-# Comprobar si estamos en desarrollo o producción
-is_production = os.environ.get("PYTHON_ENV") == "production"
-memory_threshold = 515  # MB
-
-# Aplicar optimizaciones solo en producción
-if is_production:
-    try:
-        from memory_optimization import optimize_memory_usage, setup_memory_monitor, patch_reflex_to_reduce_memory
-        
-        # Aplicar optimizaciones
-        optimize_memory_usage()
-        patch_reflex_to_reduce_memory()
-        setup_memory_monitor(memory_threshold)
-    except ImportError:
-        print("⚠️ Módulo de optimización de memoria no encontrado. Skipping...")
-
 class State(rx.State):
     """The app state."""
     pass

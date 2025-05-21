@@ -1,8 +1,5 @@
 import reflex as rx
 from rxconfig import config
-from data_processing.point1 import dataset_general, dataset_general_short , dataset_mtc , dataset_dispersion, dataset_form
-from data_processing.point1Theory import df_pvalues 
-
 class State(rx.State):
     """The app state."""
     ...
@@ -73,28 +70,57 @@ def part1() -> rx.Component:
                     rx.table.root(
                         rx.table.header(
                             rx.table.row(
-                                *[
-                                    rx.table.column_header_cell(
-                                        col,
-                                        class_name="text-white"
-                                    )
-                                    for col in dataset_general.columns
-                                ]
+                                rx.table.column_header_cell(
+                                    "Línea A (s)",
+                                    class_name="text-white"
+                                ),
+                                rx.table.column_header_cell(
+                                    "Línea B (s)", 
+                                    class_name="text-white"
+                                )
                             )
                         ),
                         rx.table.body(
-                            *[
-                                rx.table.row(
-                                    *[
-                                        rx.table.cell(
-                                            str(value),
-                                            class_name="text-white"
-                                        )
-                                        for value in row
-                                    ]
-                                )
-                                for row in dataset_general_short.values
-                            ]
+                            rx.table.row(
+                                rx.table.cell("124.97", class_name="text-white"),
+                                rx.table.cell("93.02", class_name="text-white")
+                            ),
+                            rx.table.row(
+                                rx.table.cell("118.62", class_name="text-white"),
+                                rx.table.cell("104.95", class_name="text-white")
+                            ),
+                            rx.table.row(
+                                rx.table.cell("126.48", class_name="text-white"),
+                                rx.table.cell("105.89", class_name="text-white")
+                            ),
+                            rx.table.row(
+                                rx.table.cell("135.23", class_name="text-white"),
+                                rx.table.cell("100.37", class_name="text-white")
+                            ),
+                            rx.table.row(
+                                rx.table.cell("117.66", class_name="text-white"),
+                                rx.table.cell("108.06", class_name="text-white")
+                            ),
+                            rx.table.row(
+                                rx.table.cell("117.66", class_name="text-white"),
+                                rx.table.cell("114.85", class_name="text-white")
+                            ),
+                            rx.table.row(
+                                rx.table.cell("135.79", class_name="text-white"),
+                                rx.table.cell("132.63", class_name="text-white")
+                            ),
+                            rx.table.row(
+                                rx.table.cell("127.67", class_name="text-white"),
+                                rx.table.cell("112.09", class_name="text-white")
+                            ),
+                            rx.table.row(
+                                rx.table.cell("115.31", class_name="text-white"),
+                                rx.table.cell("113.09", class_name="text-white")
+                            ),
+                            rx.table.row(
+                                rx.table.cell("125.43", class_name="text-white"),
+                                rx.table.cell("109.11", class_name="text-white")
+                            )
                         ),
                         variant="surface",
                         class_name="bg-black mb-8 w-full",
@@ -122,31 +148,34 @@ def part1() -> rx.Component:
                     rx.table.root(
                         rx.table.header(
                             rx.table.row(
-                                *[
-                                    rx.table.column_header_cell(
-                                        col,
-                                        class_name="text-white"
-                                    )
-                                    for col in dataset_mtc.columns
-                                ]
+                                rx.table.column_header_cell("Medida", class_name="text-white"),
+                                rx.table.column_header_cell("Descripción", class_name="text-white"),
+                                rx.table.column_header_cell("Línea A", class_name="text-white"),
+                                rx.table.column_header_cell("Línea B", class_name="text-white"),
                             )
                         ),
                         rx.table.body(
-                            *[
-                                rx.table.row(
-                                    *[
-                                        rx.table.cell(
-                                            str(value),
-                                            class_name="text-white"
-                                        )
-                                        for value in row
-                                    ]
-                                )
-                                for row in dataset_mtc.values
-                            ]
+                            rx.table.row(
+                                rx.table.cell("Media", class_name="text-white"),
+                                rx.table.cell("Promedio de todos los valores", class_name="text-white"),
+                                rx.table.cell("118.96 s", class_name="text-white"),
+                                rx.table.cell("110.27 s", class_name="text-white"),
+                            ),
+                            rx.table.row(
+                                rx.table.cell("Mediana", class_name="text-white"),
+                                rx.table.cell("Valor central que divide el conjunto en dos partes iguales", class_name="text-white"),
+                                rx.table.cell("119.0 s", class_name="text-white"),
+                                rx.table.cell("110.0 s", class_name="text-white"),
+                            ),
+                            rx.table.row(
+                                rx.table.cell("Moda", class_name="text-white"),
+                                rx.table.cell("Valor que aparece con más frecuencia", class_name="text-white"),
+                                rx.table.cell("120 s", class_name="text-white"),
+                                rx.table.cell("111 s", class_name="text-white"),
+                            ),
                         ),
                         variant="surface",
-                        class_name="bg-black mb-8 w-full",
+                        class_name="bg-black mb-4 w-full",
                     ),
                     rx.heading(
                         "Medidas de dispersión",
@@ -160,28 +189,37 @@ def part1() -> rx.Component:
                     rx.table.root(
                         rx.table.header(
                             rx.table.row(
-                                *[
-                                    rx.table.column_header_cell(
-                                        col,
-                                        class_name="text-white"
-                                    )
-                                    for col in dataset_dispersion.columns
-                                ]
+                                rx.table.column_header_cell("Medida", class_name="text-white"),
+                                rx.table.column_header_cell("Descripción", class_name="text-white"), 
+                                rx.table.column_header_cell("Línea A", class_name="text-white"),
+                                rx.table.column_header_cell("Línea B", class_name="text-white"),
                             )
                         ),
                         rx.table.body(
-                            *[
-                                rx.table.row(
-                                    *[
-                                        rx.table.cell(
-                                            str(value),
-                                            class_name="text-white"
-                                        )
-                                        for value in row
-                                    ]
-                                )
-                                for row in dataset_dispersion.values
-                            ]
+                            rx.table.row(
+                                rx.table.cell("Desviación estándar", class_name="text-white"),
+                                rx.table.cell("Medida de dispersión respecto a la media", class_name="text-white"),
+                                rx.table.cell("9.08 s", class_name="text-white"),
+                                rx.table.cell("11.44 s", class_name="text-white"),
+                            ),
+                            rx.table.row(
+                                rx.table.cell("Varianza", class_name="text-white"),
+                                rx.table.cell("Promedio de las desviaciones al cuadrado", class_name="text-white"),
+                                rx.table.cell("82.48 s²", class_name="text-white"),
+                                rx.table.cell("130.97 s²", class_name="text-white"),
+                            ),
+                            rx.table.row(
+                                rx.table.cell("Rango", class_name="text-white"),
+                                rx.table.cell("Diferencia entre valor máximo y mínimo", class_name="text-white"),
+                                rx.table.cell("44.72 s", class_name="text-white"),
+                                rx.table.cell("55.67 s", class_name="text-white"),
+                            ),
+                            rx.table.row(
+                                rx.table.cell("Coeficiente de variación", class_name="text-white"),
+                                rx.table.cell("Variabilidad relativa respecto a la media", class_name="text-white"),
+                                rx.table.cell("7.63%", class_name="text-white"),
+                                rx.table.cell("10.38%", class_name="text-white"),
+                            ),
                         ),
                         variant="surface",
                         class_name="bg-black mb-8 w-full",
@@ -198,28 +236,25 @@ def part1() -> rx.Component:
                     rx.table.root(
                         rx.table.header(
                             rx.table.row(
-                                *[
-                                    rx.table.column_header_cell(
-                                        col,
-                                        class_name="text-white"
-                                    )
-                                    for col in dataset_form.columns
-                                ]
+                                rx.table.column_header_cell("Medida", class_name="text-white"),
+                                rx.table.column_header_cell("Descripción", class_name="text-white"),
+                                rx.table.column_header_cell("Línea A", class_name="text-white"),
+                                rx.table.column_header_cell("Línea B", class_name="text-white"),
                             )
                         ),
                         rx.table.body(
-                            *[
-                                rx.table.row(
-                                    *[
-                                        rx.table.cell(
-                                            str(value),
-                                            class_name="text-white"
-                                        )
-                                        for value in row
-                                    ]
-                                )
-                                for row in dataset_form.values
-                            ]
+                            rx.table.row(
+                                rx.table.cell("Asimetría", class_name="text-white"),
+                                rx.table.cell("Indica el grado y dirección de asimetría de la distribución", class_name="text-white"),
+                                rx.table.cell("-0.18", class_name="text-white"),
+                                rx.table.cell("0.39", class_name="text-white"),
+                            ),
+                            rx.table.row(
+                                rx.table.cell("Curtosis", class_name="text-white"),
+                                rx.table.cell("Indica qué tan puntiaguda o plana es la distribución", class_name="text-white"), 
+                                rx.table.cell("-0.10", class_name="text-white"),
+                                rx.table.cell("0.03", class_name="text-white"),
+                            ),
                         ),
                         variant="surface",
                         class_name="bg-black mb-8 w-full",
@@ -288,28 +323,61 @@ def part1() -> rx.Component:
                     rx.table.root(
                         rx.table.header(
                             rx.table.row(
-                                *[
-                                    rx.table.column_header_cell(
-                                        col,
-                                        class_name="text-white"
-                                    )
-                                    for col in df_pvalues.columns
-                                ]
+                                rx.table.column_header_cell(
+                                    "Normal",
+                                    class_name="text-white"
+                                ),
+                                rx.table.column_header_cell(
+                                    "Exponencial", 
+                                    class_name="text-white"
+                                ),
+                                rx.table.column_header_cell(
+                                    "Weibull",
+                                    class_name="text-white"
+                                ),
+                                rx.table.column_header_cell(
+                                    "Mejor ajuste",
+                                    class_name="text-white"
+                                )
                             )
                         ),
                         rx.table.body(
-                            *[
-                                rx.table.row(
-                                    *[
-                                        rx.table.cell(
-                                            str(value),
-                                            class_name="text-white"
-                                        )
-                                        for value in row
-                                    ]
+                            rx.table.row(
+                                rx.table.cell(
+                                    "0.940",
+                                    class_name="text-white"
+                                ),
+                                rx.table.cell(
+                                    "5.82e-30",
+                                    class_name="text-white"
+                                ),
+                                rx.table.cell(
+                                    "0.824",
+                                    class_name="text-white"
+                                ),
+                                rx.table.cell(
+                                    "Normal",
+                                    class_name="text-white"
                                 )
-                                for row in df_pvalues.values
-                            ]
+                            ),
+                            rx.table.row(
+                                rx.table.cell(
+                                    "0.651",
+                                    class_name="text-white"
+                                ),
+                                rx.table.cell(
+                                    "5.11e-29",
+                                    class_name="text-white"
+                                ),
+                                rx.table.cell(
+                                    "0.560",
+                                    class_name="text-white"
+                                ),
+                                rx.table.cell(
+                                    "Normal",
+                                    class_name="text-white"
+                                )
+                            )
                         ),
                         variant="surface",
                         class_name="bg-black mb-8 w-full",

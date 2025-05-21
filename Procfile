@@ -1,1 +1,0 @@
-web: export MALLOC_ARENA_MAX=2 && PYTHON_ENV=production python optimize_media.py && PYTHONMALLOC=malloc MALLOC_TRIM_THRESHOLD_=100000 NODE_OPTIONS="--max-old-space-size=400" && python -m reflex init && python -m reflex build && uvicorn create_app:asgi_app --host 0.0.0.0 --port $PORT 
