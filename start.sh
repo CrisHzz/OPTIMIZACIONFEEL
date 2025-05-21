@@ -12,10 +12,11 @@ export MALLOC_TRIM_THRESHOLD_=100000
 
 # Configuración del puerto
 export PORT=${PORT:-8000}
+echo "Configurando puerto: $PORT"
 
 # Limpieza
 find . -name "__pycache__" -type d -exec rm -rf {} +
 find . -name "*.pyc" -delete
 
-# Iniciar aplicación
-reflex run --env prod 
+# Iniciar aplicación con host y puerto explícitos
+reflex run --env prod --host 0.0.0.0 --port $PORT 
