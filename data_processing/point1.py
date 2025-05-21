@@ -3,8 +3,6 @@ import pandas as pd
 import matplotlib
 matplotlib.use('Agg')  # Usar el backend Agg que no requiere interfaz gráfica
 import matplotlib.pyplot as plt
-from sklearn.preprocessing import StandardScaler
-
 
 #Generar datasets
 def generate_dataset1():
