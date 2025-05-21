@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: feel-the-distribution
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: |
+      export PYTHON_ENV=production
+      python optimize_media.py
+      export PYTHONMALLOC=malloc
+      export MALLOC_TRIM_THRESHOLD_=100000
+      find . -name "__pycache__" -type d -exec rm -rf {} +
+      find . -name "*.pyc" -delete
+      reflex run --env prod
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.9
+      - key: MAX_WORKERS
+        value: 1
+      - key: PYTHONUNBUFFERED
+        value: true
+      - key: WEB_CONCURRENCY
+        value: 1 
