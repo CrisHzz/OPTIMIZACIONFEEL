@@ -3,15 +3,19 @@ services:
     name: feel-the-distribution
     env: python
     buildCommand: pip install -r requirements.txt
+    plan: starter
     startCommand: |
       export PYTHON_ENV=production
-      python optimize_media.py
+      export MALLOC_ARENA_MAX=2
       export PYTHONMALLOC=malloc
       export MALLOC_TRIM_THRESHOLD_=100000
-      export PORT=${PORT:-8000}
-      echo "Configurando puerto: $PORT"
-      find . -name "__pycache__" -type d -exec rm -rf {} +
+      export NODE_OPTIONS="--max-old-space-size=400"
+      export PORT=${PORT:-10000}
+      echo "Configurando puerto: $PORT en $(hostname)"
+      python optimize_media.py
+      find . -name "__pycache__" -type d -exec rm -rf {} + 2>/dev/null || true
       find . -name "*.pyc" -delete
+      python -c "import gc; gc.collect()"
       reflex run --env prod --backend-host 0.0.0.0 --backend-port $PORT
     envVars:
       - key: PYTHON_VERSION
@@ -23,4 +27,4 @@ services:
       - key: WEB_CONCURRENCY
         value: 1
       - key: PORT
-        value: 8000 
+        value: 10000 
