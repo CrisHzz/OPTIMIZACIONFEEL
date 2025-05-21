@@ -4,5 +4,6 @@ import reflex as rx
 # Configuración de la aplicación
 config = rx.Config(
     app_name="FeelTheDistribution",
-    static_dir="assets"  # Configurar la carpeta de archivos estáticos
+    static_dir="assets",  # Configurar la carpeta de archivos estáticos
+    port=int(os.environ.get("PORT", 8000))
 )

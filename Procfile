@@ -1,1 +1,1 @@
-web: PYTHON_ENV=production python optimize_media.py && PYTHONMALLOC=malloc MALLOC_TRIM_THRESHOLD_=100000 reflex run --env prod 
+web: PYTHON_ENV=production python optimize_media.py && PYTHONMALLOC=malloc MALLOC_TRIM_THRESHOLD_=100000 PORT=${PORT:-8000} reflex run --env prod 

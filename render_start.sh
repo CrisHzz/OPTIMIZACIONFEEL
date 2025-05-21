@@ -6,6 +6,10 @@ echo "Starting FeelTheDistribution with memory optimizations..."
 # Establecer la variable de entorno para producción
 export PYTHON_ENV=production
 
+# Establecer el puerto para la aplicación
+export PORT=${PORT:-8000}
+echo "Using PORT: $PORT"
+
 # Optimizar imágenes primero
 echo "Optimizing media assets..."
 python optimize_media.py
