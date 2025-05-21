@@ -1,10 +1,13 @@
-reflex==0.7.12
-numpy==2.2.5
-pandas==2.2.3
-matplotlib==3.10.1
-scikit-learn==1.6.1
-scipy==1.15.2
-seaborn==0.13.2
-openpyxl==3.1.5
-gunicorn==23.0.0
-uvicorn==0.34.2
+# Dependencias principales
+reflex
+pandas
+numpy
+matplotlib
+openpyxl
+pillow
+
+# Servidor web
+uvicorn>=0.23.0
+
+# Optimización
+psutil

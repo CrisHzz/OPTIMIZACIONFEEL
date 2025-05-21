@@ -21,5 +21,13 @@ find . -name "__pycache__" -type d -exec rm -rf {} + 2>/dev/null || true
 find . -name "*.pyc" -delete
 python -c "import gc; gc.collect()"
 
-# Iniciar aplicación con host y puerto explícitos y menor consumo de memoria
-reflex run --env prod --backend-host 0.0.0.0 --backend-port $PORT 
+# Inicializar Reflex
+python -m reflex init
+
+# Mostrar puertos en uso
+echo "Puertos actualmente en uso:"
+netstat -tulpn 2>/dev/null || echo "netstat no disponible"
+
+# Iniciar aplicación con uvicorn directamente
+echo "Iniciando servidor en 0.0.0.0:$PORT"
+uvicorn create_app:asgi_app --host 0.0.0.0 --port $PORT 

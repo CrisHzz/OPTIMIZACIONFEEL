@@ -16,7 +16,12 @@ services:
       find . -name "__pycache__" -type d -exec rm -rf {} + 2>/dev/null || true
       find . -name "*.pyc" -delete
       python -c "import gc; gc.collect()"
-      reflex run --env prod --backend-host 0.0.0.0 --backend-port $PORT
+      # Verificar que puertos están abiertos
+      echo "Puertos en uso antes de iniciar:"
+      netstat -tulpn 2>/dev/null || echo "netstat no disponible"
+      # Iniciar con uvicorn directamente
+      python -m reflex init
+      uvicorn create_app:asgi_app --host 0.0.0.0 --port $PORT
     envVars:
       - key: PYTHON_VERSION
         value: 3.9
