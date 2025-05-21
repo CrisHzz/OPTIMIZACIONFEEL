@@ -14,10 +14,10 @@ from reflex.compiler import compiler
 
 # Obtener la aplicación ASGI compilada
 # En Reflex 0.7.12, necesitamos compilar la app antes de exponerla
-app.compile()
+app._compile()
 
 # Exponer la aplicación ASGI directamente para que Uvicorn/Gunicorn la use
-from reflex.backend.app import app as reflex_app
+from reflex.app import app as reflex_app
 asgi_app = reflex_app
 
 # Esta función es para uso con Gunicorn

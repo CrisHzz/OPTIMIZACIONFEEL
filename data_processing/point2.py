@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-dataset_2 = pd.read_excel('./media/dataset_punto2.xlsx')
+dataset_2 = pd.read_excel('./media_optimized/dataset_punto2.xlsx')
 
 
 dataset_2_short = dataset_2.head(10)
