@@ -5,7 +5,6 @@ numpy
 matplotlib
 openpyxl
 pillow
-scikit-learn
 scipy
 seaborn
 

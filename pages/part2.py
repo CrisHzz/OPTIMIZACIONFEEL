@@ -1,14 +1,11 @@
 import reflex as rx
 from rxconfig import config
 from data_processing.point2 import dataset_2_short, dataset_dispersion2, dataset_dispersion2, dataset_form2
-from data_processing.regressionPoint2 import corre_variables, best_model, dataset_estandarizado_short, regression_instancia, model_message, regression_data_model, model_validation, model_optimization
 
 class State(rx.State):
     """The app state."""
     ...
 
-# Convertir el objeto regression_instancia a texto antes de pasarlo a rx.code_block
-regression_instancia_text = str(regression_instancia)
 
 def part2() -> rx.Component:
     return rx.container(
@@ -264,11 +261,10 @@ def part2() -> rx.Component:
                         style={"white-space": "pre-line"},
                         class_name="text-white mb-4",
                     ),
-                    rx.code_block(
-                        corre_variables,
-                        language="python",
-                        show_line_numbers=True,
-                        class_name="bg-black text-white p-4 rounded-lg my-4 w-full overflow-auto",
+                    rx.text(
+                        "El coeficiente de correlacion entre las 2 variables es de 0.764,\npor lo tanto hay CORRELACION LINEAL ALTA.",
+                        class_name="bg-black text-white p-4 rounded-lg my-4 w-full overflow-auto font-mono",
+                        style={"white-space": "pre-line"},
                     ),
                     rx.heading( 
                         "Recomendación de modelo de regresión",
@@ -280,11 +276,20 @@ def part2() -> rx.Component:
                         style={"white-space": "pre-line"},
                         class_name="text-white mb-4",
                     ),
-                    rx.code_block(
-                        best_model,
-                        language="python",
-                        show_line_numbers=True,
-                        class_name="bg-black text-white p-4 rounded-lg my-4 w-full overflow-auto",
+                    rx.text(
+                        """--- Evaluación de modelos (R² con cross-validation) ---
+
+                        Regresión Lineal: R² promedio = 0.4171
+                        Ridge: R² promedio = 0.4171 
+                        Lasso: R² promedio = 0.4171
+
+                        --- Resultados ---
+
+                        ✅ Modelo recomendado: Regresión Lineal
+                        Valores de R² promedio:
+                        {'Regresión Lineal': 0.4171, 'Ridge': 0.4171, 'Lasso': 0.4171}""",
+                        class_name="bg-black text-white p-4 rounded-lg my-4 w-full overflow-auto font-mono",
+                        style={"white-space": "pre-line"},
                     ),
                     rx.heading(
                         "Estandarizacion del dataset",
@@ -296,34 +301,9 @@ def part2() -> rx.Component:
                         style={"white-space": "pre-line"},
                         class_name="text-white mb-4",
                     ),
-                    rx.table.root(
-                        rx.table.header(
-                            rx.table.row(
-                                *[
-                                    rx.table.column_header_cell(
-                                        col,
-                                        class_name="text-white"
-                                    )
-                                    for col in dataset_estandarizado_short.columns
-                                ]
-                            )
-                        ),
-                        rx.table.body(
-                            *[
-                                rx.table.row(
-                                    *[
-                                        rx.table.cell(
-                                            str(value),
-                                            class_name="text-white"
-                                        )
-                                        for value in row
-                                    ]
-                                )
-                                for row in dataset_estandarizado_short.values
-                            ]
-                        ),
-                        variant="surface",
-                        class_name="bg-black",
+                    rx.image(
+                        src='/standardDataset.png',
+                        class_name="p-4 rounded-2xl bg-black shadow-lg overflow-x-auto",
                     ),
                     rx.heading(
                         "Implementacion de regresion lineal",
@@ -346,11 +326,10 @@ def part2() -> rx.Component:
                         style={"white-space": "pre-line"},
                         class_name="text-white mb-4",
                     ),
-                    rx.code_block(
-                        regression_instancia_text,
-                        language="python",
-                        show_line_numbers=True,
-                        class_name="bg-black text-white p-4 rounded-lg my-4 w-full overflow-auto",
+                    rx.text(
+                        "LinearRegression()",
+                        font_family="monospace",
+                        class_name="bg-black text-white p-4 rounded-lg my-4 w-full overflow-auto font-mono",
                     ),
                     rx.heading(
                         "Entreno del modelo , pesos y sesgos de este",
@@ -362,11 +341,10 @@ def part2() -> rx.Component:
                         style={"white-space": "pre-line"},
                         class_name="text-white mb-4",
                     ),
-                    rx.code_block(
-                        model_message,
-                        language="python",
-                        show_line_numbers=True,
-                        class_name="bg-black text-white p-4 rounded-lg my-4 w-full overflow-auto",
+                    rx.text(
+                        "El peso (Coeficiente) del modelo es [0.8283] y su sesgo (intercepto) es -0.02370000071823597",
+                        font_family="monospace",
+                        class_name="bg-black text-white p-4 rounded-lg my-4 w-full overflow-auto font-mono",
                     ),
                     rx.markdown(
                         "$$ Y = 0.8283X -0.0237 $$"
@@ -383,11 +361,30 @@ def part2() -> rx.Component:
                         class_name="text-white mb-4",
                     ),
 
-                    rx.code_block(
-                        regression_data_model,
-                        language="python",
-                        show_line_numbers=True,
-                        class_name="bg-black text-white p-4 rounded-lg my-4 w-full overflow-auto",
+                    rx.vstack(
+                        rx.text(
+                            "Resultados de la regresión lineal:",
+                            font_family="monospace",
+                            class_name="text-white font-bold",
+                        ),
+                        rx.unordered_list(
+                            rx.list_item("MSE: 0.3605"),
+                            rx.list_item("RMSE: 0.6004"), 
+                            rx.list_item("R²: 0.4150"),
+                            class_name="text-white mb-4",
+                        ),
+                        rx.text(
+                            "Interpretación:",
+                            font_family="monospace",
+                            class_name="text-white font-bold",
+                        ),
+                        rx.unordered_list(
+                            rx.list_item("El modelo explica el 41.50% de la variabilidad en los datos"),
+                            rx.list_item("El error promedio en las predicciones es de 0.6004 unidades"),
+                            rx.list_item("El modelo presenta una precisión muy baja; esto puede deberse a registros limitados o baja calidad de los datos"),
+                            class_name="text-white",
+                        ),
+                        class_name="bg-black p-4 rounded-lg my-4 w-full overflow-auto font-mono",
                     ),
                     
                     # Nueva sección para validación del modelo (punto d)
@@ -403,7 +400,53 @@ def part2() -> rx.Component:
                     ),
                     
                     rx.code_block(
-                        model_validation,
+                        """## Validación del Modelo de Regresión Lineal
+**NOTA: Algunas pruebas estadísticas avanzadas no están disponibles. Instale statsmodels para análisis completo: pip install statsmodels**
+
+### 1. Verificación de Supuestos
+
+**Normalidad de residuos:**
+- Test Shapiro-Wilk: p-valor = 0.9867
+- Conclusión: Los residuos SIGUEN una distribución normal
+    
+**Homocedasticidad:**
+- Test Breusch-Pagan: p-valor = 0.0000
+- Conclusión: NO EXISTE homocedasticidad (varianza constante)
+
+**Independencia de residuos:**
+- Estadístico Durbin-Watson: 0.0000
+- Conclusión: Los residuos NO SON independientes
+
+### 2. Pruebas de Hipótesis para los Parámetros
+
+**Intercepto (β₀):**
+- Valor: -0.0237
+- p-valor: 0.0000
+- Conclusión: El intercepto es ESTADÍSTICAMENTE NO SIGNIFICATIVO
+
+**Pendiente (β₁):**
+- Valor: 0.8283
+- p-valor: 0.0000
+- Conclusión: La pendiente es ESTADÍSTICAMENTE SIGNIFICATIVA
+
+### 3. Intervalos de Confianza (95%)
+
+**Intercepto (β₀):**
+- IC 95%: [0.0000, 0.0000]
+
+**Pendiente (β₁):**
+- IC 95%: [0.0000, 0.0000]
+
+### 4. Análisis de Residuos
+
+Se han generado los siguientes gráficos para analizar visualmente los residuos:
+- Residuos vs Valores ajustados: permite verificar linealidad y homocedasticidad
+- Gráfico Q-Q: permite verificar normalidad de residuos
+- Histograma de residuos: muestra la distribución de los errores
+
+**Conclusión general:**
+El modelo NO CUMPLE con todos los supuestos de regresión lineal.
+La pendiente del modelo es SIGNIFICATIVA, lo que indica que EXISTE una relación lineal entre la velocidad de producción y el consumo de energía.""",
                         language="markdown",
                         show_line_numbers=False,
                         class_name="bg-black text-white p-4 rounded-lg my-4 w-full overflow-auto",
@@ -421,11 +464,7 @@ def part2() -> rx.Component:
                     ),
                     
                     rx.cond(
-                        model_validation.__contains__("NOTA"),
-                        rx.text(
-                            "Para visualizar los gráficos de residuos, instale las dependencias indicadas arriba y ejecute la aplicación nuevamente.",
-                            class_name="text-white text-center p-4 bg-red-900/50 rounded-xl mb-6"
-                        ),
+                        True,  # Condición siempre verdadera para mostrar los gráficos
                         rx.vstack(
                             rx.heading(
                                 "Residuos vs Valores Ajustados",
@@ -494,9 +533,40 @@ def part2() -> rx.Component:
                         style={"white-space": "pre-line"},
                         class_name="text-white mb-4",
                     ),
-                    
                     rx.code_block(
-                        model_optimization,
+                        """## Aplicación y Optimización del Modelo
+
+### 1. Predicción de Consumo Energético
+
+Para una velocidad de producción de **85.00 unidades/hora**:
+- Consumo energético predicho: **119.84 kWh**
+
+### 2. Intervalo de Predicción del 95%
+
+El intervalo de predicción con 95% de confianza para el consumo energético es:
+- Límite inferior: **114.34 kWh**
+- Límite superior: **125.34 kWh**
+
+Esto significa que, con una confianza del 95%, el consumo energético real estará dentro de este rango.
+
+### 3. Optimización de la Eficiencia Energética
+
+La velocidad de producción que minimiza el consumo energético por unidad producida es:
+- Velocidad óptima: **133.00 unidades/hora**
+- Consumo energético correspondiente: **157.08 kWh**
+- Eficiencia energética óptima: **1.1810 kWh/unidad**
+
+### 4. Recomendaciones para Optimizar la Eficiencia Energética
+
+1. **Ajustar la velocidad de producción**: Establecer la velocidad de producción lo más cercana posible a 133.00 unidades/hora para minimizar el consumo energético por unidad producida.
+
+2. **Implementar monitoreo continuo**: Desarrollar un sistema de monitoreo que registre en tiempo real la velocidad de producción y el consumo energético para mantener la operación en el punto óptimo.
+
+3. **Planificar producción en lotes óptimos**: Organizar los ciclos de producción para operar principalmente en el rango de mayor eficiencia, evitando arranques y paradas frecuentes que pueden ser menos eficientes.
+
+4. **Mantenimiento preventivo**: Establecer un programa de mantenimiento preventivo para asegurar que los equipos operen cerca de su eficiencia óptima.
+
+5. **Análisis periódico**: Reevaluar regularmente la relación entre velocidad y consumo para detectar cambios en el proceso que puedan alterar el punto óptimo de operación.""",
                         language="markdown",
                         show_line_numbers=False,
                         class_name="bg-black text-white p-4 rounded-lg my-4 w-full overflow-auto",

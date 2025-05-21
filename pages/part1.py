@@ -1,7 +1,7 @@
 import reflex as rx
 from rxconfig import config
 from data_processing.point1 import dataset_general, dataset_general_short , dataset_mtc , dataset_dispersion, dataset_form
-from data_processing.point1Theory import df_pvalues , probability_time_extra, confidence_intervals_95, hypothesis_test_results
+from data_processing.point1Theory import df_pvalues 
 
 class State(rx.State):
     """The app state."""
@@ -345,10 +345,13 @@ def part1() -> rx.Component:
                         class_name="text-white mb-4",
 
                     ),
-                    rx.code_block(
-                        probability_time_extra,
-                        language="python",
-                        class_name="text-white mb-4",
+                    rx.text(
+                                            """Línea A (distribución usada: Normal, mejor ajuste: Normal)
+                    →  P(T>120) = 45.45%   |   t_90 = 130.60 s
+
+                    Línea B (distribución usada: Normal, mejor ajuste: Normal)  
+                    →  P(T>120) = 19.75%   |   t_90 = 124.93 s""",
+                                            class_name="text-white bg-[#1e1e1e] p-4 rounded-lg font-mono mb-4 whitespace-pre",
                     ),
                     
                     rx.heading(
@@ -400,10 +403,13 @@ def part1() -> rx.Component:
                         "Los intervalos de confianza al 95% para las medias de las líneas A y B son los siguientes:",
                         class_name="text-white mb-4",
                     ),
-                    rx.code_block(
-                        confidence_intervals_95,
-                        language="python",
-                        class_name="text-white mb-4",
+                    rx.text(
+                        "IC 95% μ_A: 117.16 – 120.76",
+                        class_name="text-white mb-2 font-mono bg-black/30 p-2 rounded whitespace-pre",
+                    ),
+                    rx.text(
+                        "IC 95% μ_B: 108.00 – 112.54", 
+                        class_name="text-white mb-4 font-mono bg-black/30 p-2 rounded whitespace-pre",
                     ),
                     rx.text(
                         "Esto significa que estamos un 95% seguros de que la media real del tiempo de producción para la Línea A está entre 117.16 y 120.76 segundos, mientras que para la Línea B está entre 108.00 y 112.54 segundos.",
@@ -420,10 +426,48 @@ def part1() -> rx.Component:
                         "Para determinar si existe una diferencia estadísticamente significativa entre los tiempos medios de ciclo de ambas líneas de producción, se realizó una prueba t de Student para muestras independientes (también conocida como prueba t de Welch, ya que las varianzas son diferentes).",
                         class_name="text-white mb-4",
                     ),
-                    rx.code_block(
-                        hypothesis_test_results,
-                        language="python",
-                        class_name="text-white mb-4",
+                    rx.text(
+                        "Prueba de hipótesis para comparar tiempos medios de ciclo:",
+                        class_name="text-white mb-2 font-bold",
+                    ),
+                    rx.heading(
+                        "Hipótesis:",
+                        size="6", 
+                        class_name="text-white mb-2",
+                    ),
+                    rx.unordered_list(
+                        rx.list_item(
+                            rx.text("H₀: μ_A = μ_B (No hay diferencia significativa entre los tiempos medios)")
+                        ),
+                        rx.list_item(
+                            rx.text("H₁: μ_A ≠ μ_B (Existe diferencia significativa entre los tiempos medios)")
+                        ),
+                        class_name="text-white mb-4 pl-6",
+                    ),
+                    rx.heading(
+                        "Resultados:",
+                        size="6",
+                        class_name="text-white mb-2", 
+                    ),
+                    rx.unordered_list(
+                        rx.list_item(rx.text("Estadístico t: 5.9508")),
+                        rx.list_item(rx.text("Valor p: 0.000000012784")),
+                        rx.list_item(rx.text("Media Línea A: 118.96 segundos")),
+                        rx.list_item(rx.text("Media Línea B: 110.27 segundos")),
+                        rx.list_item(rx.text("Diferencia de medias: 8.69 segundos")),
+                        class_name="text-white mb-4 pl-6",
+                    ),
+                    rx.heading(
+                        "Interpretación:",
+                        size="6",
+                        class_name="text-white mb-2",
+                    ),
+                    rx.unordered_list(
+                        rx.list_item(rx.text("Se rechaza la hipótesis nula (p < 0.05)")),
+                        rx.list_item(rx.text("Existe evidencia estadísticamente significativa de que los tiempos medios de ciclo son diferentes")),
+                        rx.list_item(rx.text("La Línea B es en promedio 8.69 segundos más rápida que la Línea A")),
+                        rx.list_item(rx.text("Esta diferencia es estadísticamente significativa y tiene implicaciones prácticas para la gestión del proceso")),
+                        class_name="text-white mb-4 pl-6",
                     ),
                     rx.text(
                         "Esta prueba nos permite tomar decisiones basadas en evidencia estadística sobre si las diferencias observadas en los tiempos de ciclo son significativas o podrían deberse al azar. Los resultados tienen importantes implicaciones para la gestión del proceso, ya que nos ayudan a identificar si una línea de producción es significativamente más eficiente que la otra.",
