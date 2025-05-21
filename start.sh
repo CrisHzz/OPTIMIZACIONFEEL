@@ -19,4 +19,4 @@ find . -name "__pycache__" -type d -exec rm -rf {} +
 find . -name "*.pyc" -delete
 
 # Iniciar aplicación con host y puerto explícitos
-reflex run --env prod --host 0.0.0.0 --port $PORT 
+reflex run --env prod --backend-host 0.0.0.0 --backend-port $PORT 
