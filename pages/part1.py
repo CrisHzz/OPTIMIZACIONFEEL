@@ -52,10 +52,9 @@ def part1() -> rx.Component:
             ),
             rx.box(
                 rx.vstack(
-                    # Dataset Parte #1
                     rx.heading(
-                        "Dataset Parte #1",
-                        size="7",
+                        "Part 1: Análisis de tiempos en procesos de producción ",
+                        size="8",
                         class_name="text-white mb-4",
                     ),
                     rx.heading(
@@ -125,16 +124,10 @@ def part1() -> rx.Component:
                         variant="surface",
                         class_name="bg-black mb-8 w-full",
                     ),
-                    
-                    # Medidas de tendencia central, dispersión y forma
                     rx.heading(
-                        "Medidas de tendencia central, dispersión y forma",
+                        "A) Analisis descriptivo y visualizacion de datos",
                         size="7",
-                        class_name="text-white mb-4 mt-8",
-                    ),
-                    rx.text(
-                        "Existen varios tipos de medidas que nos sirven para darle sentido a valor a los datos sea desde el apartado basico como entender el promedio, como se desvian sus datos del centro y hasta que forma y comportamiento tienen ellos",
-                        class_name="text-white mb-4",
+                        class_name="text-white",
                     ),
                     rx.heading(
                         "Medidas de tendencia central",
@@ -312,7 +305,7 @@ def part1() -> rx.Component:
                     
                     # Identificar la distribución
                     rx.heading(
-                        "Indentificar la distribucion indicada",
+                        "B) Indentificar la distribucion indicada",
                         size="7",
                         class_name="text-white mb-4 mt-8",
                     ),
@@ -403,7 +396,7 @@ def part1() -> rx.Component:
                         class_name="text-white mb-4"
                     ),
                     rx.heading(
-                        "Utilizando la distribucion indicada, encontrar la probabilidad de encontrar un tiempo extra",
+                        "C) Calculos de probabilidad segun la distribucion ajustada", 
                         size="7",
                         class_name="text-white mb-4 mt-8",
                     ),
@@ -463,7 +456,7 @@ def part1() -> rx.Component:
                         class_name="text-white mb-4 font-bold",
                     ),
                     rx.heading(
-                        "Intervalos de confianza al 95%",
+                        "D) Intervalos de confianza al 95% para las lineas",
                         size="7",
                         class_name="text-white mb-4 mt-8",
                     ),
@@ -486,7 +479,7 @@ def part1() -> rx.Component:
                     
                     # Prueba de hipótesis
                     rx.heading(
-                        "Prueba de hipótesis para comparar tiempos medios",
+                        "E) Prueba de hipótesis para comparar tiempos medios",
                         size="7",
                         class_name="text-white mb-4 mt-8",
                     ),
@@ -544,7 +537,7 @@ def part1() -> rx.Component:
                     
                     # Comparación con artículo científico
                     rx.heading(
-                        "Comparación con artículo científico",
+                        "F) Comparación con artículo científico",
                         size="7",
                         class_name="text-white mb-4 mt-8",
                     ),

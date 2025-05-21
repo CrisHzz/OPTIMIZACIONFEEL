@@ -65,7 +65,7 @@ def part3() -> rx.Component:
                 rx.vstack(
                     rx.box(
                         rx.heading(
-                            "Problemas planteados",
+                            "A) Problemas planteados",
                             size="6",
                             class_name="text-purple-300 mb-4",
                         ),
@@ -124,7 +124,7 @@ def part3() -> rx.Component:
                     # Problema 2: El problema del Titanic
                     rx.box(
                         rx.heading(
-                            "Campo 2: Ciencia de datos y análisis (El problema del Titanic)",
+                            "(A-B) Campo 2: Ciencia de datos y análisis (El problema del Titanic)",
                             size="5",
                             class_name="text-purple-200 mb-3",
                         ),
@@ -191,7 +191,7 @@ def part3() -> rx.Component:
                             class_name="p-4 bg-purple-700/40 rounded-xl border border-purple-500/30 mb-4 text-center",
                         ),
                         rx.heading(
-                            "Obtencion de los datos",
+                            "C) Obtencion de los datos",
                             size="6",
                             class_name="text-purple-200 mb-2",
                         ),
@@ -384,7 +384,7 @@ def part3() -> rx.Component:
                             class_name="bg-black mb-8 w-full",
                         ),
                         rx.heading(
-                            "Analisis estadistico",
+                            "D) Analisis estadistico ",
                             size="8",
                             class_name="text-purple-200 mb-2 font-bold",
                         ),
@@ -800,6 +800,49 @@ Esta función transforma cualquier valor de entrada en un rango entre 0 y 1, ide
             """,
                             class_name="text-gray-200 bg-purple-900/20 p-4 rounded-xl border border-purple-500/30 mb-4 overflow-x-auto",
                         ),
+                        rx.heading(
+                            "E)Conclusiones",
+                            size="7",
+                            class_name="text-purple-200 mb-4",
+                        ),
+                        rx.vstack(
+                            rx.text(
+                                "El problema del Titanic es una excelente introducción al mundo del machine learning, la ciencia de datos y la estadística. En este ejercicio, aplicamos todas estas técnicas para predecir un suceso histórico real, dividiéndolo en tres etapas fundamentales:",
+                                class_name="text-gray-200 mb-4",
+                            ),
+                            rx.unordered_list(
+                                rx.list_item("Limpieza de datos", class_name="text-gray-200"),
+                                rx.list_item("Optimización y validación estadística", class_name="text-gray-200"),
+                                rx.list_item("Creación del modelo predictivo", class_name="text-gray-200"),
+                                spacing="2",
+                                class_name="mb-4",
+                            ),
+                            rx.text(
+                                "Los resultados obtenidos nos revelan conclusiones importantes:",
+                                class_name="text-gray-200 mb-2",
+                            ),
+                            rx.box(
+                                rx.unordered_list(
+                                    rx.list_item("Las mujeres y niños tuvieron mayor probabilidad de supervivencia", class_name="text-gray-200"),
+                                    rx.list_item("El precio del pasaje influyó directamente en las posibilidades de salvarse", class_name="text-gray-200"),
+                                    rx.list_item("La edad fue un factor determinante (siendo los muy jóvenes y ancianos más vulnerables)", class_name="text-gray-200"),
+                                    rx.list_item("El puerto de embarque también jugó un papel significativo", class_name="text-gray-200"),
+                                    spacing="2",
+                                ),
+                                class_name="p-4 bg-purple-900/20 rounded-xl border border-purple-500/30 mb-4",
+                            ),
+                            rx.text(
+                                "Sin embargo, es importante notar que, debido a la antigüedad de los datos, enfrentamos desafíos con información faltante o errónea, lo que podría afectar la precisión de nuestras predicciones.",
+                                class_name="text-gray-200 mb-4",
+                            ),
+                            rx.text(
+                                "A pesar de identificar patrones claros, ninguna variable garantizaba una supervivencia del 100%, recordándonos la naturaleza trágica e impredecible de este acontecimiento histórico.",
+                                class_name="text-gray-200 mb-4 font-bold",
+                            ),
+                            align="start",
+                            spacing="2",
+                        ),
+
                         rx.heading(
                             "Titanic Survivors SandBox",
                             size="8",

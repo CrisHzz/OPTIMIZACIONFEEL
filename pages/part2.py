@@ -53,7 +53,7 @@ def part2() -> rx.Component:
             ),
             rx.box(
                 rx.heading(
-                    "Dataset Parte #2",
+                    "Part 2: Análisis de la relación entre variables de proceso y consumo energético",
                     size="8",
                     class_name="text-white mb-4",
                 ),
@@ -143,7 +143,7 @@ def part2() -> rx.Component:
             ),
             rx.box(
                 rx.heading(
-                    "Medidas de tendencia central, dispersión y forma",
+                    "A) Analisis descriptivo y grafico de los datos",
                     size="8",
                     class_name="text-white mb-4",
                 ),
@@ -291,8 +291,8 @@ def part2() -> rx.Component:
                         class_name="p-4 rounded-2xl bg-black shadow-lg overflow-x-auto",
                     ),
                     rx.heading(
-                        "Encontrar la coeficiente de correlacion entre las variables",
-                        size="6",
+                        "B) El coeficiente de correlación",
+                        size="7",
                         class_name="text-white mb-4 pt-4",
                     ),
                     rx.text(
@@ -301,9 +301,34 @@ def part2() -> rx.Component:
                         class_name="text-white mb-4",
                     ),
                     rx.text(
+                        """• Tamaño de muestra: 50
+
+• Coeficiente de correlación: 0.764
+
+• Estadístico t: 8.210
+
+• Valor p: 1.064e-10
+
+• Alpha: 0.05
+
+• Hipótesis nula: No hay correlación entre las variables.
+
+• Hipótesis alternativa: Existe una correlación significativa entre las variables.
+
+• Rechazamos la hipótesis nula. La correlación es estadísticamente significativa.""",
+                        class_name="bg-black text-white p-4 rounded-lg my-4 w-full overflow-auto font-mono",
+                        style={"white-space": "pre-line"},
+                    ),
+                    
+                    rx.text(
                         "El coeficiente de correlacion entre las 2 variables es de 0.764,\npor lo tanto hay CORRELACION LINEAL ALTA.",
                         class_name="bg-black text-white p-4 rounded-lg my-4 w-full overflow-auto font-mono",
                         style={"white-space": "pre-line"},
+                    ),
+                    rx.heading(
+                        "C) Regresión lineal simple",
+                        size="7",
+                        class_name="text-white mb-4 pt-4",
                     ),
                     rx.heading( 
                         "Recomendación de modelo de regresión",
@@ -391,7 +416,7 @@ def part2() -> rx.Component:
                     rx.text(
                         "Evaluacion del rendimiento de la regresion lineal",
                         size="6",
-                        class_name="text-white mb-4 pt-4",
+                        class_name="text-white mb-4 pt-4 font-bold",
                     ),
 
                     rx.text(
@@ -428,7 +453,7 @@ def part2() -> rx.Component:
                     
                     # Nueva sección para validación del modelo (punto d)
                     rx.heading(
-                        "Validación del Modelo de Regresión",
+                        "D) Validación del Modelo de Regresión",
                         size="7",
                         class_name="text-white mb-4 pt-6",
                     ),
@@ -563,7 +588,7 @@ La pendiente del modelo es SIGNIFICATIVA, lo que indica que EXISTE una relación
                     
                     # Nueva sección para el punto e: Utilización del modelo
                     rx.heading(
-                        "Aplicación y Optimización del Modelo",
+                        "E) Aplicación y Optimización del Modelo",
                         size="7",
                         class_name="text-white mb-4 pt-6",
                     ),
