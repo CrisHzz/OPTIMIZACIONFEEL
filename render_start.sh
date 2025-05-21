@@ -23,6 +23,14 @@ find . -name "__pycache__" -type d -exec rm -rf {} +
 find . -name "*.pyc" -delete
 find . -name ".DS_Store" -delete
 
+# Inicializar el proyecto Reflex
+echo "Initializing Reflex..."
+python -m reflex init
+
+# Compilar el proyecto
+echo "Compiling Reflex project..."
+python -m reflex build
+
 # Iniciar la aplicación con uvicorn directamente
 echo "Starting application with uvicorn..."
 uvicorn create_app:asgi_app --host 0.0.0.0 --port $PORT 
