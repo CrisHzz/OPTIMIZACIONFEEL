@@ -182,6 +182,34 @@ def bibliografias() -> rx.Component:
                         class_name="mb-6",
                     ),
                     
+                    # Recursos de Criptografía y Ciberseguridad
+                    rx.heading(
+                        "Criptografía y Ciberseguridad",
+                        size="5",
+                        class_name="text-purple-300 mb-4 mt-6",
+                    ),
+                    rx.box(
+                        rx.text("[50] B. Schneier, \"Applied Cryptography: Protocols, Algorithms, and Source Code in C,\" Wiley, 2015.", class_name="text-white mb-2"),
+                        
+                        rx.text("[51] A. J. Menezes, P. C. van Oorschot, and S. A. Vanstone, \"Handbook of Applied Cryptography,\" CRC Press, 1996. [Online]. Available: http://cacr.uwaterloo.ca/hac/", class_name="text-white mb-2"),
+                        
+                        rx.text("[52] NIST, \"Statistical Test Suite for Random and Pseudorandom Number Generators for Cryptographic Applications,\" Special Publication 800-22, 2010. [Online]. Available: https://csrc.nist.gov/publications/detail/sp/800-22/rev-1a/final", class_name="text-white mb-2"),
+                        
+                        rx.text("[53] D. Kahn, \"The Codebreakers: The Comprehensive History of Secret Communication from Ancient Times to the Internet,\" Scribner, 1996.", class_name="text-white mb-2"),
+                        
+                        rx.text("[54] T. Dierks and E. Rescorla, \"The Transport Layer Security (TLS) Protocol,\" RFC 5246, 2008. [Online]. Available: https://datatracker.ietf.org/doc/html/rfc5246", class_name="text-white mb-2"),
+                        
+                        rx.text("[55] J. Katz and Y. Lindell, \"Introduction to Modern Cryptography,\" Chapman and Hall/CRC, 2020.", class_name="text-white mb-2"),
+                        
+                        rx.text("[56] C. E. Shannon, \"Communication Theory of Secrecy Systems,\" Bell System Technical Journal, vol. 28, no. 4, pp. 656-715, 1949.", class_name="text-white mb-2"),
+                        
+                        rx.text("[57] W. Stallings, \"Cryptography and Network Security: Principles and Practice,\" Pearson, 2017.", class_name="text-white mb-2"),
+                        
+                        rx.text("[58] NIST, \"Cryptographic Standards and Guidelines,\" Computer Security Resource Center. [Online]. Available: https://csrc.nist.gov/projects/cryptographic-standards-and-guidelines", class_name="text-white mb-2"),
+                        
+                        class_name="mb-6",
+                    ),
+                    
                     width="100%",
                     spacing="4",
                     align="start",
