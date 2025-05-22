@@ -125,7 +125,7 @@ def part1() -> rx.Component:
                         class_name="bg-black mb-8 w-full",
                     ),
                     rx.text(
-                        "Referencias: [2][5][33] Creado usando pandas con funciones de estadistica.",
+                        "Referencias: [2][5][38] Creado usando pandas con funciones de estadistica.",
                         class_name="text-gray-400 text-sm mb-4 text-center italic",
                     ),
                     rx.heading(
@@ -339,7 +339,7 @@ def part1() -> rx.Component:
                         class_name="text-white mb-4 mt-8",
                     ),
                     rx.text(
-                        "Para identificar la distribución de los datos, se aplican pruebas de bondad de ajuste [13][14]. Estas pruebas comparan la distribución observada con varias distribuciones teóricas para determinar cuál se ajusta mejor a los datos. En este caso, se aplicaron las pruebas de Kolmogorov-Smirnov (KS) para las distribuciones Normal, Exponencial y Weibull.",
+                        "Para identificar la distribución de los datos, se aplican pruebas de bondad de ajuste [25][32][33][34]. Estas pruebas comparan la distribución observada con varias distribuciones teóricas para determinar cuál se ajusta mejor a los datos. En este caso, se aplicaron las pruebas de Kolmogorov-Smirnov (KS) para las distribuciones Normal, Exponencial y Weibull.",
                         class_name="text-white mb-4",
                     ),
                     rx.table.root(
@@ -406,7 +406,7 @@ def part1() -> rx.Component:
                     ),
                     
                     rx.text(
-                        "En la tabla anterior, se presentan los resultados de las pruebas de bondad de ajuste para las distribuciones Normal, Exponencial y Weibull [7][8]. La columna 'Mejor ajuste' indica cuál distribución se ajusta mejor a los datos de cada línea de producción. Si el valor p es menor que el nivel de significancia (α = 0.05), se rechaza la hipótesis nula de que los datos siguen esa distribución.",
+                        "En la tabla anterior, se presentan los resultados de las pruebas de bondad de ajuste para las distribuciones Normal, Exponencial y Weibull [2][7][8]. La columna 'Mejor ajuste' indica cuál distribución se ajusta mejor a los datos de cada línea de producción. Si el valor p es menor que el nivel de significancia (α = 0.05), se rechaza la hipótesis nula de que los datos siguen esa distribución.",
                         class_name="text-white mb-4 font-bold"
                     ),
                     rx.image(
@@ -452,6 +452,9 @@ def part1() -> rx.Component:
                     →  P(T>120) = 19.75%   |   t_90 = 124.93 s""",
                                             class_name="text-white bg-[#1e1e1e] p-4 rounded-lg font-mono mb-4 whitespace-pre",
                     ),
+                    rx.text(
+                        "Referencias: [3][18][32][33]"
+                    ),
                     
                     rx.heading(
                         "Interpretación de resultados",
@@ -490,7 +493,7 @@ def part1() -> rx.Component:
                         class_name="text-white mb-4 pl-6",
                     ),
                     rx.text(
-                        "Con base en estos resultados, podemos concluir que la Línea B presenta un mejor desempeño operativo en términos de tiempos de ciclo [11][12]. La menor variabilidad y el tiempo promedio más bajo en la Línea B sugieren que podría ser beneficioso analizar qué factores contribuyen a su mejor rendimiento para potencialmente implementarlos también en la Línea A y mejorar su eficiencia.",
+                        "Con base en estos resultados, podemos concluir que la Línea B presenta un mejor desempeño operativo en términos de tiempos de ciclo [3][16][32][33]. La menor variabilidad y el tiempo promedio más bajo en la Línea B sugieren que podría ser beneficioso analizar qué factores contribuyen a su mejor rendimiento para potencialmente implementarlos también en la Línea A y mejorar su eficiencia.",
                         class_name="text-white mb-4 font-bold",
                     ),
                     rx.heading(
@@ -499,7 +502,7 @@ def part1() -> rx.Component:
                         class_name="text-white mb-4 mt-8",
                     ),
                     rx.text(
-                        "Los intervalos de confianza al 95% para las medias de las líneas A y B son los siguientes [36]:",
+                        "Los intervalos de confianza al 95% para las medias de las líneas A y B son los siguientes [7][8][32][33][36]:",
                         class_name="text-white mb-4",
                     ),
                     rx.text(
@@ -522,7 +525,7 @@ def part1() -> rx.Component:
                         class_name="text-white mb-4 mt-8",
                     ),
                     rx.text(
-                        "Para determinar si existe una diferencia estadísticamente significativa entre los tiempos medios de ciclo de ambas líneas de producción, se realizó una prueba t de Student para muestras independientes [33][35] (también conocida como prueba t de Welch, ya que las varianzas son diferentes).",
+                        "Para determinar si existe una diferencia estadísticamente significativa entre los tiempos medios de ciclo de ambas líneas de producción, se realizó una prueba t de Student para muestras independientes [25][33][35] (también conocida como prueba t de Welch, ya que las varianzas son diferentes).",
                         class_name="text-white mb-4",
                     ),
                     rx.text(
