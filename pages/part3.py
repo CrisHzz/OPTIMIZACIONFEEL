@@ -131,13 +131,13 @@ def part3() -> rx.Component:
                         rx.text(
                             "Nuestro segundo campo es la ciencia de datos y el análisis de ello. La ingeniería de sistemas y "
                             "todas estas ciencias computacionales han dado oportunidad a la revolución actual de la inteligencia "
-                            "artificial y la implementación de modelos matemáticos y estadísticos para la solución de problemas actuales. "
+                            "artificial y la implementación de modelos matemáticos y estadísticos para la solución de problemas actuales [27][28]. "
                             "Con este campo queremos enfocarnos en problemas que utilicen estas ciencias que ya mencionamos y toda la "
                             "parte computacional moderna.",
                             class_name="text-gray-200 mb-4",
                         ),
                         rx.text(
-                            "Gracias a ello planteamos la siguiente aplicación de todo lo anterior y se trata del problema del Titanic. "
+                            "Gracias a ello planteamos la siguiente aplicación de todo lo anterior y se trata del problema del Titanic [24]. "
                             "Nos plantean un dataset roto y real con muchos valores vacíos, campos faltantes y bastantes datos inexistentes "
                             "que provienen del incidente real del barco RMS TITANIC ocurrido el 14 de abril de 1912 en un recorrido desde "
                             "Reino Unido a Estados Unidos. La distorsión del tiempo, las personas fallecidas sin reconocer y las condiciones "
@@ -415,7 +415,11 @@ def part3() -> rx.Component:
                         ),
                         rx.image(
                             src='/datasetnan.png',
-                            class_name="p-4 rounded-2xl bg-black shadow-lg overflow-x-auto mb-4",
+                            class_name="p-4 rounded-2xl bg-black shadow-lg mb-4",
+                        ),
+                        rx.text(
+                            "Referencias: [2][24] Visualización de valores faltantes utilizando Pandas.",
+                            class_name="text-gray-400 text-sm mb-4 text-center italic",
                         ),
                         rx.heading(
                             "Eliminacion de variables (Sibsp y parch)",
@@ -428,11 +432,19 @@ def part3() -> rx.Component:
                         ),
                         rx.image(
                             src='/sibsp.png',
-                            class_name="p-4 rounded-2xl bg-black shadow-lg overflow-x-auto",
+                            class_name="p-4 rounded-2xl bg-black shadow-lg mb-4",
+                        ),
+                        rx.text(
+                            "Referencias: [2][3] Análisis de variable SibSp utilizando Pandas y Matplotlib.",
+                            class_name="text-gray-400 text-sm mb-4 text-center italic",
                         ),
                         rx.image(
                             src='/parch.png',
-                            class_name="p-4 rounded-2xl bg-black shadow-lg overflow-x-auto mb-4",
+                            class_name="p-4 rounded-2xl bg-black shadow-lg mb-4",
+                        ),
+                        rx.text(
+                            "Referencias: [2][3] Análisis de variable Parch utilizando Pandas y Matplotlib.",
+                            class_name="text-gray-400 text-sm mb-4 text-center italic",
                         ),
                         rx.text(
                             'Podemos concluir que la estructura familiar tuvo una influencia moderada en las probabilidades de supervivencia. Las personas que viajaban con un número pequeño de familiares (1-3) mostraron tasas de supervivencia más altas que aquellas que viajaban solas o con familias numerosas.\n\nSin embargo, esta variable por sí sola no es determinante. Las amplias barras de error en los gráficos indican una gran variabilidad, sugiriendo que otros factores como el género, la clase social y la edad probablemente jugaron un papel más decisivo',
@@ -449,7 +461,11 @@ def part3() -> rx.Component:
                         ),
                         rx.image(
                             src='/fare.png',
-                            class_name="p-4 rounded-2xl bg-black shadow-lg overflow-x-auto mb-4",
+                            class_name="p-4 rounded-2xl bg-black shadow-lg mb-4",
+                        ),
+                        rx.text(
+                            "Referencias: [2][3][6] Análisis de tarifas utilizando Pandas, Matplotlib y Seaborn.",
+                            class_name="text-gray-400 text-sm mb-4 text-center italic",
                         ),
                         rx.text(
                             "El análisis muestra una clara correlación entre el precio del boleto y la supervivencia. Los datos revelan:",
@@ -491,7 +507,7 @@ def part3() -> rx.Component:
                             class_name="text-purple-200 mb-4",
                         ),
                         rx.text(
-                            "El conjunto de datos presenta valores faltantes en tres variables importantes: edad, cabina y bote salvavidas. Para manejar estos datos faltantes:\n\n"
+                            "El conjunto de datos presenta valores faltantes en tres variables importantes: edad, cabina y bote salvavidas. Para manejar estos datos faltantes [2][5][7]:\n\n"
                             "Para la edad, utilizamos la media como método de imputación. Esta decisión se basa en que la media es un estimador robusto que representa el valor típico de la edad de los pasajeros, minimizando el impacto en las distribuciones estadísticas y manteniendo la estructura general de los datos de edad.\n\n"
                             "En el caso de las cabinas (que son identificadores alfanuméricos que indican la ubicación del pasajero en el barco), creamos categorías especiales para aquellos registros sin asignación. Esto nos permite mantener la integridad del análisis sin perder información sobre los pasajeros sin cabina asignada.\n\n"
                             "De manera similar, para los botes salvavidas, asignamos identificadores especiales a aquellos registros sin información, permitiendo incluir estos casos en el análisis general de la distribución y uso de los botes salvavidas.",
@@ -499,7 +515,11 @@ def part3() -> rx.Component:
                         ),
                         rx.image(
                             src='/meanclean.png',
-                            class_name="p-4 rounded-2xl bg-black shadow-lg overflow-x-auto mb-4",
+                            class_name="p-4 rounded-2xl bg-black shadow-lg mb-4",
+                        ),
+                        rx.text(
+                            "Referencias: [2][5][24] Limpieza de datos utilizando valores medios con Pandas y NumPy.",
+                            class_name="text-gray-400 text-sm mb-4 text-center italic",
                         ),
                         rx.heading(
                             "Compresion de graficas y analisis de supervivencia",
@@ -517,11 +537,11 @@ def part3() -> rx.Component:
                         ),
                         rx.image(
                             src='/cakeage.png',
-                            class_name="p-4 rounded-2xl bg-black shadow-lg overflow-x-auto mb-4",
+                            class_name="p-4 rounded-2xl bg-black shadow-lg mb-4",
                         ),
                         rx.text(
-                            "Este grafico de pastel muestra la poblacion del barco diferenciacion sus edades",
-                            class_name="text-gray-200 mb-4",
+                            "Referencias: [2][3] Gráfico de pastel para distribución de edades creado con Matplotlib y Pandas.",
+                            class_name="text-gray-400 text-sm mb-4 text-center italic",
                         ),
                         rx.heading(
                             "Intervalo de confianza para encontrar la edad promedio",
@@ -530,7 +550,11 @@ def part3() -> rx.Component:
                         ),
                         rx.image(
                             src='/confidentage.png',
-                            class_name="p-4 rounded-2xl bg-black shadow-lg overflow-x-auto mb-4",
+                            class_name="p-4 rounded-2xl bg-black shadow-lg mb-4",
+                        ),
+                        rx.text(
+                            "Referencias: [2][18][25] Intervalos de confianza para edad utilizando SciPy y Pandas.",
+                            class_name="text-gray-400 text-sm mb-4 text-center italic",
                         ),
                         rx.vstack(
                             rx.text(
@@ -560,8 +584,11 @@ def part3() -> rx.Component:
 
                         rx.image(
                             src='/survivors.png',
-                            class_name="p-4 rounded-2xl bg-black shadow-lg overflow-x-auto mb-4",
-
+                            class_name="p-4 rounded-2xl bg-black shadow-lg mb-4",
+                        ),
+                        rx.text(
+                            "Referencias: [2][3][6] Análisis de supervivencia por género utilizando Pandas, Matplotlib y Seaborn.",
+                            class_name="text-gray-400 text-sm mb-4 text-center italic",
                         ),
                         rx.text(
                             "El análisis revela que las mujeres tenían una tasa de supervivencia significativamente más alta que los hombres. "
@@ -579,7 +606,11 @@ def part3() -> rx.Component:
                         ),
                         rx.image(
                             src='/embark.png',
-                            class_name="p-4 rounded-2xl bg-black shadow-lg overflow-x-auto mb-4",
+                            class_name="p-4 rounded-2xl bg-black shadow-lg mb-4",
+                        ),
+                        rx.text(
+                            "Referencias: [2][3][6] Análisis de puertos de embarque utilizando Pandas, Matplotlib y Seaborn.",
+                            class_name="text-gray-400 text-sm mb-4 text-center italic",
                         ),
                         rx.heading(
                             "Prueba de hipotesis: El dataset es lo suficientemente grande para crear un modelo predictivo con precision del 70%?",
@@ -588,7 +619,7 @@ def part3() -> rx.Component:
                         ),
 
                         rx.text(
-                            "A la hora de entrenar nuestro modelo, vamos a plantear una prueba de hipótesis que nos permitirá determinar si la cantidad de datos es suficiente para obtener una precisión esperada del 70%. Para esto establecemos:",
+                            "A la hora de entrenar nuestro modelo, vamos a plantear una prueba de hipótesis [36][37] que nos permitirá determinar si la cantidad de datos es suficiente para obtener una precisión esperada del 70%. Para esto establecemos:",
                             class_name="text-gray-200 mb-4",
                         ),
                         rx.text(
@@ -609,7 +640,11 @@ def part3() -> rx.Component:
                         ),
                         rx.image(
                             src='/hypothesis.png',
-                            class_name="p-4 rounded-2xl bg-black shadow-lg overflow-x-auto mb-4",
+                            class_name="p-4 rounded-2xl bg-black shadow-lg mb-4",
+                        ),
+                        rx.text(
+                            "Referencias: [18][25][36] Prueba de hipótesis utilizando SciPy y métodos estadísticos.",
+                            class_name="text-gray-400 text-sm mb-4 text-center italic",
                         ),
                         rx.text(
                             "Teóricamente, el tamaño de la muestra no es lo suficientemente grande para obtener esa precisión esperada en terminos teoricos; "
@@ -776,7 +811,7 @@ def part3() -> rx.Component:
                             class_name="text-purple-200 mb-4",
                         ),
                         rx.text(
-                            "Para nuestro modelo, utilizamos una regresión logística, también conocida como función sigmoid. Esta técnica nos permite crear una clasificación de tipo binaria para obtener un resultado basado en una o más variables independientes. Las variables pasan por esta función y retornan un valor entre 0 y 1, donde los valores cercanos a 1 indican alta probabilidad de supervivencia, mientras que los valores cercanos a 0 indican baja probabilidad de supervivencia.",
+                            "Para nuestro modelo, utilizamos una regresión logística [25][26], también conocida como función sigmoid. Esta técnica nos permite crear una clasificación de tipo binaria para obtener un resultado basado en una o más variables independientes. Las variables pasan por esta función y retornan un valor entre 0 y 1, donde los valores cercanos a 1 indican alta probabilidad de supervivencia, mientras que los valores cercanos a 0 indican baja probabilidad de supervivencia.",
                             class_name="text-gray-200 mb-4",
                         ),
                         rx.text(
@@ -807,7 +842,7 @@ Esta función transforma cualquier valor de entrada en un rango entre 0 y 1, ide
                         ),
                         rx.vstack(
                             rx.text(
-                                "El problema del Titanic es una excelente introducción al mundo del machine learning, la ciencia de datos y la estadística. En este ejercicio, aplicamos todas estas técnicas para predecir un suceso histórico real, dividiéndolo en tres etapas fundamentales:",
+                                "El problema del Titanic es una excelente introducción al mundo del machine learning, la ciencia de datos y la estadística [29][30]. En este ejercicio, aplicamos todas estas técnicas para predecir un suceso histórico real, dividiéndolo en tres etapas fundamentales:",
                                 class_name="text-gray-200 mb-4",
                             ),
                             rx.unordered_list(
@@ -823,7 +858,7 @@ Esta función transforma cualquier valor de entrada en un rango entre 0 y 1, ide
                             ),
                             rx.box(
                                 rx.unordered_list(
-                                    rx.list_item("Las mujeres y niños tuvieron mayor probabilidad de supervivencia", class_name="text-gray-200"),
+                                    rx.list_item("Las mujeres y niños tuvieron mayor probabilidad de supervivencia [46][49]", class_name="text-gray-200"),
                                     rx.list_item("El precio del pasaje influyó directamente en las posibilidades de salvarse", class_name="text-gray-200"),
                                     rx.list_item("La edad fue un factor determinante (siendo los muy jóvenes y ancianos más vulnerables)", class_name="text-gray-200"),
                                     rx.list_item("El puerto de embarque también jugó un papel significativo", class_name="text-gray-200"),

@@ -10,7 +10,7 @@ def part2() -> rx.Component:
     return rx.container(
         rx.color_mode.button(
             position="top-right", 
-            class_name="bg-yellow-500 text-black hover:bg-yellow-600 transition-colors px-4 py-2 rounded-lg"
+            class_name="bg-white text-black hover:bg-gray-200 transition-colors px-4 py-2 rounded-lg border-6 border-white-400 shadow-md"
         ),
         rx.vstack(
             rx.box(
@@ -153,7 +153,7 @@ def part2() -> rx.Component:
                     class_name="text-white mb-4",
                 ),
                 rx.text(
-                    "Existen varios tipos de medidas que nos sirven para darle sentido a valor a los datos sea desde el apartado basico como entender el promedio, como se desvian sus datos del centro y hasta que forma y comportamiento tienen ellos",
+                    "Existen varios tipos de medidas que nos sirven para darle sentido a valor a los datos sea desde el apartado basico como entender el promedio, como se desvian sus datos del centro y hasta que forma y comportamiento tienen ellos [33][34]",
                     style={"white-space": "pre-line"},
                     class_name="text-white mb-4",),
                     rx.table.root(
@@ -191,7 +191,7 @@ def part2() -> rx.Component:
 
                     ),
                     rx.text(
-                        "Las medidas de dispersión nos indican qué tan dispersos están los datos alrededor de su valor central. La desviación estándar, varianza y rango nos ayudan a entender la variabilidad de los datos.",
+                        "Las medidas de dispersión nos indican qué tan dispersos están los datos alrededor de su valor central [35][37]. La desviación estándar, varianza y rango nos ayudan a entender la variabilidad de los datos.",
                         style={"white-space": "pre-line"},
                         class_name="text-white mb-4",
                     ),
@@ -234,7 +234,7 @@ def part2() -> rx.Component:
                         class_name="text-white mb-4 pt-4",
                     ),
                     rx.text(
-                        "Las medidas de forma nos indican la asimetría y la forma de la distribución de los datos. La asimetría nos dice si los datos están sesgados hacia un lado, mientras que la curtosis nos indica la 'altura' de la distribución.",
+                        "Las medidas de forma nos indican la asimetría y la forma de la distribución de los datos [34][35]. La asimetría nos dice si los datos están sesgados hacia un lado, mientras que la curtosis nos indica la 'altura' de la distribución.",
                         style={"white-space": "pre-line"},
                         class_name="text-white mb-4",
                     ),
@@ -267,13 +267,17 @@ def part2() -> rx.Component:
                         class_name="text-white mb-4 pt-4",
                     ),
                     rx.text(
-                        "El histograma es una representación gráfica de los datos a traves del tiempo y poder evidenciar como es la distribucion de los datos",
+                        "El histograma es una representación gráfica de los datos a traves del tiempo y poder evidenciar como es la distribucion de los datos [41][43]",
                         style={"white-space": "pre-line"},
                         class_name="text-white mb-4",
                     ),
                     rx.image(
                         src='/histogram2.png',
-                        class_name="p-4 rounded-2xl bg-black shadow-lg overflow-x-auto",
+                        class_name="p-4 rounded-2xl bg-black shadow-lg mb-4",
+                    ),
+                    rx.text(
+                        "Referencias: [3][9] Histograma creado con Matplotlib para visualizar la distribución de datos.",
+                        class_name="text-gray-400 text-sm mb-4 text-center italic",
                     ),
 
                     rx.heading(
@@ -282,13 +286,17 @@ def part2() -> rx.Component:
                         class_name="text-white mb-4 pt-4",
                     ),
                     rx.text(
-                        "El grafico de dispersion nos permite ver por encima la distribucion de los datos , datos atipicos y encontrar que tipo de correlacion existe entre las variables que se estan analizando",
+                        "El grafico de dispersion nos permite ver por encima la distribucion de los datos, datos atipicos y encontrar que tipo de correlacion existe entre las variables que se estan analizando [42][44]",
                         style={"white-space": "pre-line"},
                         class_name="text-white mb-4",
                     ),
                     rx.image(
                         src='/scatter.png',
-                        class_name="p-4 rounded-2xl bg-black shadow-lg overflow-x-auto",
+                        class_name="p-4 rounded-2xl bg-black shadow-lg mb-4",
+                    ),
+                    rx.text(
+                        "Referencias: [3][10] Gráfico de dispersión creado con Matplotlib para visualizar la correlación.",
+                        class_name="text-gray-400 text-sm mb-4 text-center italic",
                     ),
                     rx.heading(
                         "B) El coeficiente de correlación",
@@ -296,7 +304,7 @@ def part2() -> rx.Component:
                         class_name="text-white mb-4 pt-4",
                     ),
                     rx.text(
-                        "El coeficiente de correlación es una medida estadística que indica la fuerza y dirección de la relación lineal entre dos variables. Varía entre -1 y 1, donde 1 indica una correlación positiva perfecta, -1 una correlación negativa perfecta y 0 ninguna correlación.",
+                        "El coeficiente de correlación es una medida estadística que indica la fuerza y dirección de la relación lineal entre dos variables [16][21]. Varía entre -1 y 1, donde 1 indica una correlación positiva perfecta, -1 una correlación negativa perfecta y 0 ninguna correlación.",
                         style={"white-space": "pre-line"},
                         class_name="text-white mb-4",
                     ),
@@ -336,7 +344,7 @@ def part2() -> rx.Component:
                         class_name="text-white mb-4 pt-4",
                     ),
                     rx.text(
-                        "Existen varios tipos de modelos de regresion que nos pueden servir para desarollar este proyecto , todo depende del tipo de datos que se tienen , la cantidad de variables , el peso de estas para la prediccion entre muchas otras caracteristicas. En este caso a pesar de plantear 3 tipos de modelo de regresion , la regresion lineal es la que mejor se adapta a los datos y el comportamiento de estos, ridge y lasso nos darian el mismo rendimiento pues las condiciones para estos no son las indicadas y el R2 nos da igual en los 3 casos",
+                        "Existen varios tipos de modelos de regresion que nos pueden servir para desarollar este proyecto [17][18][19], todo depende del tipo de datos que se tienen, la cantidad de variables, el peso de estas para la prediccion entre muchas otras caracteristicas. En este caso a pesar de plantear 3 tipos de modelo de regresion, la regresion lineal es la que mejor se adapta a los datos y el comportamiento de estos, ridge y lasso nos darian el mismo rendimiento pues las condiciones para estos no son las indicadas y el R2 nos da igual en los 3 casos",
                         style={"white-space": "pre-line"},
                         class_name="text-white mb-4",
                     ),
@@ -361,13 +369,17 @@ def part2() -> rx.Component:
                         class_name="text-white mb-4 pt-4",
                     ),
                     rx.text(
-                        "La estandarización es un proceso que transforma los datos para que tengan una media de 0 y una desviación estándar de 1. Esto es útil para comparar variables que están en diferentes escalas o unidades. ayuda bastante a la hora de alimentar nuestro modelo o regresion haciendo los datos mas pequeños y disminuir el tiempo de entreno",
+                        "La estandarización es un proceso que transforma los datos para que tengan una media de 0 y una desviación estándar de 1 [20][39]. Esto es útil para comparar variables que están en diferentes escalas o unidades. ayuda bastante a la hora de alimentar nuestro modelo o regresion haciendo los datos mas pequeños y disminuir el tiempo de entreno",
                         style={"white-space": "pre-line"},
                         class_name="text-white mb-4",
                     ),
                     rx.image(
                         src='/standardDataset.png',
-                        class_name="p-4 rounded-2xl bg-black shadow-lg overflow-x-auto",
+                        class_name="p-4 rounded-2xl bg-black shadow-lg mb-4",
+                    ),
+                    rx.text(
+                        "Referencias: [2][5] Estandarización de datos utilizando NumPy y Pandas.",
+                        class_name="text-gray-400 text-sm mb-4 text-center italic",
                     ),
                     rx.heading(
                         "Implementacion de regresion lineal",
@@ -375,7 +387,7 @@ def part2() -> rx.Component:
                         class_name="text-white mb-4 pt-4",
                     ),
                     rx.text(
-                        "Ahora ya encontramos el tipo de regresion adecuada para el conjunto de datos , gracias a ello podemos crear una regresion lineal que permitira hacer una prediccion dada una variable indepediente",
+                        "Ahora ya encontramos el tipo de regresion adecuada para el conjunto de datos [4][21], gracias a ello podemos crear una regresion lineal que permitira hacer una prediccion dada una variable indepediente",
                         style={"white-space": "pre-line"},
                         class_name="text-white mb-4",
 
@@ -401,7 +413,7 @@ def part2() -> rx.Component:
                         class_name="text-white mb-4 pt-4",
                     ),
                     rx.text(
-                        "Vamos a entrenar nuestro modelo utilizando aproximadamente un 70% para los datos de entreno y un 30% para los datos de testeo, esto nos permitira ver si el modelo es capaz de predecir los datos que no ha visto antes , ademas de visualizar el peso y sesgo del modelo",
+                        "Vamos a entrenar nuestro modelo utilizando aproximadamente un 70% para los datos de entreno y un 30% para los datos de testeo [27][28], esto nos permitira ver si el modelo es capaz de predecir los datos que no ha visto antes, ademas de visualizar el peso y sesgo del modelo",
                         style={"white-space": "pre-line"},
                         class_name="text-white mb-4",
                     ),
@@ -420,7 +432,7 @@ def part2() -> rx.Component:
                     ),
 
                     rx.text(
-                        "Existen varias metricas para evaluar nuestro rendimiento del modelo , en este caso usaremos el error cuadratico medio , el coeficiente de determinacion y la raiz del error cuadratico medio",
+                        "Existen varias metricas para evaluar nuestro rendimiento del modelo [21][29], en este caso usaremos el error cuadratico medio, el coeficiente de determinacion y la raiz del error cuadratico medio",
                         style={"white-space": "pre-line"},
                         class_name="text-white mb-4",
                     ),
@@ -458,7 +470,7 @@ def part2() -> rx.Component:
                         class_name="text-white mb-4 pt-6",
                     ),
                     rx.text(
-                        "La validación del modelo es un paso crucial para determinar si un modelo de regresión lineal es adecuado para los datos. Esta validación incluye verificar los supuestos del modelo, realizar pruebas de hipótesis para los parámetros, construir intervalos de confianza y analizar los residuos.",
+                        "La validación del modelo es un paso crucial para determinar si un modelo de regresión lineal es adecuado para los datos [22][23]. Esta validación incluye verificar los supuestos del modelo, realizar pruebas de hipótesis para los parámetros, construir intervalos de confianza y analizar los residuos.",
                         style={"white-space": "pre-line"},
                         class_name="text-white mb-4",
                     ),
@@ -522,7 +534,7 @@ La pendiente del modelo es SIGNIFICATIVA, lo que indica que EXISTE una relación
                         class_name="text-white mb-4 pt-4",
                     ),
                     rx.text(
-                        "El análisis visual de los residuos es fundamental para verificar los supuestos del modelo de regresión lineal. A continuación se presentan gráficos que nos ayudan a evaluar dichos supuestos:",
+                        "El análisis visual de los residuos es fundamental para verificar los supuestos del modelo de regresión lineal [3][6][8]. A continuación se presentan gráficos que nos ayudan a evaluar dichos supuestos:",
                         style={"white-space": "pre-line"},
                         class_name="text-white mb-4",
                     ),
@@ -536,13 +548,17 @@ La pendiente del modelo es SIGNIFICATIVA, lo que indica que EXISTE una relación
                                 class_name="text-white text-center font-bold mt-6"
                             ),
                             rx.text(
-                                "Este gráfico permite visualizar si los residuos se distribuyen de manera aleatoria alrededor de cero, lo que indicaría que el modelo es apropiado. Patrones en este gráfico pueden revelar problemas con el modelo.",
+                                "Este gráfico permite visualizar si los residuos se distribuyen de manera aleatoria alrededor de cero, lo que indicaría que el modelo es apropiado [44]. Patrones en este gráfico pueden revelar problemas con el modelo.",
                                 class_name="text-white mb-4 text-center"
                             ),
                             rx.image(
                                 src='/residuos_vs_ajustados.png',
                                 height="500px",
-                                class_name="p-4 rounded-2xl bg-black shadow-lg mb-8 object-contain",
+                                class_name="p-4 rounded-2xl bg-black shadow-lg mb-4 object-contain",
+                            ),
+                            rx.text(
+                                "Referencias: [3][13][19] Gráfico de residuos vs valores ajustados creado con Seaborn y Statsmodels.",
+                                class_name="text-gray-400 text-sm mb-4 text-center italic",
                             ),
                             
                             rx.heading(
@@ -551,13 +567,17 @@ La pendiente del modelo es SIGNIFICATIVA, lo que indica que EXISTE una relación
                                 class_name="text-white text-center font-bold mt-6"
                             ),
                             rx.text(
-                                "El gráfico Q-Q compara los cuantiles de los residuos con los cuantiles teóricos de una distribución normal. Si los puntos siguen aproximadamente la línea diagonal, los residuos siguen una distribución normal.",
+                                "El gráfico Q-Q compara los cuantiles de los residuos con los cuantiles teóricos de una distribución normal [13]. Si los puntos siguen aproximadamente la línea diagonal, los residuos siguen una distribución normal.",
                                 class_name="text-white mb-4 text-center"
                             ),
                             rx.image(
                                 src='/qq_residuos.png',
                                 height="500px",
-                                class_name="p-4 rounded-2xl bg-black shadow-lg mb-8 object-contain",
+                                class_name="p-4 rounded-2xl bg-black shadow-lg mb-4 object-contain",
+                            ),
+                            rx.text(
+                                "Referencias: [3][15] Gráfico Q-Q para evaluar normalidad de residuos creado con Matplotlib.",
+                                class_name="text-gray-400 text-sm mb-4 text-center italic",
                             ),
                             
                             rx.heading(
@@ -566,13 +586,17 @@ La pendiente del modelo es SIGNIFICATIVA, lo que indica que EXISTE una relación
                                 class_name="text-white text-center font-bold mt-6"
                             ),
                             rx.text(
-                                "El histograma muestra la distribución de los residuos. Idealmente, debería seguir una forma aproximadamente normal y centrada en cero, lo que indicaría que los errores del modelo son aleatorios.",
+                                "El histograma muestra la distribución de los residuos [43]. Idealmente, debería seguir una forma aproximadamente normal y centrada en cero, lo que indicaría que los errores del modelo son aleatorios.",
                                 class_name="text-white mb-4 text-center"
                             ),
                             rx.image(
                                 src='/histograma_residuos.png',
                                 height="500px",
-                                class_name="p-4 rounded-2xl bg-black shadow-lg mb-8 object-contain",
+                                class_name="p-4 rounded-2xl bg-black shadow-lg mb-4 object-contain",
+                            ),
+                            rx.text(
+                                "Referencias: [3][9] Histograma de residuos creado con Matplotlib para verificar la distribución de errores.",
+                                class_name="text-gray-400 text-sm mb-4 text-center italic",
                             ),
                             width="100%",
                             spacing="4",
@@ -593,7 +617,7 @@ La pendiente del modelo es SIGNIFICATIVA, lo que indica que EXISTE una relación
                         class_name="text-white mb-4 pt-6",
                     ),
                     rx.text(
-                        "En esta sección aplicaremos el modelo para realizar predicciones específicas, construir intervalos de predicción, optimizar la eficiencia energética y proporcionar recomendaciones concretas para la empresa.",
+                        "En esta sección aplicaremos el modelo para realizar predicciones específicas, construir intervalos de predicción, optimizar la eficiencia energética y proporcionar recomendaciones concretas para la empresa [16][21].",
                         style={"white-space": "pre-line"},
                         class_name="text-white mb-4",
                     ),
@@ -642,14 +666,18 @@ La velocidad de producción que minimiza el consumo energético por unidad produ
                         class_name="text-white mb-4 pt-4",
                     ),
                     rx.text(
-                        "El siguiente gráfico muestra la relación entre la velocidad de producción y la eficiencia energética (consumo por unidad producida). El punto marcado en rojo representa la velocidad óptima que minimiza el consumo energético por unidad.",
+                        "El siguiente gráfico muestra la relación entre la velocidad de producción y la eficiencia energética (consumo por unidad producida) [41][45]. El punto marcado en rojo representa la velocidad óptima que minimiza el consumo energético por unidad.",
                         style={"white-space": "pre-line"},
                         class_name="text-white mb-4",
                     ),
                     rx.image(
                         src='/eficiencia_vs_velocidad.png',
                         height="600px",
-                        class_name="p-4 rounded-2xl bg-black shadow-lg mb-8 object-contain",
+                        class_name="p-4 rounded-2xl bg-black shadow-lg mb-4 object-contain",
+                    ),
+                    rx.text(
+                        "Referencias: [3][4][21] Gráfico de eficiencia energética creado con Matplotlib y modelos de Scikit-learn.",
+                        class_name="text-gray-400 text-sm mb-8 text-center italic",
                     ),
 
                 class_name="p-8 rounded-2xl w-full bg-gradient-to-br from-black to-purple-800 shadow-lg overflow-x-auto",

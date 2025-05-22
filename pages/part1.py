@@ -63,7 +63,7 @@ def part1() -> rx.Component:
                         class_name="text-white mb-4",
                     ),
                     rx.text(
-                        "Se crea un dataset usando las librerías de numpy y pandas, estos nos generarán los datasets para este apartado. La columna Línea A (s) representa el tiempo que demora completar una operación en esta línea de operación para un producto, lo mismo con la columna Línea B (s). Siendo un total de 100 registros por cada línea de producción.",
+                        "Se crea un dataset usando las librerías de numpy [5] y pandas [2], estos nos generarán los datasets para este apartado. La columna Línea A (s) representa el tiempo que demora completar una operación en esta línea de operación para un producto, lo mismo con la columna Línea B (s). Siendo un total de 100 registros por cada línea de producción.",
                         class_name="text-white mb-8",
                     ),
                     rx.table.root(
@@ -135,7 +135,7 @@ def part1() -> rx.Component:
                         class_name="text-white mb-4",
                     ),
                     rx.text(
-                        "Las medidas de tendencia central nos ayudan a entender el valor central o típico de nuestros datos. La media nos da el promedio, la mediana el valor central y la moda el valor más frecuente.",
+                        "Las medidas de tendencia central nos ayudan a entender el valor central o típico de nuestros datos [9][33]. La media nos da el promedio, la mediana el valor central y la moda el valor más frecuente.",
                         class_name="text-white mb-4",
                     ),
                     rx.table.root(
@@ -176,7 +176,7 @@ def part1() -> rx.Component:
                         class_name="text-white mb-4",
                     ),
                     rx.text(
-                        "Las medidas de dispersión nos indican qué tan dispersos están los datos alrededor de su valor central. La desviación estándar, varianza y rango nos ayudan a entender la variabilidad de los datos.",
+                        "Las medidas de dispersión nos indican qué tan dispersos están los datos alrededor de su valor central [34]. La desviación estándar, varianza y rango nos ayudan a entender la variabilidad de los datos.",
                         class_name="text-white mb-4",
                     ),
                     rx.table.root(
@@ -223,7 +223,7 @@ def part1() -> rx.Component:
                         class_name="text-white mb-4",
                     ),
                     rx.text(
-                        "Las medidas de forma nos ayudan a entender la distribución de los datos. La asimetría nos indica si la distribución está sesgada hacia la izquierda o derecha, mientras que la curtosis nos dice qué tan puntiaguda o plana es la distribución.",
+                        "Las medidas de forma nos ayudan a entender la distribución de los datos [35]. La asimetría nos indica si la distribución está sesgada hacia la izquierda o derecha, mientras que la curtosis nos dice qué tan puntiaguda o plana es la distribución.",
                         class_name="text-white mb-4",
                     ),
                     rx.table.root(
@@ -260,7 +260,7 @@ def part1() -> rx.Component:
                         class_name="text-white mb-4 mt-8",
                     ),
                     rx.text(
-                        "Entender como se ven nuestros datos graficamente es parte fundamental en un analisis estadistico, aqui encontraremos el significado de las figuras y colores que le dan sentido a la estadistica",
+                        "Entender como se ven nuestros datos graficamente es parte fundamental en un analisis estadistico [41][43], aqui encontraremos el significado de las figuras y colores que le dan sentido a la estadistica",
                         class_name="text-white mb-4",
                     ),
                     rx.heading(
@@ -269,12 +269,16 @@ def part1() -> rx.Component:
                         class_name="text-white mb-4",
                     ),
                     rx.text(
-                        "Un histograma es una representación gráfica de la distribución de un conjunto de datos. Se utiliza para mostrar la frecuencia de los datos en intervalos específicos, lo que permite visualizar la forma de la distribución.",
+                        "Un histograma es una representación gráfica de la distribución de un conjunto de datos [44]. Se utiliza para mostrar la frecuencia de los datos en intervalos específicos, lo que permite visualizar la forma de la distribución.",
                         class_name="text-white mb-4",
                     ),
                     rx.image(
                         src='/histogram.png',
-                        class_name="p-4 rounded-2xl bg-black shadow-lg mb-8 w-full",
+                        class_name="p-4 rounded-2xl bg-black shadow-lg mb-4 w-full",
+                    ),
+                    rx.text(
+                        "Referencias: [3][9] Creado usando Matplotlib con funciones de histograma.",
+                        class_name="text-gray-400 text-sm mb-4 text-center italic",
                     ),
                     rx.heading(
                         "Grafico de boxplot",
@@ -282,12 +286,16 @@ def part1() -> rx.Component:
                         class_name="text-white mb-4 pt-4",
                     ),
                     rx.text(
-                        "Un boxplot es una representación gráfica que muestra la distribución de un conjunto de datos a través de sus cuartiles. Permite identificar la mediana, los cuartiles y valores de tipo outlier.",
+                        "Un boxplot es una representación gráfica que muestra la distribución de un conjunto de datos a través de sus cuartiles [3][6]. Permite identificar la mediana, los cuartiles y valores de tipo outlier.",
                         class_name="text-white mb-4",
                     ),
                     rx.image(
                         src='/box_plot.png',
-                        class_name="p-4 rounded-2xl bg-black shadow-lg mb-8 w-full",
+                        class_name="p-4 rounded-2xl bg-black shadow-lg mb-4 w-full",
+                    ),
+                    rx.text(
+                        "Referencias: [3][6][12] Creado usando Matplotlib y Seaborn para visualización de box plots.",
+                        class_name="text-gray-400 text-sm mb-4 text-center italic",
                     ),
                     rx.heading(
                         "Grafico de tallos y hojas",
@@ -295,12 +303,16 @@ def part1() -> rx.Component:
                         class_name="text-white mb-4 pt-4",
                     ),
                     rx.text(
-                        "El gráfico de tallos y hojas es un tipo de gráfico que permite ver la distribución de los datos manteniendo su orden original y su valor exacto, lo que lo hace especialmente útil para análisis exploratorios. A diferencia de otros gráficos como los histogramas, este conserva los valores individuales, permitiendo una inspección más precisa. Además, facilita la identificación de valores atípicos (outliers), la detección de la moda, y proporciona una visión clara de la simetría o asimetría en la distribución.",
+                        "El gráfico de tallos y hojas es un tipo de gráfico que permite ver la distribución de los datos manteniendo su orden original y su valor exacto [9][10], lo que lo hace especialmente útil para análisis exploratorios. A diferencia de otros gráficos como los histogramas, este conserva los valores individuales, permitiendo una inspección más precisa. Además, facilita la identificación de valores atípicos (outliers), la detección de la moda, y proporciona una visión clara de la simetría o asimetría en la distribución.",
                         class_name="text-white mb-4"
                     ),
                     rx.image(
                         src='/stem_comparison_tables.png',
-                        class_name="p-4 rounded-2xl bg-black shadow-lg mb-8 w-full",
+                        class_name="p-4 rounded-2xl bg-black shadow-lg mb-4 w-full",
+                    ),
+                    rx.text(
+                        "Referencias: [3][17] Creado usando Matplotlib con funciones de gráficos de tallos y hojas.",
+                        class_name="text-gray-400 text-sm mb-4 text-center italic",
                     ),
                     
                     # Identificar la distribución
@@ -310,7 +322,7 @@ def part1() -> rx.Component:
                         class_name="text-white mb-4 mt-8",
                     ),
                     rx.text(
-                        "Para identificar la distribución de los datos, se aplican pruebas de bondad de ajuste. Estas pruebas comparan la distribución observada con varias distribuciones teóricas para determinar cuál se ajusta mejor a los datos. En este caso, se aplicaron las pruebas de Kolmogorov-Smirnov (KS) para las distribuciones Normal, Exponencial y Weibull.",
+                        "Para identificar la distribución de los datos, se aplican pruebas de bondad de ajuste [13][14]. Estas pruebas comparan la distribución observada con varias distribuciones teóricas para determinar cuál se ajusta mejor a los datos. En este caso, se aplicaron las pruebas de Kolmogorov-Smirnov (KS) para las distribuciones Normal, Exponencial y Weibull.",
                         class_name="text-white mb-4",
                     ),
                     rx.table.root(
@@ -376,12 +388,16 @@ def part1() -> rx.Component:
                         class_name="bg-black mb-8 w-full",
                     ),
                     rx.text(
-                        "En la tabla anterior, se presentan los resultados de las pruebas de bondad de ajuste para las distribuciones Normal, Exponencial y Weibull. La columna 'Mejor ajuste' indica cuál distribución se ajusta mejor a los datos de cada línea de producción. Si el valor p es menor que el nivel de significancia (α = 0.05), se rechaza la hipótesis nula de que los datos siguen esa distribución.",
+                        "En la tabla anterior, se presentan los resultados de las pruebas de bondad de ajuste para las distribuciones Normal, Exponencial y Weibull [7][8]. La columna 'Mejor ajuste' indica cuál distribución se ajusta mejor a los datos de cada línea de producción. Si el valor p es menor que el nivel de significancia (α = 0.05), se rechaza la hipótesis nula de que los datos siguen esa distribución.",
                         class_name="text-white mb-4 font-bold"
                     ),
                     rx.image(
                         src='/Línea_A_dist_fit.png',
-                        class_name="p-4 rounded-2xl bg-black shadow-lg mb-8 w-full",
+                        class_name="p-4 rounded-2xl bg-black shadow-lg mb-4 w-full",
+                    ),
+                    rx.text(
+                        "Referencias: [3][18] Ajuste de distribución usando SciPy y visualización con Matplotlib.",
+                        class_name="text-gray-400 text-sm mb-4 text-center italic",
                     ),
                     rx.text(
                         "Se muestra el gráfico de la Línea A con la distribución Normal superpuesta. La línea azul representa la distribución Normal ajustada a los datos de la Línea A. Se observa que la distribución Normal se ajusta bastante bien a los datos.",
@@ -389,7 +405,11 @@ def part1() -> rx.Component:
                     ),
                     rx.image(
                         src='/Línea_B_dist_fit.png',
-                        class_name="p-4 rounded-2xl bg-black shadow-lg mb-8 w-full",
+                        class_name="p-4 rounded-2xl bg-black shadow-lg mb-4 w-full",
+                    ),
+                    rx.text(
+                        "Referencias: [3][18] Ajuste de distribución usando SciPy y visualización con Matplotlib.",
+                        class_name="text-gray-400 text-sm mb-4 text-center italic",
                     ),
                     rx.text(
                         "En el gráfico de la Línea B con la distribución Normal y weibull superpuesta. La línea azul representa la distribución Normal ajustada a los datos de la Línea B.",
@@ -452,7 +472,7 @@ def part1() -> rx.Component:
                         class_name="text-white mb-4 pl-6",
                     ),
                     rx.text(
-                        "Con base en estos resultados, podemos concluir que la Línea B presenta un mejor desempeño operativo en términos de tiempos de ciclo. La menor variabilidad y el tiempo promedio más bajo en la Línea B sugieren que podría ser beneficioso analizar qué factores contribuyen a su mejor rendimiento para potencialmente implementarlos también en la Línea A y mejorar su eficiencia.",
+                        "Con base en estos resultados, podemos concluir que la Línea B presenta un mejor desempeño operativo en términos de tiempos de ciclo [11][12]. La menor variabilidad y el tiempo promedio más bajo en la Línea B sugieren que podría ser beneficioso analizar qué factores contribuyen a su mejor rendimiento para potencialmente implementarlos también en la Línea A y mejorar su eficiencia.",
                         class_name="text-white mb-4 font-bold",
                     ),
                     rx.heading(
@@ -461,7 +481,7 @@ def part1() -> rx.Component:
                         class_name="text-white mb-4 mt-8",
                     ),
                     rx.text(
-                        "Los intervalos de confianza al 95% para las medias de las líneas A y B son los siguientes:",
+                        "Los intervalos de confianza al 95% para las medias de las líneas A y B son los siguientes [36]:",
                         class_name="text-white mb-4",
                     ),
                     rx.text(
@@ -484,7 +504,7 @@ def part1() -> rx.Component:
                         class_name="text-white mb-4 mt-8",
                     ),
                     rx.text(
-                        "Para determinar si existe una diferencia estadísticamente significativa entre los tiempos medios de ciclo de ambas líneas de producción, se realizó una prueba t de Student para muestras independientes (también conocida como prueba t de Welch, ya que las varianzas son diferentes).",
+                        "Para determinar si existe una diferencia estadísticamente significativa entre los tiempos medios de ciclo de ambas líneas de producción, se realizó una prueba t de Student para muestras independientes [33][35] (también conocida como prueba t de Welch, ya que las varianzas son diferentes).",
                         class_name="text-white mb-4",
                     ),
                     rx.text(
@@ -531,7 +551,7 @@ def part1() -> rx.Component:
                         class_name="text-white mb-4 pl-6",
                     ),
                     rx.text(
-                        "Esta prueba nos permite tomar decisiones basadas en evidencia estadística sobre si las diferencias observadas en los tiempos de ciclo son significativas o podrían deberse al azar. Los resultados tienen importantes implicaciones para la gestión del proceso, ya que nos ayudan a identificar si una línea de producción es significativamente más eficiente que la otra.",
+                        "Esta prueba nos permite tomar decisiones basadas en evidencia estadística sobre si las diferencias observadas en los tiempos de ciclo son significativas o podrían deberse al azar [36]. Los resultados tienen importantes implicaciones para la gestión del proceso, ya que nos ayudan a identificar si una línea de producción es significativamente más eficiente que la otra.",
                         class_name="text-white mb-4",
                     ),
                     
@@ -542,12 +562,16 @@ def part1() -> rx.Component:
                         class_name="text-white mb-4 mt-8",
                     ),
                     rx.image(
-                        src='/article_image.png',  # Asegúrate de guardar tu imagen con este nombre en la carpeta /assets
+                        src='/article_image.png',
                         height="300px",
-                        class_name="p-4 rounded-2xl bg-black shadow-lg mb-6 object-contain",
+                        class_name="p-4 rounded-2xl bg-black shadow-lg mb-4 object-contain",
                     ),
                     rx.text(
-                        "Se realizó una comparación de las técnicas estadísticas utilizadas en este análisis con las del artículo 'Design the Abnormal Object Detection System Using Template Matching and Subtract Background Algorithm', obtenido a través de la base de datos Springer de la universidad.",
+                        "Referencias: Artículo científico comparativo citado en el texto.",
+                        class_name="text-gray-400 text-sm mb-2 text-center italic",
+                    ),
+                    rx.text(
+                        "Se realizó una comparación de las técnicas estadísticas utilizadas en este análisis con las del artículo 'Design the Abnormal Object Detection System Using Template Matching and Subtract Background Algorithm' [15], obtenido a través de la base de datos Springer de la universidad.",
                         class_name="text-white mb-4",
                     ),
                     rx.heading(
@@ -602,7 +626,7 @@ def part1() -> rx.Component:
                         class_name="text-white mb-4 pl-6",
                     ),
                     rx.text(
-                        "Esta comparación ilustra cómo los principios estadísticos se aplican en diversos campos, aunque con adaptaciones específicas según el dominio de aplicación. Tanto nuestro análisis de procesos industriales como el sistema de detección de anomalías comparten fundamentos estadísticos, pero implementados de manera diferente según los objetivos específicos.",
+                        "Esta comparación ilustra cómo los principios estadísticos se aplican en diversos campos, aunque con adaptaciones específicas según el dominio de aplicación [38][39]. Tanto nuestro análisis de procesos industriales como el sistema de detección de anomalías comparten fundamentos estadísticos, pero implementados de manera diferente según los objetivos específicos.",
                         class_name="text-white mb-4",
                     ),
                     
