@@ -78,42 +78,106 @@ def part3() -> rx.Component:
                         class_name="w-full",
                     ),
                     
-                    # Problema 1: Identificador de infecciones en las hojas de plantas
+                    # Problema 1: Criptografía Estadística en Ciberseguridad
                     rx.box(
                         rx.heading(
-                            "Problema 1: Identificador de infecciones en hojas de plantas",
+                            "Problema 1: Criptografía Estadística en Ciberseguridad",
                             size="5",
                             class_name="text-purple-200 mb-3",
                         ),
                         rx.text(
-                            "El primero se trata de un identificador de infecciones en las hojas de plantas, "
-                            "mostrando que en las hojas existen 3 tipos:",
+                            "La criptografía moderna se sustenta en principios estadísticos y matemáticos que permiten proteger la información digital [29][55]. "
+                            "Los algoritmos criptográficos utilizan propiedades estadísticas para generar claves seguras y evaluar su resistencia frente a ataques.",
                             class_name="text-gray-200 mb-2",
                         ),
+                        rx.heading(
+                            "Fundamentos estadísticos en criptografía",
+                            size="6",
+                            class_name="text-gray-300 mb-2",
+                        ),
                         rx.unordered_list(
-                            rx.list_item("Infección tipo frijol con manchas con frijoles que contaminan a la planta"),
-                            rx.list_item("Infección tipo angular que sus figuras tienen una forma más característica"),
-                            rx.list_item("Plantas sanas que no tienen ninguna enfermedad alguna"),
+                            rx.list_item("Generación de números aleatorios y pseudoaleatorios [52][56]", class_name="text-gray-200"),
+                            rx.list_item("Análisis de frecuencia para romper cifrados simples [53]", class_name="text-gray-200"),
+                            rx.list_item("Pruebas estadísticas para validar la calidad de cifrados [52]", class_name="text-gray-200"),
+                            rx.list_item("Distribuciones de probabilidad en la generación de claves [50][51]", class_name="text-gray-200"),
+                            rx.list_item("Análisis de entropía para medir la fortaleza criptográfica [56]", class_name="text-gray-200"),
                             class_name="text-gray-200 mb-4 pl-6",
                         ),
                         rx.text(
-                            "Este problema ayudaría a que los agricultores primerizos puedan identificar "
-                            "cómo están sus plantas y cómo controlar las plagas.",
+                            "La criptografía asimétrica (RSA, ECC) depende de problemas matemáticamente difíciles como la factorización de números grandes "
+                            "o el logaritmo discreto. La seguridad de estos sistemas se basa en la distribución estadística de números primos y "
+                            "en la improbabilidad computacional de resolver ciertos problemas en tiempo polinómico [51][57].",
+                            class_name="text-gray-200 mb-3",
+                        ),
+                        rx.heading(
+                            "Aplicaciones de la estadística en ciberdefensa",
+                            size="6",
+                            class_name="text-gray-300 mb-2",
+                        ),
+                        rx.box(
+                            rx.text(
+                                "Visualización de propiedades estadísticas en criptografía",
+                                class_name="text-white font-bold text-center mb-2",
+                            ),
+                            rx.text(
+                                "• Distribuciones de frecuencia en datos cifrados vs. aleatorios",
+                                class_name="text-gray-200 mb-1",
+                            ),
+                            rx.text(
+                                "• Análisis de correlación entre texto plano y cifrado",
+                                class_name="text-gray-200 mb-1",
+                            ),
+                            rx.text(
+                                "• Medidas de entropía y aleatoriedad en secuencias cifradas",
+                                class_name="text-gray-200 mb-1",
+                            ),
+                            rx.text(
+                                "• Patrones estadísticos utilizados en criptoanálisis",
+                                class_name="text-gray-200 mb-1",
+                            ),
+                            class_name="p-6 bg-black rounded-2xl shadow-lg mb-4 border border-purple-500/30",
+                        ),
+                        rx.text(
+                            "Referencias: [52][56] Propiedades estadísticas del proceso de cifrado.",
+                            class_name="text-gray-400 text-sm mb-4 text-center italic",
+                        ),
+                        rx.text(
+                            "El análisis estadístico es fundamental en la detección de anomalías y ataques cibernéticos. "
+                            "Mediante la aplicación de pruebas de hipótesis, intervalos de confianza y análisis de regresión, "
+                            "los sistemas de seguridad pueden identificar patrones sospechosos y distinguirlos del tráfico normal [57][58].",
                             class_name="text-gray-200 mb-3",
                         ),
                         rx.text(
-                            "Sin embargo, no tiene un análisis estadístico tan grande que sirva como fruto "
-                            "de juntar varios conocimientos del curso.",
+                            "Un ejemplo concreto es el análisis estadístico del tiempo de ejecución (timing attacks), donde pequeñas "
+                            "variaciones en el tiempo de procesamiento pueden revelar información sobre claves privadas. "
+                            "Estos ataques se basan en análisis de varianza (ANOVA) y pruebas de correlación para extraer "
+                            "información sensible de sistemas criptográficos [50][55].",
+                            class_name="text-gray-200 mb-3",
+                        ),
+                        rx.heading(
+                            "Criptografía cuántica y estadística",
+                            size="6",
+                            class_name="text-gray-300 mb-2",
+                        ),
+                        rx.text(
+                            "La criptografía cuántica representa el futuro de la seguridad digital, utilizando principios de la mecánica cuántica "
+                            "como la superposición y el entrelazamiento. Los protocolos como QKD (Quantum Key Distribution) dependen de "
+                            "distribuciones estadísticas para detectar interceptaciones y garantizar la seguridad [51][57].",
+                            class_name="text-gray-200 mb-3",
+                        ),
+                        rx.text(
+                            "El análisis estadístico es esencial para garantizar que los sistemas criptográficos sean realmente seguros "
+                            "y resistentes a diversos tipos de ataques, desde fuerza bruta hasta criptoanálisis diferencial y lineal.",
                             class_name="text-gray-200 mb-3",
                         ),
                         rx.box(
                             rx.text(
-                                "Si deseas ver cómo se realizó, se usó Redes neuronales y clasificación binaria",
+                                "Para más información sobre análisis estadístico en ciberseguridad, consultar:",
                                 class_name="text-gray-200",
                             ),
                             rx.link(
-                                "Ver implementación",
-                                href="https://github.com/CrisHzz/CureMyLeaf", 
+                                "NIST Cryptographic Standards and Guidelines [58]",
+                                href="https://csrc.nist.gov/projects/cryptographic-standards-and-guidelines", 
                                 class_name="text-blue-300 hover:text-blue-200 transition-colors",
                             ),
                             class_name="p-4 bg-purple-900/30 rounded-xl border border-purple-500/30 mb-8",
