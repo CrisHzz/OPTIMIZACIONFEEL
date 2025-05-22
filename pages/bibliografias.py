@@ -139,10 +139,7 @@ def bibliografias() -> rx.Component:
                         class_name="text-purple-300 mb-4 mt-6",
                     ),
                     rx.box(
-                        rx.text("[27] D. C. Montgomery, \"Introduction to Statistical Quality Control,\" Wiley, 2012.", class_name="text-white mb-2"),
-                        
-                        rx.text("[29] J. S. Oakland, \"Statistical Process Control,\" Routledge, 2007.", class_name="text-white mb-2"),
-                        
+                                                
                         rx.text("[32] G. Casella and R. L. Berger, \"Statistical Inference,\" Cengage Learning, 2001.", class_name="text-white mb-2"),
                         
                         rx.text("[33] J. Rice, \"Mathematical Statistics and Data Analysis,\" Cengage Learning, 2006.", class_name="text-white mb-2"),
@@ -170,9 +167,7 @@ def bibliografias() -> rx.Component:
                         rx.text("[42] Kaggle, \"Titanic - Machine Learning from Disaster,\" 2012. [Online]. Available: https://www.kaggle.com/c/titanic", class_name="text-white mb-2"),
                         
                         rx.text("[43] D. W. Hosmer and S. Lemeshow, \"Applied Logistic Regression,\" Wiley, 2000.", class_name="text-white mb-2"),
-                        
-                        rx.text("[44] T. Fawcett, \"An Introduction to ROC Analysis,\" Pattern Recognition Letters, 2006.", class_name="text-white mb-2"),
-                        
+                                                
                         rx.text("[47] S. Raschka and V. Mirjalili, \"Python Machine Learning,\" Packt Publishing, 2019.", class_name="text-white mb-2"),
                         
                         rx.text("[48] The British Wreck Commissioner's Inquiry, \"Report on the Loss of the 'Titanic' (S.S.),\" Her Majesty's Stationery Office, 1912.", class_name="text-white mb-2"),

@@ -124,6 +124,10 @@ def part1() -> rx.Component:
                         variant="surface",
                         class_name="bg-black mb-8 w-full",
                     ),
+                    rx.text(
+                        "Referencias: [2][5][33] Creado usando pandas con funciones de estadistica.",
+                        class_name="text-gray-400 text-sm mb-4 text-center italic",
+                    ),
                     rx.heading(
                         "A) Analisis descriptivo y visualizacion de datos",
                         size="7",
@@ -135,7 +139,7 @@ def part1() -> rx.Component:
                         class_name="text-white mb-4",
                     ),
                     rx.text(
-                        "Las medidas de tendencia central nos ayudan a entender el valor central o típico de nuestros datos [9][33]. La media nos da el promedio, la mediana el valor central y la moda el valor más frecuente.",
+                        "Las medidas de tendencia central nos ayudan a entender el valor central o típico de nuestros datos [33][34]. La media nos da el promedio, la mediana el valor central y la moda el valor más frecuente.",
                         class_name="text-white mb-4",
                     ),
                     rx.table.root(
@@ -169,6 +173,10 @@ def part1() -> rx.Component:
                         ),
                         variant="surface",
                         class_name="bg-black mb-4 w-full",
+                    ),
+                    rx.text(
+                        "Referencias: [2][33] Creado usando pandas con funciones de estadistica.",
+                        class_name="text-gray-400 text-sm mb-4 text-center italic",
                     ),
                     rx.heading(
                         "Medidas de dispersión",
@@ -217,13 +225,17 @@ def part1() -> rx.Component:
                         variant="surface",
                         class_name="bg-black mb-8 w-full",
                     ),
+                    rx.text(
+                        "Referencias: [2][33] Creado usando pandas con funciones de estadistica.",
+                        class_name="text-gray-400 text-sm mb-4 text-center italic",
+                    ),
                     rx.heading(
                         "Medidas de forma",
                         size="5",
                         class_name="text-white mb-4",
                     ),
                     rx.text(
-                        "Las medidas de forma nos ayudan a entender la distribución de los datos [35]. La asimetría nos indica si la distribución está sesgada hacia la izquierda o derecha, mientras que la curtosis nos dice qué tan puntiaguda o plana es la distribución.",
+                        "Las medidas de forma nos ayudan a entender la distribución de los datos [33][34]. La asimetría nos indica si la distribución está sesgada hacia la izquierda o derecha, mientras que la curtosis nos dice qué tan puntiaguda o plana es la distribución.",
                         class_name="text-white mb-4",
                     ),
                     rx.table.root(
@@ -249,8 +261,13 @@ def part1() -> rx.Component:
                                 rx.table.cell("0.03", class_name="text-white"),
                             ),
                         ),
+
                         variant="surface",
                         class_name="bg-black mb-8 w-full",
+                    ),
+                    rx.text(
+                        "Referencias: [2][33] Creado usando pandas con funciones de estadistica.",
+                        class_name="text-gray-400 text-sm mb-4 text-center italic",
                     ),
                     
                     # Gráficos
@@ -260,7 +277,7 @@ def part1() -> rx.Component:
                         class_name="text-white mb-4 mt-8",
                     ),
                     rx.text(
-                        "Entender como se ven nuestros datos graficamente es parte fundamental en un analisis estadistico [41][43], aqui encontraremos el significado de las figuras y colores que le dan sentido a la estadistica",
+                        "Entender como se ven nuestros datos graficamente es parte fundamental en un analisis estadistico [33][34], aqui encontraremos el significado de las figuras y colores que le dan sentido a la estadistica",
                         class_name="text-white mb-4",
                     ),
                     rx.heading(
@@ -286,7 +303,7 @@ def part1() -> rx.Component:
                         class_name="text-white mb-4 pt-4",
                     ),
                     rx.text(
-                        "Un boxplot es una representación gráfica que muestra la distribución de un conjunto de datos a través de sus cuartiles [3][6]. Permite identificar la mediana, los cuartiles y valores de tipo outlier.",
+                        "Un boxplot es una representación gráfica que muestra la distribución de un conjunto de datos a través de sus cuartiles [3][6][33]. Permite identificar la mediana, los cuartiles y valores de tipo outlier.",
                         class_name="text-white mb-4",
                     ),
                     rx.image(
@@ -303,7 +320,7 @@ def part1() -> rx.Component:
                         class_name="text-white mb-4 pt-4",
                     ),
                     rx.text(
-                        "El gráfico de tallos y hojas es un tipo de gráfico que permite ver la distribución de los datos manteniendo su orden original y su valor exacto [9][10], lo que lo hace especialmente útil para análisis exploratorios. A diferencia de otros gráficos como los histogramas, este conserva los valores individuales, permitiendo una inspección más precisa. Además, facilita la identificación de valores atípicos (outliers), la detección de la moda, y proporciona una visión clara de la simetría o asimetría en la distribución.",
+                        "El gráfico de tallos y hojas es un tipo de gráfico que permite ver la distribución de los datos manteniendo su orden original y su valor exacto [17][33], lo que lo hace especialmente útil para análisis exploratorios. A diferencia de otros gráficos como los histogramas, este conserva los valores individuales, permitiendo una inspección más precisa. Además, facilita la identificación de valores atípicos (outliers), la detección de la moda, y proporciona una visión clara de la simetría o asimetría en la distribución.",
                         class_name="text-white mb-4"
                     ),
                     rx.image(
@@ -387,6 +404,7 @@ def part1() -> rx.Component:
                         variant="surface",
                         class_name="bg-black mb-8 w-full",
                     ),
+                    
                     rx.text(
                         "En la tabla anterior, se presentan los resultados de las pruebas de bondad de ajuste para las distribuciones Normal, Exponencial y Weibull [7][8]. La columna 'Mejor ajuste' indica cuál distribución se ajusta mejor a los datos de cada línea de producción. Si el valor p es menor que el nivel de significancia (α = 0.05), se rechaza la hipótesis nula de que los datos siguen esa distribución.",
                         class_name="text-white mb-4 font-bold"

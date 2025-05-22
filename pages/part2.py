@@ -136,9 +136,15 @@ def part2() -> rx.Component:
                             rx.table.cell("126.6", class_name="text-white")
                         )
                     ),
+                    
                     variant="surface",
                     class_name="bg-black",
+                    
                 ),
+                rx.text(
+                        "Referencias: Brindados por la actividad",
+                        class_name="text-gray-400 text-sm mb-4 text-center italic",
+                    ),
                 class_name="p-8 rounded-2xl w-full bg-gradient-to-br from-black to-purple-800 shadow-lg overflow-x-auto",
             ),
             rx.box(
@@ -184,6 +190,10 @@ def part2() -> rx.Component:
                         variant="surface",
                         class_name="bg-black",
                     ),
+                    rx.text(
+                        "Referencias: [2][5] Tabla creada con numpy y matplotlib.",
+                        class_name="text-gray-400 text-sm mb-4 text-center italic",
+                    ),
                     rx.heading(
                         "Medidas de dispersión",
                         size="6",
@@ -225,8 +235,13 @@ def part2() -> rx.Component:
                                 rx.table.cell("0.106", class_name="text-white")
                             )
                         ),
+                        
                         variant="surface",
                         class_name="bg-black",
+                    ),
+                    rx.text(
+                        "Referencias: [2][5] Tabla creada con numpy y matplotlib.",
+                        class_name="text-gray-400 text-sm mb-4 text-center italic",
                     ),
                     rx.heading(
                         "Medidas de forma",
@@ -258,8 +273,13 @@ def part2() -> rx.Component:
                                 rx.table.cell("-0.547", class_name="text-white")
                             )
                         ),
+                        
                         variant="surface",
                         class_name="bg-black",
+                    ),
+                    rx.text(
+                        "Referencias: [2][5] Tabla creada con numpy y matplotlib.",
+                        class_name="text-gray-400 text-sm mb-4 text-center italic",
                     ),
                     rx.heading(
                         "Grafico de histograma",
@@ -267,7 +287,7 @@ def part2() -> rx.Component:
                         class_name="text-white mb-4 pt-4",
                     ),
                     rx.text(
-                        "El histograma es una representación gráfica de los datos a traves del tiempo y poder evidenciar como es la distribucion de los datos [41][43]",
+                        "El histograma es una representación gráfica de los datos a traves del tiempo y poder evidenciar como es la distribucion de los datos [33][34]",
                         style={"white-space": "pre-line"},
                         class_name="text-white mb-4",
                     ),
@@ -286,7 +306,7 @@ def part2() -> rx.Component:
                         class_name="text-white mb-4 pt-4",
                     ),
                     rx.text(
-                        "El grafico de dispersion nos permite ver por encima la distribucion de los datos, datos atipicos y encontrar que tipo de correlacion existe entre las variables que se estan analizando [42][44]",
+                        "El grafico de dispersion nos permite ver por encima la distribucion de los datos, datos atipicos y encontrar que tipo de correlacion existe entre las variables que se estan analizando [33][34]",
                         style={"white-space": "pre-line"},
                         class_name="text-white mb-4",
                     ),
@@ -304,7 +324,7 @@ def part2() -> rx.Component:
                         class_name="text-white mb-4 pt-4",
                     ),
                     rx.text(
-                        "El coeficiente de correlación es una medida estadística que indica la fuerza y dirección de la relación lineal entre dos variables [16][21]. Varía entre -1 y 1, donde 1 indica una correlación positiva perfecta, -1 una correlación negativa perfecta y 0 ninguna correlación.",
+                        "El coeficiente de correlación es una medida estadística que indica la fuerza y dirección de la relación lineal entre dos variables [21][33][43]. Varía entre -1 y 1, donde 1 indica una correlación positiva perfecta, -1 una correlación negativa perfecta y 0 ninguna correlación.",
                         style={"white-space": "pre-line"},
                         class_name="text-white mb-4",
                     ),
@@ -333,6 +353,10 @@ def part2() -> rx.Component:
                         class_name="bg-black text-white p-4 rounded-lg my-4 w-full overflow-auto font-mono",
                         style={"white-space": "pre-line"},
                     ),
+                    rx.text(
+                        "Referencias: [7][25][32] ",
+                        class_name="text-gray-400 text-sm mb-4 text-center italic",
+                    ),
                     rx.heading(
                         "C) Regresión lineal simple",
                         size="7",
@@ -344,7 +368,7 @@ def part2() -> rx.Component:
                         class_name="text-white mb-4 pt-4",
                     ),
                     rx.text(
-                        "Existen varios tipos de modelos de regresion que nos pueden servir para desarollar este proyecto [17][18][19], todo depende del tipo de datos que se tienen, la cantidad de variables, el peso de estas para la prediccion entre muchas otras caracteristicas. En este caso a pesar de plantear 3 tipos de modelo de regresion, la regresion lineal es la que mejor se adapta a los datos y el comportamiento de estos, ridge y lasso nos darian el mismo rendimiento pues las condiciones para estos no son las indicadas y el R2 nos da igual en los 3 casos",
+                        "Existen varios tipos de modelos de regresion que nos pueden servir para desarollar este proyecto [33][42][21], todo depende del tipo de datos que se tienen, la cantidad de variables, el peso de estas para la prediccion entre muchas otras caracteristicas. En este caso a pesar de plantear 3 tipos de modelo de regresion, la regresion lineal es la que mejor se adapta a los datos y el comportamiento de estos, ridge y lasso nos darian el mismo rendimiento pues las condiciones para estos no son las indicadas y el R2 nos da igual en los 3 casos",
                         style={"white-space": "pre-line"},
                         class_name="text-white mb-4",
                     ),
@@ -363,13 +387,17 @@ def part2() -> rx.Component:
                         class_name="bg-black text-white p-4 rounded-lg my-4 w-full overflow-auto font-mono",
                         style={"white-space": "pre-line"},
                     ),
+                    rx.text(
+                        "Referencias: [2][21][4][47] Evaluación de modelos de regresión lineal, Ridge y Lasso utilizando Scikit-learn.",
+                        class_name="text-gray-400 text-sm mb-4 text-center italic",
+                    ),
                     rx.heading(
                         "Estandarizacion del dataset",
                         size="6",
                         class_name="text-white mb-4 pt-4",
                     ),
                     rx.text(
-                        "La estandarización es un proceso que transforma los datos para que tengan una media de 0 y una desviación estándar de 1 [20][39]. Esto es útil para comparar variables que están en diferentes escalas o unidades. ayuda bastante a la hora de alimentar nuestro modelo o regresion haciendo los datos mas pequeños y disminuir el tiempo de entreno",
+                        "La estandarización es un proceso que transforma los datos para que tengan una media de 0 y una desviación estándar de 1 [33][34]. Esto es útil para comparar variables que están en diferentes escalas o unidades. ayuda bastante a la hora de alimentar nuestro modelo o regresion haciendo los datos mas pequeños y disminuir el tiempo de entreno",
                         style={"white-space": "pre-line"},
                         class_name="text-white mb-4",
                     ),
@@ -413,7 +441,7 @@ def part2() -> rx.Component:
                         class_name="text-white mb-4 pt-4",
                     ),
                     rx.text(
-                        "Vamos a entrenar nuestro modelo utilizando aproximadamente un 70% para los datos de entreno y un 30% para los datos de testeo [27][28], esto nos permitira ver si el modelo es capaz de predecir los datos que no ha visto antes, ademas de visualizar el peso y sesgo del modelo",
+                        "Vamos a entrenar nuestro modelo utilizando aproximadamente un 70% para los datos de entreno y un 30% para los datos de testeo [34][38][47], esto nos permitira ver si el modelo es capaz de predecir los datos que no ha visto antes, ademas de visualizar el peso y sesgo del modelo",
                         style={"white-space": "pre-line"},
                         class_name="text-white mb-4",
                     ),
@@ -461,6 +489,10 @@ def part2() -> rx.Component:
                             class_name="text-white",
                         ),
                         class_name="bg-black p-4 rounded-lg my-4 w-full overflow-auto font-mono",
+                    ),
+                    rx.text(
+                        "Referencias: [2][4][21] Evaluación del rendimiento de la regresión lineal utilizando Scikit-learn.",
+                        class_name="text-gray-400 text-sm mb-4 text-center italic",
                     ),
                     
                     # Nueva sección para validación del modelo (punto d)
