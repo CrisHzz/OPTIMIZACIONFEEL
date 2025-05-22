@@ -460,7 +460,7 @@ def part2() -> rx.Component:
                     ),
 
                     rx.text(
-                        "Existen varias metricas para evaluar nuestro rendimiento del modelo [21][29], en este caso usaremos el error cuadratico medio, el coeficiente de determinacion y la raiz del error cuadratico medio",
+                        "Existen varias metricas para evaluar nuestro rendimiento del modelo [21][33][34], en este caso usaremos el error cuadratico medio, el coeficiente de determinacion y la raiz del error cuadratico medio",
                         style={"white-space": "pre-line"},
                         class_name="text-white mb-4",
                     ),
