@@ -201,7 +201,7 @@ def part3() -> rx.Component:
                             class_name="text-gray-200 mb-4",
                         ),
                         rx.text(
-                            "Gracias a ello planteamos la siguiente aplicación de todo lo anterior y se trata del problema del Titanic [24]. "
+                            "Gracias a ello planteamos la siguiente aplicación de todo lo anterior y se trata del problema del Titanic. "
                             "Nos plantean un dataset roto y real con muchos valores vacíos, campos faltantes y bastantes datos inexistentes "
                             "que provienen del incidente real del barco RMS TITANIC ocurrido el 14 de abril de 1912 en un recorrido desde "
                             "Reino Unido a Estados Unidos. La distorsión del tiempo, las personas fallecidas sin reconocer y las condiciones "
@@ -571,7 +571,7 @@ def part3() -> rx.Component:
                             class_name="text-purple-200 mb-4",
                         ),
                         rx.text(
-                            "El conjunto de datos presenta valores faltantes en tres variables importantes: edad, cabina y bote salvavidas. Para manejar estos datos faltantes [2][5][7]:\n\n"
+                            "El conjunto de datos presenta valores faltantes en tres variables importantes: edad, cabina y bote salvavidas. Para manejar estos datos faltante:\n\n"
                             "Para la edad, utilizamos la media como método de imputación. Esta decisión se basa en que la media es un estimador robusto que representa el valor típico de la edad de los pasajeros, minimizando el impacto en las distribuciones estadísticas y manteniendo la estructura general de los datos de edad.\n\n"
                             "En el caso de las cabinas (que son identificadores alfanuméricos que indican la ubicación del pasajero en el barco), creamos categorías especiales para aquellos registros sin asignación. Esto nos permite mantener la integridad del análisis sin perder información sobre los pasajeros sin cabina asignada.\n\n"
                             "De manera similar, para los botes salvavidas, asignamos identificadores especiales a aquellos registros sin información, permitiendo incluir estos casos en el análisis general de la distribución y uso de los botes salvavidas.",
@@ -906,7 +906,7 @@ Esta función transforma cualquier valor de entrada en un rango entre 0 y 1, ide
                         ),
                         rx.vstack(
                             rx.text(
-                                "El problema del Titanic es una excelente introducción al mundo del machine learning, la ciencia de datos y la estadística [29][30]. En este ejercicio, aplicamos todas estas técnicas para predecir un suceso histórico real, dividiéndolo en tres etapas fundamentales:",
+                                "El problema del Titanic es una excelente introducción al mundo del machine learning, la ciencia de datos y la estadística En este ejercicio, aplicamos todas estas técnicas para predecir un suceso histórico real, dividiéndolo en tres etapas fundamentales:",
                                 class_name="text-gray-200 mb-4",
                             ),
                             rx.unordered_list(
@@ -922,7 +922,7 @@ Esta función transforma cualquier valor de entrada en un rango entre 0 y 1, ide
                             ),
                             rx.box(
                                 rx.unordered_list(
-                                    rx.list_item("Las mujeres y niños tuvieron mayor probabilidad de supervivencia [46][49]", class_name="text-gray-200"),
+                                    rx.list_item("Las mujeres y niños tuvieron mayor probabilidad de supervivencia]", class_name="text-gray-200"),
                                     rx.list_item("El precio del pasaje influyó directamente en las posibilidades de salvarse", class_name="text-gray-200"),
                                     rx.list_item("La edad fue un factor determinante (siendo los muy jóvenes y ancianos más vulnerables)", class_name="text-gray-200"),
                                     rx.list_item("El puerto de embarque también jugó un papel significativo", class_name="text-gray-200"),
