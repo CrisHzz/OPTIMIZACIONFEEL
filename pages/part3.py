@@ -35,7 +35,7 @@ def part3() -> rx.Component:
                             class_name="text-white hover:text-purple-300 transition-colors px-4 py-2 rounded-lg hover:bg-purple-900/30"
                         ),
                         rx.link(
-                            "Bibliografias", 
+                            "Bibliografías", 
                             href="/bibliografias", 
                             class_name="text-white hover:text-purple-300 transition-colors px-4 py-2 rounded-lg hover:bg-purple-900/30"
                         ),
@@ -51,7 +51,7 @@ def part3() -> rx.Component:
             ),
             rx.box(
                 rx.heading(
-                    "Part 3 - Aplicando la estadistica en la vida real",
+                    "Part 3 - Aplicando la estadística en la vida real",
                     size="8",
                     class_name="text-white mb-4",
                 ),
@@ -214,7 +214,7 @@ def part3() -> rx.Component:
                             class_name="text-gray-200 mb-4",
                         ),
                         rx.heading(
-                            "Temas y conceptos aplicados en la solucion:",
+                            "Temas y conceptos aplicados en la solución:",
                             size="6",
                             class_name="text-purple-200 mt-4 mb-2",
                         ),
@@ -249,13 +249,13 @@ def part3() -> rx.Component:
                         ),
                         rx.box(
                             rx.text(
-                                "Este segundo campo sera nuestra elección y desarrollaremos como problema principal",
+                                "Este segundo campo será nuestra elección y desarrollaremos como problema principal",
                                 class_name="text-white font-semibold",
                             ),
                             class_name="p-4 bg-purple-700/40 rounded-xl border border-purple-500/30 mb-4 text-center",
                         ),
                         rx.heading(
-                            "C) Obtencion de los datos",
+                            "C) Obtención de los datos",
                             size="6",
                             class_name="text-purple-200 mb-2",
                         ),
@@ -448,7 +448,7 @@ def part3() -> rx.Component:
                             class_name="bg-black mb-8 w-full",
                         ),
                         rx.heading(
-                            "D) Analisis estadistico ",
+                            "D) Análisis estadístico ",
                             size="8",
                             class_name="text-purple-200 mb-2 font-bold",
                         ),
@@ -458,7 +458,7 @@ def part3() -> rx.Component:
                         ),
                         rx.box(
                             rx.text(
-                                "Si deseas ver el proceso completo que se hizo , ingresa al siguiente link (El desarollo esta en ingles)",
+                                "Si deseas ver el proceso completo que se hizo, ingresa al siguiente link (El desarrollo está en inglés)",
                                 class_name="text-gray-200",
                             ),
                             rx.link(
@@ -474,7 +474,7 @@ def part3() -> rx.Component:
                             class_name="text-purple-200 mb-2",
                         ),
                         rx.text(
-                            "El primer paso es eliminar todos los NaN (Not a Number) que son los valores vacíos. y generan muchos problemas a la hora de realizar análisis estadísticos.",
+                            "El primer paso es eliminar todos los NaN (Not a Number) que son los valores vacíos y generan muchos problemas a la hora de realizar análisis estadísticos.",
                             class_name="text-gray-200 mb-4",
                         ),
                         rx.image(
@@ -486,7 +486,7 @@ def part3() -> rx.Component:
                             class_name="text-gray-400 text-sm mb-4 text-center italic",
                         ),
                         rx.heading(
-                            "Eliminacion de variables (Sibsp y parch)",
+                            "Eliminación de variables (Sibsp y parch)",
                             size="6",
                             class_name="text-gray-200 mb-4",
                         ),
@@ -511,7 +511,7 @@ def part3() -> rx.Component:
                             class_name="text-gray-400 text-sm mb-4 text-center italic",
                         ),
                         rx.text(
-                            'Podemos concluir que la estructura familiar tuvo una influencia moderada en las probabilidades de supervivencia. Las personas que viajaban con un número pequeño de familiares (1-3) mostraron tasas de supervivencia más altas que aquellas que viajaban solas o con familias numerosas.\n\nSin embargo, esta variable por sí sola no es determinante. Las amplias barras de error en los gráficos indican una gran variabilidad, sugiriendo que otros factores como el género, la clase social y la edad probablemente jugaron un papel más decisivo',
+                            'Podemos concluir que la estructura familiar tuvo una influencia moderada en las probabilidades de supervivencia. Las personas que viajaban con un número pequeño de familiares (1-3) mostraron tasas de supervivencia más altas que aquellas que viajaban solas o con familias numerosas.\n\nSin embargo, esta variable por sí sola no es determinante. Las amplias barras de error en los gráficos indican una gran variabilidad, sugiriendo que otros factores como el género, la clase social y la edad probablemente jugaron un papel más decisivo.',
                             class_name="text-gray-200 mb-4",
                         ),
                         rx.heading(
@@ -571,7 +571,7 @@ def part3() -> rx.Component:
                             class_name="text-purple-200 mb-4",
                         ),
                         rx.text(
-                            "El conjunto de datos presenta valores faltantes en tres variables importantes: edad, cabina y bote salvavidas. Para manejar estos datos faltante:\n\n"
+                            "El conjunto de datos presenta valores faltantes en tres variables importantes: edad, cabina y bote salvavidas. Para manejar estos datos faltantes:\n\n"
                             "Para la edad, utilizamos la media como método de imputación. Esta decisión se basa en que la media es un estimador robusto que representa el valor típico de la edad de los pasajeros, minimizando el impacto en las distribuciones estadísticas y manteniendo la estructura general de los datos de edad.\n\n"
                             "En el caso de las cabinas (que son identificadores alfanuméricos que indican la ubicación del pasajero en el barco), creamos categorías especiales para aquellos registros sin asignación. Esto nos permite mantener la integridad del análisis sin perder información sobre los pasajeros sin cabina asignada.\n\n"
                             "De manera similar, para los botes salvavidas, asignamos identificadores especiales a aquellos registros sin información, permitiendo incluir estos casos en el análisis general de la distribución y uso de los botes salvavidas.",
@@ -586,7 +586,7 @@ def part3() -> rx.Component:
                             class_name="text-gray-400 text-sm mb-4 text-center italic",
                         ),
                         rx.heading(
-                            "Compresion de graficas y analisis de supervivencia",
+                            "Comprensión de gráficas y análisis de supervivencia",
                             size="7",
                             class_name="text-purple-200 mb-4",
                         ),
@@ -641,7 +641,7 @@ def part3() -> rx.Component:
                         ),
 
                         rx.heading(
-                            "Mujeres vs Hombres , Quien sobrevive?",
+                            "Mujeres vs Hombres. ¿Quién sobrevive?",
                             size="4",
                             class_name="text-purple-200 mb-4",
                         ),
@@ -656,7 +656,7 @@ def part3() -> rx.Component:
                         ),
                         rx.text(
                             "El análisis revela que las mujeres tenían una tasa de supervivencia significativamente más alta que los hombres. "
-                            "Esto sugiere que las mujeres recibieron un trato preferencial en la evacuación, De aqui sale famosa frase Mujeres y niños primero.",
+                            "Esto sugiere que las mujeres recibieron un trato preferencial en la evacuación. De aquí sale la famosa frase 'Mujeres y niños primero'.",
                             class_name="text-gray-200 mb-4",
                         ),
                         rx.heading(
@@ -665,7 +665,7 @@ def part3() -> rx.Component:
                             class_name="text-purple-200 mb-4",
                         ),
                         rx.text(
-                            "El RMS Titanic zarpó de Southampton, Inglaterra, y realizó escalas en Cherburgo, Francia, y Queenstown (actualmente Cobh), Irlanda ,vamos a analizar la distribucion de personas en los puertos de embarque ",
+                            "El RMS Titanic zarpó de Southampton, Inglaterra, y realizó escalas en Cherburgo, Francia, y Queenstown (actualmente Cobh), Irlanda. Vamos a analizar la distribución de personas en los puertos de embarque.",
                             class_name="text-gray-200 mb-4",
                         ),
                         rx.image(
@@ -677,7 +677,7 @@ def part3() -> rx.Component:
                             class_name="text-gray-400 text-sm mb-4 text-center italic",
                         ),
                         rx.heading(
-                            "Prueba de hipotesis: El dataset es lo suficientemente grande para crear un modelo predictivo con precision del 70%?",
+                            "Prueba de hipótesis: ¿El dataset es lo suficientemente grande para crear un modelo predictivo con precisión del 70%?",
                             size="6",
                             class_name="text-purple-200 mb-4",
                         ),
@@ -711,7 +711,7 @@ def part3() -> rx.Component:
                             class_name="text-gray-400 text-sm mb-4 text-center italic",
                         ),
                         rx.text(
-                            "Teóricamente, el tamaño de la muestra no es lo suficientemente grande para obtener esa precisión esperada en terminos teoricos; "
+                            "Teóricamente, el tamaño de la muestra no es lo suficientemente grande para obtener esa precisión esperada en términos teóricos; "
                             "sin embargo, empíricamente y computacionalmente, obtenemos una precisión del 76%.",
                             class_name="text-gray-200 mb-4",
                         ),
@@ -900,13 +900,13 @@ Esta función transforma cualquier valor de entrada en un rango entre 0 y 1, ide
                             class_name="text-gray-200 bg-purple-900/20 p-4 rounded-xl border border-purple-500/30 mb-4 overflow-x-auto",
                         ),
                         rx.heading(
-                            "E)Conclusiones",
+                            "E) Conclusiones",
                             size="7",
                             class_name="text-purple-200 mb-4",
                         ),
                         rx.vstack(
                             rx.text(
-                                "El problema del Titanic es una excelente introducción al mundo del machine learning, la ciencia de datos y la estadística En este ejercicio, aplicamos todas estas técnicas para predecir un suceso histórico real, dividiéndolo en tres etapas fundamentales:",
+                                "El problema del Titanic es una excelente introducción al mundo del machine learning, la ciencia de datos y la estadística. En este ejercicio, aplicamos todas estas técnicas para predecir un suceso histórico real, dividiéndolo en tres etapas fundamentales:",
                                 class_name="text-gray-200 mb-4",
                             ),
                             rx.unordered_list(
@@ -922,7 +922,7 @@ Esta función transforma cualquier valor de entrada en un rango entre 0 y 1, ide
                             ),
                             rx.box(
                                 rx.unordered_list(
-                                    rx.list_item("Las mujeres y niños tuvieron mayor probabilidad de supervivencia]", class_name="text-gray-200"),
+                                    rx.list_item("Las mujeres y niños tuvieron mayor probabilidad de supervivencia", class_name="text-gray-200"),
                                     rx.list_item("El precio del pasaje influyó directamente en las posibilidades de salvarse", class_name="text-gray-200"),
                                     rx.list_item("La edad fue un factor determinante (siendo los muy jóvenes y ancianos más vulnerables)", class_name="text-gray-200"),
                                     rx.list_item("El puerto de embarque también jugó un papel significativo", class_name="text-gray-200"),

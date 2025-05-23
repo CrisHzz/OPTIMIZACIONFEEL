@@ -35,7 +35,7 @@ def part1() -> rx.Component:
                             class_name="text-white hover:text-purple-300 transition-colors px-4 py-2 rounded-lg hover:bg-purple-900/30"
                         ),
                         rx.link(
-                            "Bibliografias", 
+                            "Bibliografías", 
                             href="/bibliografias", 
                             class_name="text-white hover:text-purple-300 transition-colors px-4 py-2 rounded-lg hover:bg-purple-900/30"
                         ),
@@ -125,11 +125,11 @@ def part1() -> rx.Component:
                         class_name="bg-black mb-8 w-full",
                     ),
                     rx.text(
-                        "Referencias: [2][5][38] Creado usando pandas con funciones de estadistica.",
+                        "Referencias: [2][5][38] Creado usando pandas con funciones de estadística.",
                         class_name="text-gray-400 text-sm mb-4 text-center italic",
                     ),
                     rx.heading(
-                        "A) Analisis descriptivo y visualizacion de datos",
+                        "A) Análisis descriptivo y visualización de datos",
                         size="7",
                         class_name="text-white",
                     ),
@@ -175,8 +175,12 @@ def part1() -> rx.Component:
                         class_name="bg-black mb-4 w-full",
                     ),
                     rx.text(
-                        "Referencias: [2][33] Creado usando pandas con funciones de estadistica.",
+                        "Referencias: [2][33] Creado usando pandas con funciones de estadística.",
                         class_name="text-gray-400 text-sm mb-4 text-center italic",
+                    ),
+                    rx.text(
+                        "El análisis muestra que la Línea B es más rápida que la Línea A, con una diferencia promedio de 8.7 segundos (118.96s vs 110.27s).",
+                        class_name="text-white mb-4",
                     ),
                     rx.heading(
                         "Medidas de dispersión",
@@ -226,8 +230,13 @@ def part1() -> rx.Component:
                         class_name="bg-black mb-8 w-full",
                     ),
                     rx.text(
-                        "Referencias: [2][33] Creado usando pandas con funciones de estadistica.",
+                        "Referencias: [2][33] Creado usando pandas con funciones de estadística.",
                         class_name="text-gray-400 text-sm mb-4 text-center italic",
+                    ),
+                    rx.text(
+                        "El análisis muestra que la Línea A tiene una desviación estándar de 9.08 segundos, lo que indica que los tiempos de producción son relativamente consistentes. En comparación, la Línea B tiene una desviación estándar de 11.44 segundos, también se sugiere una mayor variabilidad en los tiempos de producción con el coeficiente de variación del 10.38%. Esto significa que la Línea A es más predecible en términos de tiempos de producción, mientras que la Línea B presenta una mayor variabilidad.",
+                        class_name="text-white mb-4",
+
                     ),
                     rx.heading(
                         "Medidas de forma",
@@ -265,23 +274,28 @@ def part1() -> rx.Component:
                         variant="surface",
                         class_name="bg-black mb-8 w-full",
                     ),
+
                     rx.text(
-                        "Referencias: [2][33] Creado usando pandas con funciones de estadistica.",
+                        "Referencias: [2][33] Creado usando pandas con funciones de estadística.",
                         class_name="text-gray-400 text-sm mb-4 text-center italic",
+                    ),
+                    rx.text(
+                        "El análisis muestra que la Línea A tiene una asimetría de -0.18, lo que indica que está ligeramente sesgada a la izquierda, mientras que la Línea B tiene una asimetría de 0.39, indicando un sesgo a la derecha. La curtosis de ambas líneas es cercana a 0, lo que sugiere que ambas distribuciones son relativamente planas y no tienen colas pesadas.",
+                        class_name="text-white mb-4",
                     ),
                     
                     # Gráficos
                     rx.heading(
-                        "Graficos: Histograma, boxplot y tallos de hojas",
+                        "Gráficos: Histograma, boxplot y tallos de hojas",
                         size="7",
                         class_name="text-white mb-4 mt-8",
                     ),
                     rx.text(
-                        "Entender como se ven nuestros datos graficamente es parte fundamental en un analisis estadistico [33][34], aqui encontraremos el significado de las figuras y colores que le dan sentido a la estadistica",
+                        "Entender cómo se ven nuestros datos gráficamente es parte fundamental en un análisis estadístico [33][34], aquí encontraremos el significado de las figuras y colores que le dan sentido a la estadística",
                         class_name="text-white mb-4",
                     ),
                     rx.heading(
-                        "Grafico de histograma",
+                        "Gráfico de histograma",
                         size="6",
                         class_name="text-white mb-4",
                     ),
@@ -298,7 +312,7 @@ def part1() -> rx.Component:
                         class_name="text-gray-400 text-sm mb-4 text-center italic",
                     ),
                     rx.heading(
-                        "Grafico de boxplot",
+                        "Gráfico de boxplot",
                         size="6",
                         class_name="text-white mb-4 pt-4",
                     ),
@@ -315,7 +329,7 @@ def part1() -> rx.Component:
                         class_name="text-gray-400 text-sm mb-4 text-center italic",
                     ),
                     rx.heading(
-                        "Grafico de tallos y hojas",
+                        "Gráfico de tallos y hojas",
                         size="6",
                         class_name="text-white mb-4 pt-4",
                     ),
@@ -334,7 +348,7 @@ def part1() -> rx.Component:
                     
                     # Identificar la distribución
                     rx.heading(
-                        "B) Indentificar la distribucion indicada",
+                        "B) Identificar la distribución indicada",
                         size="7",
                         class_name="text-white mb-4 mt-8",
                     ),
@@ -434,13 +448,12 @@ def part1() -> rx.Component:
                         class_name="text-white mb-4"
                     ),
                     rx.heading(
-                        "C) Calculos de probabilidad segun la distribucion ajustada", 
+                        "C) Cálculos de probabilidad según la distribución ajustada", 
                         size="7",
                         class_name="text-white mb-4 mt-8",
                     ),
                     rx.text(
-                        "Calcule la probabilidad de que un ciclo exceda el tiempo estándar establecido en 120 segundos Determine el tiempo máximo que debe establecerse como estándar para garantizar que el 90% de los ciclos se completen dentro de ese tiempo ",
-                        size="5",
+                        "Calcule la probabilidad de que un ciclo exceda el tiempo estándar establecido en 120 segundos. Determine el tiempo máximo que debe establecerse como estándar para garantizar que el 90% de los ciclos se completen dentro de ese tiempo.",
                         class_name="text-white mb-4",
 
                     ),
@@ -453,7 +466,8 @@ def part1() -> rx.Component:
                                             class_name="text-white bg-[#1e1e1e] p-4 rounded-lg font-mono mb-4 whitespace-pre",
                     ),
                     rx.text(
-                        "Referencias: [3][18][32][33]"
+                        "Referencias: [3][18][32][33]",
+                        class_name="text-gray-400 text-sm mb-4 text-center italic",
                     ),
                     
                     rx.heading(
@@ -497,7 +511,7 @@ def part1() -> rx.Component:
                         class_name="text-white mb-4 font-bold",
                     ),
                     rx.heading(
-                        "D) Intervalos de confianza al 95% para las lineas",
+                        "D) Intervalos de confianza al 95% para las líneas",
                         size="7",
                         class_name="text-white mb-4 mt-8",
                     ),
@@ -594,6 +608,11 @@ def part1() -> rx.Component:
                     rx.text(
                         "Se realizó una comparación de las técnicas estadísticas utilizadas en este análisis con las del artículo 'Design the Abnormal Object Detection System Using Template Matching and Subtract Background Algorithm' [15], obtenido a través de la base de datos Springer de la universidad.",
                         class_name="text-white mb-4",
+                    ),
+                    rx.link(
+                        "Artículo científico comparativo",
+                        href="https://shibaura.elsevierpure.com/en/publications/design-the-abnormal-object-detection-system-using-template-matchi",
+                        class_name="text-purple-300 hover:text-purple-500 transition-colors mb-4",
                     ),
                     rx.heading(
                         "Similitudes metodológicas",

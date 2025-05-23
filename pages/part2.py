@@ -37,7 +37,7 @@ def part2() -> rx.Component:
                             class_name="text-white hover:text-purple-300 transition-colors px-4 py-2 rounded-lg hover:bg-purple-900/30"
                         ),
                         rx.link(
-                            "Bibliografias", 
+                            "Bibliografías", 
                             href="/bibliografias", 
                             class_name="text-white hover:text-purple-300 transition-colors px-4 py-2 rounded-lg hover:bg-purple-900/30"
                         ),
@@ -149,7 +149,7 @@ def part2() -> rx.Component:
             ),
             rx.box(
                 rx.heading(
-                    "A) Analisis descriptivo y grafico de los datos",
+                    "A) Análisis descriptivo y gráfico de los datos",
                     size="8",
                     class_name="text-white mb-4",
                 ),
@@ -159,7 +159,7 @@ def part2() -> rx.Component:
                     class_name="text-white mb-4",
                 ),
                 rx.text(
-                    "Existen varios tipos de medidas que nos sirven para darle sentido a valor a los datos sea desde el apartado basico como entender el promedio, como se desvian sus datos del centro y hasta que forma y comportamiento tienen ellos [33][34]",
+                    "Existen varios tipos de medidas que nos sirven para darle sentido y valor a los datos, sea desde el apartado básico como entender el promedio, cómo se desvían sus datos del centro y hasta qué forma y comportamiento tienen ellos [33][34]",
                     style={"white-space": "pre-line"},
                     class_name="text-white mb-4",),
                     rx.table.root(
@@ -193,6 +193,10 @@ def part2() -> rx.Component:
                     rx.text(
                         "Referencias: [2][5] Tabla creada con numpy y matplotlib.",
                         class_name="text-gray-400 text-sm mb-4 text-center italic",
+                    ),
+                    rx.text(
+                        "Las medidas de tendencia central revelan patrones importantes: la velocidad de producción muestra una ligera asimetría positiva (media=100.56 > mediana=99.0 > moda=93.0), mientras que el consumo de energía presenta una distribución más simétrica entre media (131.91) y mediana (131.7), con algunos valores atípicos altos indicados por la moda (136.7). Esto sugiere un proceso productivo con velocidades variables pero un consumo energético relativamente estable.",
+                        class_name="text-white mb-4",
                     ),
                     rx.heading(
                         "Medidas de dispersión",
@@ -243,6 +247,10 @@ def part2() -> rx.Component:
                         "Referencias: [2][5] Tabla creada con numpy y matplotlib.",
                         class_name="text-gray-400 text-sm mb-4 text-center italic",
                     ),
+                    rx.text(
+                        "Podemos observar que tanto la velocidad de producción como el consumo de energía muestran niveles similares de variabilidad. La desviación estándar y varianza son ligeramente mayores en el consumo de energía, indicando una dispersión levemente superior. Sin embargo, el coeficiente de variación es menor en el consumo de energía (0.106 vs 0.138), lo que sugiere que, en términos relativos, este parámetro es más estable.",
+                        class_name="text-white mb-4"
+                    ),
                     rx.heading(
                         "Medidas de forma",
                         size="6",
@@ -281,13 +289,17 @@ def part2() -> rx.Component:
                         "Referencias: [2][5] Tabla creada con numpy y matplotlib.",
                         class_name="text-gray-400 text-sm mb-4 text-center italic",
                     ),
+                    rx.text(
+                        "Los valores de asimetría positivos pero cercanos a 0 (0.197 y 0.149) indican que ambas variables tienen una distribución ligeramente sesgada hacia la derecha, pero bastante simétrica. La curtosis negativa en ambos casos (-0.299 y -0.547) sugiere que las distribuciones son más planas que una distribución normal (platicúrticas), con colas más ligeras y picos menos pronunciados.",
+                        class_name="text-white mb-4"
+                    ),
                     rx.heading(
-                        "Grafico de histograma",
+                        "Gráfico de histograma",
                         size="6",
                         class_name="text-white mb-4 pt-4",
                     ),
                     rx.text(
-                        "El histograma es una representación gráfica de los datos a traves del tiempo y poder evidenciar como es la distribucion de los datos [33][34]",
+                        "El histograma es una representación gráfica de los datos a través del tiempo y poder evidenciar cómo es la distribución de los datos [33][34]",
                         style={"white-space": "pre-line"},
                         class_name="text-white mb-4",
                     ),
@@ -301,12 +313,12 @@ def part2() -> rx.Component:
                     ),
 
                     rx.heading(
-                        "Grafico de dispersion",
+                        "Gráfico de dispersión",
                         size="6",
                         class_name="text-white mb-4 pt-4",
                     ),
                     rx.text(
-                        "El grafico de dispersion nos permite ver por encima la distribucion de los datos, datos atipicos y encontrar que tipo de correlacion existe entre las variables que se estan analizando [33][34]",
+                        "El gráfico de dispersión nos permite ver por encima la distribución de los datos, datos atípicos y encontrar qué tipo de correlación existe entre las variables que se están analizando [33][34]",
                         style={"white-space": "pre-line"},
                         class_name="text-white mb-4",
                     ),
@@ -349,7 +361,7 @@ def part2() -> rx.Component:
                     ),
                     
                     rx.text(
-                        "El coeficiente de correlacion entre las 2 variables es de 0.764,\npor lo tanto hay CORRELACION LINEAL ALTA.",
+                        "El coeficiente de correlación entre las 2 variables es de 0.764,\npor lo tanto hay CORRELACIÓN LINEAL ALTA.",
                         class_name="bg-black text-white p-4 rounded-lg my-4 w-full overflow-auto font-mono",
                         style={"white-space": "pre-line"},
                     ),
@@ -368,7 +380,7 @@ def part2() -> rx.Component:
                         class_name="text-white mb-4 pt-4",
                     ),
                     rx.text(
-                        "Existen varios tipos de modelos de regresion que nos pueden servir para desarollar este proyecto [33][42][21], todo depende del tipo de datos que se tienen, la cantidad de variables, el peso de estas para la prediccion entre muchas otras caracteristicas. En este caso a pesar de plantear 3 tipos de modelo de regresion, la regresion lineal es la que mejor se adapta a los datos y el comportamiento de estos, ridge y lasso nos darian el mismo rendimiento pues las condiciones para estos no son las indicadas y el R2 nos da igual en los 3 casos",
+                        "Existen varios tipos de modelos de regresión que nos pueden servir para desarrollar este proyecto [33][42][21], todo depende del tipo de datos que se tienen, la cantidad de variables, el peso de estas para la predicción entre muchas otras características. En este caso a pesar de plantear 3 tipos de modelo de regresión, la regresión lineal es la que mejor se adapta a los datos y el comportamiento de estos, ridge y lasso nos darían el mismo rendimiento pues las condiciones para estos no son las indicadas y el R2 nos da igual en los 3 casos",
                         style={"white-space": "pre-line"},
                         class_name="text-white mb-4",
                     ),
@@ -392,12 +404,12 @@ def part2() -> rx.Component:
                         class_name="text-gray-400 text-sm mb-4 text-center italic",
                     ),
                     rx.heading(
-                        "Estandarizacion del dataset",
+                        "Estandarización del dataset",
                         size="6",
                         class_name="text-white mb-4 pt-4",
                     ),
                     rx.text(
-                        "La estandarización es un proceso que transforma los datos para que tengan una media de 0 y una desviación estándar de 1 [33][34]. Esto es útil para comparar variables que están en diferentes escalas o unidades. ayuda bastante a la hora de alimentar nuestro modelo o regresion haciendo los datos mas pequeños y disminuir el tiempo de entreno",
+                        "La estandarización es un proceso que transforma los datos para que tengan una media de 0 y una desviación estándar de 1 [33][34]. Esto es útil para comparar variables que están en diferentes escalas o unidades. Ayuda bastante a la hora de alimentar nuestro modelo o regresión haciendo los datos más pequeños y disminuir el tiempo de entreno",
                         style={"white-space": "pre-line"},
                         class_name="text-white mb-4",
                     ),
@@ -410,12 +422,12 @@ def part2() -> rx.Component:
                         class_name="text-gray-400 text-sm mb-4 text-center italic",
                     ),
                     rx.heading(
-                        "Implementacion de regresion lineal",
+                        "Implementación de regresión lineal",
                         size="7",
                         class_name="text-white mb-4 pt-4",
                     ),
                     rx.text(
-                        "Ahora ya encontramos el tipo de regresion adecuada para el conjunto de datos [4][21], gracias a ello podemos crear una regresion lineal que permitira hacer una prediccion dada una variable indepediente",
+                        "Ahora ya encontramos el tipo de regresión adecuada para el conjunto de datos [4][21], gracias a ello podemos crear una regresión lineal que permitirá hacer una predicción dada una variable independiente",
                         style={"white-space": "pre-line"},
                         class_name="text-white mb-4",
 
@@ -426,7 +438,7 @@ def part2() -> rx.Component:
                
                     ),
                     rx.text(
-                        "Donde W son los pesos y b el sesgo de la regresion lineal",
+                        "Donde W son los pesos y b el sesgo de la regresión lineal",
                         style={"white-space": "pre-line"},
                         class_name="text-white mb-4",
                     ),
@@ -436,12 +448,12 @@ def part2() -> rx.Component:
                         class_name="bg-black text-white p-4 rounded-lg my-4 w-full overflow-auto font-mono",
                     ),
                     rx.heading(
-                        "Entreno del modelo , pesos y sesgos de este",
+                        "Entreno del modelo, pesos y sesgos de este",
                         size="6",
                         class_name="text-white mb-4 pt-4",
                     ),
                     rx.text(
-                        "Vamos a entrenar nuestro modelo utilizando aproximadamente un 70% para los datos de entreno y un 30% para los datos de testeo [34][38][47], esto nos permitira ver si el modelo es capaz de predecir los datos que no ha visto antes, ademas de visualizar el peso y sesgo del modelo",
+                        "Vamos a entrenar nuestro modelo utilizando aproximadamente un 70% para los datos de entreno y un 30% para los datos de testeo [34][38][47], esto nos permitirá ver si el modelo es capaz de predecir los datos que no ha visto antes, además de visualizar el peso y sesgo del modelo",
                         style={"white-space": "pre-line"},
                         class_name="text-white mb-4",
                     ),
@@ -454,13 +466,13 @@ def part2() -> rx.Component:
                         "$$ Y = 0.8283X -0.0237 $$"
                     ),
                     rx.text(
-                        "Evaluacion del rendimiento de la regresion lineal",
+                        "Evaluación del rendimiento de la regresión lineal",
                         size="6",
                         class_name="text-white mb-4 pt-4 font-bold",
                     ),
 
                     rx.text(
-                        "Existen varias metricas para evaluar nuestro rendimiento del modelo [21][33][34], en este caso usaremos el error cuadratico medio, el coeficiente de determinacion y la raiz del error cuadratico medio",
+                        "Existen varias métricas para evaluar nuestro rendimiento del modelo [21][33][34], en este caso usaremos el error cuadrático medio, el coeficiente de determinación y la raíz del error cuadrático medio",
                         style={"white-space": "pre-line"},
                         class_name="text-white mb-4",
                     ),
@@ -518,8 +530,8 @@ def part2() -> rx.Component:
 - Conclusión: Los residuos SIGUEN una distribución normal
     
 **Homocedasticidad:**
-- Test Breusch-Pagan: p-valor = 0.0000
-- Conclusión: NO EXISTE homocedasticidad (varianza constante)
+- Test Breusch-Pagan: p-valor = 0.0047
+- Conclusión: Los residuos NO presentan varianza constante (no hay homocedasticidad), lo que indica que la variabilidad de los errores cambia a lo largo de las predicciones
 
 **Independencia de residuos:**
 - Estadístico Durbin-Watson: 0.0000
@@ -710,6 +722,15 @@ La velocidad de producción que minimiza el consumo energético por unidad produ
                     rx.text(
                         "Referencias: [3][4][21] Gráfico de eficiencia energética creado con Matplotlib y modelos de Scikit-learn.",
                         class_name="text-gray-400 text-sm mb-8 text-center italic",
+                    ),
+                    rx.heading(
+                        "Conclusiones",
+                        size="6",
+                        class_name="text-white mb-4 pt-4",
+                    ),
+                    rx.text(
+                        "Podemos concluir que este modelo no es adecuado para hacer producciones en un ambiente más laboral y operativo, pues demuestra una tasa de variabilidad muy baja generando una confianza baja a la hora de hacer una predicción, por lo tanto NO SE RECOMIENDA SU USO. Sin embargo, para motivos académicos se usará.",
+                        class_name="text-white mb-4",
                     ),
 
                 class_name="p-8 rounded-2xl w-full bg-gradient-to-br from-black to-purple-800 shadow-lg overflow-x-auto",

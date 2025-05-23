@@ -107,7 +107,7 @@ def index() -> rx.Component:
             height="100vh",
             class_name="w-full",
         ),
-        class_name="min-h-screen bg-gradient-to-br from-purple via-purple-600 to-purple-500 flex justify-center relative overflow-hidden",
+        class_name="min-h-screen bg-gradient-to-br from-black via-purple-500 to-blue-300 flex justify-center relative overflow-hidden",
     )
 
 app = rx.App()
