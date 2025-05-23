@@ -70,7 +70,7 @@ def part3() -> rx.Component:
                             class_name="text-purple-300 mb-4",
                         ),
                         rx.text(
-                            "Tenemos 2 problemas planteados que involucran la estadística descriptiva e inferencial, "
+                            "Tenemos 2 problemas planteados que involucran la estadística descriptiva e inferencial [33][34], "
                             "que son útiles y dan significado de lo importante que es esta ciencia hoy en día.",
                             class_name="text-gray-200 mb-6",
                             style={"white-space": "pre-line"},
@@ -86,8 +86,8 @@ def part3() -> rx.Component:
                             class_name="text-purple-200 mb-3",
                         ),
                         rx.text(
-                            "La criptografía moderna se sustenta en principios estadísticos y matemáticos que permiten proteger la información digital [29][55]. "
-                            "Los algoritmos criptográficos utilizan propiedades estadísticas para generar claves seguras y evaluar su resistencia frente a ataques.",
+                            "La criptografía moderna se sustenta en principios estadísticos y matemáticos que permiten proteger la información digital [50][51][55]. "
+                            "Los algoritmos criptográficos utilizan propiedades estadísticas para generar claves seguras y evaluar su resistencia frente a ataques [52][56].",
                             class_name="text-gray-200 mb-2",
                         ),
                         rx.heading(
@@ -96,17 +96,17 @@ def part3() -> rx.Component:
                             class_name="text-gray-300 mb-2",
                         ),
                         rx.unordered_list(
-                            rx.list_item("Generación de números aleatorios y pseudoaleatorios [52][56]", class_name="text-gray-200"),
-                            rx.list_item("Análisis de frecuencia para romper cifrados simples [53]", class_name="text-gray-200"),
-                            rx.list_item("Pruebas estadísticas para validar la calidad de cifrados [52]", class_name="text-gray-200"),
-                            rx.list_item("Distribuciones de probabilidad en la generación de claves [50][51]", class_name="text-gray-200"),
-                            rx.list_item("Análisis de entropía para medir la fortaleza criptográfica [56]", class_name="text-gray-200"),
+                            rx.list_item("Generación de números aleatorios y pseudoaleatorios ", class_name="text-gray-200"),
+                            rx.list_item("Análisis de frecuencia para romper cifrados simples ", class_name="text-gray-200"),
+                            rx.list_item("Pruebas estadísticas para validar la calidad de cifrados", class_name="text-gray-200"),
+                            rx.list_item("Distribuciones de probabilidad en la generación de claves", class_name="text-gray-200"),
+                            rx.list_item("Análisis de entropía para medir la fortaleza criptográfica", class_name="text-gray-200"),
                             class_name="text-gray-200 mb-4 pl-6",
                         ),
                         rx.text(
                             "La criptografía asimétrica (RSA, ECC) depende de problemas matemáticamente difíciles como la factorización de números grandes "
-                            "o el logaritmo discreto. La seguridad de estos sistemas se basa en la distribución estadística de números primos y "
-                            "en la improbabilidad computacional de resolver ciertos problemas en tiempo polinómico [51][57].",
+                            "o el logaritmo discreto [51][55]. La seguridad de estos sistemas se basa en la distribución estadística de números primos y "
+                            "en la improbabilidad computacional de resolver ciertos problemas en tiempo polinómico [50][57].",
                             class_name="text-gray-200 mb-3",
                         ),
                         rx.heading(
@@ -143,14 +143,14 @@ def part3() -> rx.Component:
                         ),
                         rx.text(
                             "El análisis estadístico es fundamental en la detección de anomalías y ataques cibernéticos. "
-                            "Mediante la aplicación de pruebas de hipótesis, intervalos de confianza y análisis de regresión, "
+                            "Mediante la aplicación de pruebas de hipótesis, intervalos de confianza y análisis de regresión [18][25], "
                             "los sistemas de seguridad pueden identificar patrones sospechosos y distinguirlos del tráfico normal [57][58].",
                             class_name="text-gray-200 mb-3",
                         ),
                         rx.text(
                             "Un ejemplo concreto es el análisis estadístico del tiempo de ejecución (timing attacks), donde pequeñas "
                             "variaciones en el tiempo de procesamiento pueden revelar información sobre claves privadas. "
-                            "Estos ataques se basan en análisis de varianza (ANOVA) y pruebas de correlación para extraer "
+                            "Estos ataques se basan en análisis de varianza (ANOVA) y pruebas de correlación [18][32] para extraer "
                             "información sensible de sistemas criptográficos [50][55].",
                             class_name="text-gray-200 mb-3",
                         ),
@@ -167,7 +167,7 @@ def part3() -> rx.Component:
                         ),
                         rx.text(
                             "El análisis estadístico es esencial para garantizar que los sistemas criptográficos sean realmente seguros "
-                            "y resistentes a diversos tipos de ataques, desde fuerza bruta hasta criptoanálisis diferencial y lineal.",
+                            "y resistentes a diversos tipos de ataques, desde fuerza bruta hasta criptoanálisis diferencial y lineal [50][53][55].",
                             class_name="text-gray-200 mb-3",
                         ),
                         rx.box(
@@ -193,9 +193,9 @@ def part3() -> rx.Component:
                             class_name="text-purple-200 mb-3",
                         ),
                         rx.text(
-                            "Nuestro segundo campo es la ciencia de datos y el análisis de ello. La ingeniería de sistemas y "
+                            "Nuestro segundo campo es la ciencia de datos y el análisis de ello [47]. La ingeniería de sistemas y "
                             "todas estas ciencias computacionales han dado oportunidad a la revolución actual de la inteligencia "
-                            "artificial y la implementación de modelos matemáticos y estadísticos para la solución de problemas actuales [27][28]. "
+                            "artificial y la implementación de modelos matemáticos y estadísticos para la solución de problemas actuales [4][47]. "
                             "Con este campo queremos enfocarnos en problemas que utilicen estas ciencias que ya mencionamos y toda la "
                             "parte computacional moderna.",
                             class_name="text-gray-200 mb-4",
@@ -203,14 +203,14 @@ def part3() -> rx.Component:
                         rx.text(
                             "Gracias a ello planteamos la siguiente aplicación de todo lo anterior y se trata del problema del Titanic. "
                             "Nos plantean un dataset roto y real con muchos valores vacíos, campos faltantes y bastantes datos inexistentes "
-                            "que provienen del incidente real del barco RMS TITANIC ocurrido el 14 de abril de 1912 en un recorrido desde "
+                            "que provienen del incidente real del barco RMS TITANIC ocurrido el 14 de abril de 1912 [48][49] en un recorrido desde "
                             "Reino Unido a Estados Unidos. La distorsión del tiempo, las personas fallecidas sin reconocer y las condiciones "
-                            "estadísticas de ese tiempo generaron la pérdida de muchos datos y el significado del estado base del dataset.",
+                            "estadísticas de ese tiempo generaron la pérdida de muchos datos y el significado del estado base del dataset [42].",
                             class_name="text-gray-200 mb-4",
                         ),
                         rx.text(
                             "La misión es limpiarlo, eliminar variables no relevantes, identificar factores de supervivencia y crear "
-                            "una solución predictiva para poder conocer según datos ingresados si una persona llega a sobrevivir o no.",
+                            "una solución predictiva para poder conocer según datos ingresados si una persona llega a sobrevivir o no [43][47].",
                             class_name="text-gray-200 mb-4",
                         ),
                         rx.heading(
@@ -219,14 +219,14 @@ def part3() -> rx.Component:
                             class_name="text-purple-200 mt-4 mb-2",
                         ),
                         rx.unordered_list(
-                            rx.list_item("Estadística descriptiva"),
-                            rx.list_item("Representaciones gráficas"),
-                            rx.list_item("Métodos de optimización"),
-                            rx.list_item("Normalización y estandarización de datos"),
-                            rx.list_item("Funciones matemáticas (Función Sigmoid)"),
-                            rx.list_item("Validación cruzada"),
-                            rx.list_item("Métodos de entrenamiento"),
-                            rx.list_item("Matrices de confusión"),
+                            rx.list_item("Estadística descriptiva [32][33][34]"),
+                            rx.list_item("Representaciones gráficas [3][6][9][10]"),
+                            rx.list_item("Métodos de optimización [4][22]"),
+                            rx.list_item("Normalización y estandarización de datos [2][24]"),
+                            rx.list_item("Funciones matemáticas (Función Sigmoid) [43]"),
+                            rx.list_item("Validación cruzada [22][23]"),
+                            rx.list_item("Métodos de entrenamiento [4][47]"),
+                            rx.list_item("Matrices de confusión [23]"),
                             class_name="text-gray-200 mb-4 pl-6",
                         ),
                         rx.heading(
@@ -235,10 +235,10 @@ def part3() -> rx.Component:
                             class_name="text-purple-200 mb-2",
                         ),
                         rx.unordered_list(
-                            rx.list_item("Matemáticas"),
-                            rx.list_item("Estadística"),
-                            rx.list_item("Cálculo"),
-                            rx.list_item("Álgebra lineal"),
+                            rx.list_item("Matemáticas [32][34]"),
+                            rx.list_item("Estadística [33][36][37]"),
+                            rx.list_item("Cálculo [34]"),
+                            rx.list_item("Álgebra lineal [5][40]"),
                             rx.list_item("Álgebra tensorial"),
                             rx.list_item("Física"),
                             rx.list_item("Trigonometría"),
@@ -260,7 +260,7 @@ def part3() -> rx.Component:
                             class_name="text-purple-200 mb-2",
                         ),
                         rx.text (
-                            "Los datos fueron obtenidos de Kaggle. Kaggle es una aplicación-comunidad que reúne todo lo enfocado en el análisis de datos, desde datasets, modelos de machine learning y fundamentos matemáticos y estadísticos para resolver problemas. El dataset original es el siguiente:",
+                            "Los datos fueron obtenidos de Kaggle. Kaggle es una aplicación-comunidad que reúne todo lo enfocado en el análisis de datos, desde datasets, modelos de machine learning y fundamentos matemáticos y estadísticos para resolver problemas [42]. El dataset original es el siguiente:",
                             class_name="text-gray-200 mb-4",
                         ),
                         rx.table.root(
@@ -447,6 +447,10 @@ def part3() -> rx.Component:
                             variant="surface",
                             class_name="bg-black mb-8 w-full",
                         ),
+                        rx.text(
+                            "Referencias: [42] Dataset del Titanic obtenido de Kaggle.",
+                            class_name="text-gray-400 text-sm mb-4 text-center italic",
+                        ),
                         rx.heading(
                             "D) Análisis estadístico ",
                             size="8",
@@ -474,7 +478,7 @@ def part3() -> rx.Component:
                             class_name="text-purple-200 mb-2",
                         ),
                         rx.text(
-                            "El primer paso es eliminar todos los NaN (Not a Number) que son los valores vacíos y generan muchos problemas a la hora de realizar análisis estadísticos.",
+                            "El primer paso es eliminar todos los NaN (Not a Number) que son los valores vacíos y generan muchos problemas a la hora de realizar análisis estadísticos [24].",
                             class_name="text-gray-200 mb-4",
                         ),
                         rx.image(
@@ -491,7 +495,7 @@ def part3() -> rx.Component:
                             class_name="text-gray-200 mb-4",
                         ),
                         rx.text(
-                            "Este conjunto de datos contiene datos innecesarios y es fundamental eliminar algunas columnas que no son útiles para el modelo. Sin embargo, otras columnas requieren un análisis para determinar si podemos prescindir de ellas. En este caso, vamos a analizar 2 variables para eliminar: (SibSp) y (Parch), que representan la cantidad de hermanos o cónyuges a bordo y la cantidad de padres o hijos a bordo respectivamente, para evidenciar si son relevantes para la supervivencia.",
+                            "Este conjunto de datos contiene datos innecesarios y es fundamental eliminar algunas columnas que no son útiles para el modelo [24]. Sin embargo, otras columnas requieren un análisis para determinar si podemos prescindir de ellas. En este caso, vamos a analizar 2 variables para eliminar: (SibSp) y (Parch), que representan la cantidad de hermanos o cónyuges a bordo y la cantidad de padres o hijos a bordo respectivamente, para evidenciar si son relevantes para la supervivencia [42].",
                             class_name="text-gray-200 mb-4"
                         ),
                         rx.image(
@@ -511,7 +515,7 @@ def part3() -> rx.Component:
                             class_name="text-gray-400 text-sm mb-4 text-center italic",
                         ),
                         rx.text(
-                            'Podemos concluir que la estructura familiar tuvo una influencia moderada en las probabilidades de supervivencia. Las personas que viajaban con un número pequeño de familiares (1-3) mostraron tasas de supervivencia más altas que aquellas que viajaban solas o con familias numerosas.\n\nSin embargo, esta variable por sí sola no es determinante. Las amplias barras de error en los gráficos indican una gran variabilidad, sugiriendo que otros factores como el género, la clase social y la edad probablemente jugaron un papel más decisivo.',
+                            'Podemos concluir que la estructura familiar tuvo una influencia moderada en las probabilidades de supervivencia [33]. Las personas que viajaban con un número pequeño de familiares (1-3) mostraron tasas de supervivencia más altas que aquellas que viajaban solas o con familias numerosas.\n\nSin embargo, esta variable por sí sola no es determinante [34]. Las amplias barras de error en los gráficos indican una gran variabilidad, sugiriendo que otros factores como el género, la clase social y la edad probablemente jugaron un papel más decisivo.',
                             class_name="text-gray-200 mb-4",
                         ),
                         rx.heading(
@@ -520,7 +524,7 @@ def part3() -> rx.Component:
                             class_name="text-purple-200 mb-4",
                         ),
                         rx.text(
-                            "El costo del pasaje es una variable que puede influir en la supervivencia. En este caso, vamos a analizar su impacto en la supervivencia de los pasajeros.",
+                            "El costo del pasaje es una variable que puede influir en la supervivencia [42]. En este caso, vamos a analizar su impacto en la supervivencia de los pasajeros.",
                             class_name="text-gray-200 mb-4",
                         ),
                         rx.image(
@@ -532,7 +536,7 @@ def part3() -> rx.Component:
                             class_name="text-gray-400 text-sm mb-4 text-center italic",
                         ),
                         rx.text(
-                            "El análisis muestra una clara correlación entre el precio del boleto y la supervivencia. Los datos revelan:",
+                            "El análisis muestra una clara correlación entre el precio del boleto y la supervivencia [33]. Los datos revelan:",
                             class_name="text-gray-200 mb-2",
                         ),
                         rx.unordered_list(
@@ -559,10 +563,10 @@ def part3() -> rx.Component:
                             class_name="mb-4"
                         ),
                         rx.text(
-                            "Los 'bins' son simplemente divisiones del rango de tarifas en 10 grupos iguales para facilitar el análisis visual. "
+                            "Los 'bins' son simplemente divisiones del rango de tarifas en 10 grupos iguales para facilitar el análisis visual [3]. "
                             "Esta agrupación permite ver claramente cómo la tasa de supervivencia aumenta con el precio del boleto.\n\n"
-                            "Esta variable es un fuerte predictor de supervivencia, probablemente porque refleja la clase social del pasajero, "
-                            "que determinaba la ubicación del camarote (más cercano a la cubierta en primera clase) y el acceso prioritario a los botes salvavidas.",
+                            "Esta variable es un fuerte predictor de supervivencia [43], probablemente porque refleja la clase social del pasajero [42], "
+                            "que determinaba la ubicación del camarote (más cercano a la cubierta en primera clase) y el acceso prioritario a los botes salvavidas [48].",
                             class_name="text-gray-200 mb-4",
                         ),
                         rx.heading(
@@ -571,9 +575,9 @@ def part3() -> rx.Component:
                             class_name="text-purple-200 mb-4",
                         ),
                         rx.text(
-                            "El conjunto de datos presenta valores faltantes en tres variables importantes: edad, cabina y bote salvavidas. Para manejar estos datos faltantes:\n\n"
-                            "Para la edad, utilizamos la media como método de imputación. Esta decisión se basa en que la media es un estimador robusto que representa el valor típico de la edad de los pasajeros, minimizando el impacto en las distribuciones estadísticas y manteniendo la estructura general de los datos de edad.\n\n"
-                            "En el caso de las cabinas (que son identificadores alfanuméricos que indican la ubicación del pasajero en el barco), creamos categorías especiales para aquellos registros sin asignación. Esto nos permite mantener la integridad del análisis sin perder información sobre los pasajeros sin cabina asignada.\n\n"
+                            "El conjunto de datos presenta valores faltantes en tres variables importantes: edad, cabina y bote salvavidas [24]. Para manejar estos datos faltantes:\n\n"
+                            "Para la edad, utilizamos la media como método de imputación [2][33]. Esta decisión se basa en que la media es un estimador robusto que representa el valor típico de la edad de los pasajeros, minimizando el impacto en las distribuciones estadísticas y manteniendo la estructura general de los datos de edad.\n\n"
+                            "En el caso de las cabinas (que son identificadores alfanuméricos que indican la ubicación del pasajero en el barco), creamos categorías especiales para aquellos registros sin asignación [24]. Esto nos permite mantener la integridad del análisis sin perder información sobre los pasajeros sin cabina asignada.\n\n"
                             "De manera similar, para los botes salvavidas, asignamos identificadores especiales a aquellos registros sin información, permitiendo incluir estos casos en el análisis general de la distribución y uso de los botes salvavidas.",
                             class_name="text-gray-200 mb-4",
                         ),
@@ -591,7 +595,7 @@ def part3() -> rx.Component:
                             class_name="text-purple-200 mb-4",
                         ),
                         rx.text(
-                            "En esta sección, vamos a analizar gráficamente y a través de herramientas estadísticas diversos factores que pueden determinar la supervivencia de una persona en el Titanic. Este análisis nos permitirá comprender mejor las variables que influyeron en las probabilidades de sobrevivir al desastre.",
+                            "En esta sección, vamos a analizar gráficamente y a través de herramientas estadísticas diversos factores que pueden determinar la supervivencia de una persona en el Titanic [33][34]. Este análisis nos permitirá comprender mejor las variables que influyeron en las probabilidades de sobrevivir al desastre [42][48].",
                             class_name="text-gray-200 mb-4",
                         ),
                         rx.heading(
@@ -622,18 +626,18 @@ def part3() -> rx.Component:
                         ),
                         rx.vstack(
                             rx.text(
-                                "Tras analizar la edad promedio de los pasajeros del Titanic, podemos concluir que:",
+                                "Tras analizar la edad promedio de los pasajeros del Titanic [33], podemos concluir que:",
                                 class_name="text-gray-200",
                             ),
                             rx.ordered_list(
-                                rx.list_item("La edad media de los pasajeros se encuentra entre 35.6 y 39.1 años, con un 95% de confianza."),
-                                rx.list_item("Este intervalo relativamente estrecho nos indica que tenemos una buena estimación de la edad promedio real."),
-                                rx.list_item("El análisis confirma que la mayoría de los pasajeros eran adultos de mediana edad, lo que coincide con el perfil demográfico de los viajeros transatlánticos de la época."),
-                                rx.list_item("Tanto el método paramétrico (t de Student) como el no paramétrico (bootstrap) arrojan resultados similares, validando la robustez de nuestra estimación."),
+                                rx.list_item("La edad media de los pasajeros se encuentra entre 35.6 y 39.1 años, con un 95% de confianza [18]."),
+                                rx.list_item("Este intervalo relativamente estrecho nos indica que tenemos una buena estimación de la edad promedio real [32]."),
+                                rx.list_item("El análisis confirma que la mayoría de los pasajeros eran adultos de mediana edad [42], lo que coincide con el perfil demográfico de los viajeros transatlánticos de la época [48]."),
+                                rx.list_item("Tanto el método paramétrico (t de Student) como el no paramétrico (bootstrap) arrojan resultados similares [18][25], validando la robustez de nuestra estimación."),
                                 class_name="text-gray-200 pl-6",
                             ),
                             rx.text(
-                                "Este hallazgo es valioso para caracterizar correctamente a la población que viajaba en el Titanic y puede ayudar a contextualizar otros análisis demográficos y de supervivencia.",
+                                "Este hallazgo es valioso para caracterizar correctamente a la población que viajaba en el Titanic [42][49] y puede ayudar a contextualizar otros análisis demográficos y de supervivencia.",
                                 class_name="text-gray-200",
                             ),
                             spacing="4",
@@ -655,8 +659,8 @@ def part3() -> rx.Component:
                             class_name="text-gray-400 text-sm mb-4 text-center italic",
                         ),
                         rx.text(
-                            "El análisis revela que las mujeres tenían una tasa de supervivencia significativamente más alta que los hombres. "
-                            "Esto sugiere que las mujeres recibieron un trato preferencial en la evacuación. De aquí sale la famosa frase 'Mujeres y niños primero'.",
+                            "El análisis revela que las mujeres tenían una tasa de supervivencia significativamente más alta que los hombres [42][48]. "
+                            "Esto sugiere que las mujeres recibieron un trato preferencial en la evacuación [48]. De aquí sale la famosa frase 'Mujeres y niños primero'.",
                             class_name="text-gray-200 mb-4",
                         ),
                         rx.heading(
@@ -665,7 +669,7 @@ def part3() -> rx.Component:
                             class_name="text-purple-200 mb-4",
                         ),
                         rx.text(
-                            "El RMS Titanic zarpó de Southampton, Inglaterra, y realizó escalas en Cherburgo, Francia, y Queenstown (actualmente Cobh), Irlanda. Vamos a analizar la distribución de personas en los puertos de embarque.",
+                            "El RMS Titanic zarpó de Southampton, Inglaterra, y realizó escalas en Cherburgo, Francia, y Queenstown (actualmente Cobh), Irlanda [48][49]. Vamos a analizar la distribución de personas en los puertos de embarque.",
                             class_name="text-gray-200 mb-4",
                         ),
                         rx.image(
@@ -683,7 +687,7 @@ def part3() -> rx.Component:
                         ),
 
                         rx.text(
-                            "A la hora de entrenar nuestro modelo, vamos a plantear una prueba de hipótesis [36][37] que nos permitirá determinar si la cantidad de datos es suficiente para obtener una precisión esperada del 70%. Para esto establecemos:",
+                            "A la hora de entrenar nuestro modelo, vamos a plantear una prueba de hipótesis [25][36][37] que nos permitirá determinar si la cantidad de datos es suficiente para obtener una precisión esperada del 70%. Para esto establecemos:",
                             class_name="text-gray-200 mb-4",
                         ),
                         rx.text(
@@ -711,8 +715,8 @@ def part3() -> rx.Component:
                             class_name="text-gray-400 text-sm mb-4 text-center italic",
                         ),
                         rx.text(
-                            "Teóricamente, el tamaño de la muestra no es lo suficientemente grande para obtener esa precisión esperada en términos teóricos; "
-                            "sin embargo, empíricamente y computacionalmente, obtenemos una precisión del 76%.",
+                            "Teóricamente, el tamaño de la muestra no es lo suficientemente grande para obtener esa precisión esperada en términos teóricos [36][37]; "
+                            "sin embargo, empíricamente y computacionalmente, obtenemos una precisión del 76% [23].",
                             class_name="text-gray-200 mb-4",
                         ),
                         rx.heading(
@@ -722,11 +726,11 @@ def part3() -> rx.Component:
                         ),
             
                         rx.text(
-                            "Después de todo este largo proceso, obtuvimos nuestro dataset limpiando variables, justificando decisiones y obteniendo resultados. De un total de aproximadamente 1309 filas y 12 columnas, quedamos con 292 filas y 10 columnas. Realmente, es mucha la cantidad de datos e información que se perdió eliminando los valores vacíos, incoherentes y NaN, demostrando que este problema del Titanic, al haber ocurrido hace más de 100 años, perdió mucha información y es un milagro que en esos tiempos se pudiera haber obtenido al menos algunos datos de las personas.",
+                            "Después de todo este largo proceso, obtuvimos nuestro dataset limpiando variables, justificando decisiones y obteniendo resultados [24]. De un total de aproximadamente 1309 filas y 12 columnas, quedamos con 292 filas y 10 columnas. Realmente, es mucha la cantidad de datos e información que se perdió eliminando los valores vacíos, incoherentes y NaN [24], demostrando que este problema del Titanic [42], al haber ocurrido hace más de 100 años [48], perdió mucha información y es un milagro que en esos tiempos se pudiera haber obtenido al menos algunos datos de las personas [49].",
                             class_name="text-gray-200 mb-4",
                         ),
                         rx.text(
-                            "De las variables obtenidas, algunas serán descartadas para la predicción, ya sea por su uso para otros propósitos o porque no sirven para alimentar el modelo. Específicamente, descartaremos Name, Cabin, boat y survived (esta última tiene un uso para la clasificación, mas no para la predicción).",
+                            "De las variables obtenidas, algunas serán descartadas para la predicción [43], ya sea por su uso para otros propósitos o porque no sirven para alimentar el modelo [4]. Específicamente, descartaremos Name, Cabin, boat y survived (esta última tiene un uso para la clasificación, mas no para la predicción).",
                             class_name="text-gray-200 mb-4",
                         ),
                         rx.table.root(
@@ -869,22 +873,26 @@ def part3() -> rx.Component:
                             variant="surface",
                             class_name="bg-black mb-8 w-full",
                         ),
+                        rx.text(
+                            "Referencias: [2] Dataset limpio creado con Pandas.",
+                            class_name="text-gray-400 text-sm mb-4 text-center italic",
+                        ),
                         rx.heading(
                             "Nuestro modelo",
                             size="6",
                             class_name="text-purple-200 mb-4",
                         ),
                         rx.text(
-                            "Para nuestro modelo, utilizamos una regresión logística [25][26], también conocida como función sigmoid. Esta técnica nos permite crear una clasificación de tipo binaria para obtener un resultado basado en una o más variables independientes. Las variables pasan por esta función y retornan un valor entre 0 y 1, donde los valores cercanos a 1 indican alta probabilidad de supervivencia, mientras que los valores cercanos a 0 indican baja probabilidad de supervivencia.",
+                            "Para nuestro modelo, utilizamos una regresión logística [43], también conocida como función sigmoid. Esta técnica nos permite crear una clasificación de tipo binaria para obtener un resultado basado en una o más variables independientes [43]. Las variables pasan por esta función y retornan un valor entre 0 y 1, donde los valores cercanos a 1 indican alta probabilidad de supervivencia, mientras que los valores cercanos a 0 indican baja probabilidad de supervivencia.",
                             class_name="text-gray-200 mb-4",
                         ),
                         rx.text(
-                            "En nuestro análisis, interpretamos los valores mayores a 0.6 como una supervivencia aceptable, siendo 1 una supervivencia casi perfecta. Por otro lado, los valores menores a 0.6 nos indican una probabilidad de supervivencia muy baja, casi nula. Esta función sigmoid nos permite transformar múltiples variables predictoras en una probabilidad clara y fácil de interpretar.",
+                            "En nuestro análisis [23], interpretamos los valores mayores a 0.6 como una supervivencia aceptable, siendo 1 una supervivencia casi perfecta. Por otro lado, los valores menores a 0.6 nos indican una probabilidad de supervivencia muy baja, casi nula. Esta función sigmoid nos permite transformar múltiples variables predictoras en una probabilidad clara y fácil de interpretar [43].",
                             class_name="text-gray-200 mb-4",
                         ),
                         rx.markdown(
                             """
-### Función Logística (Sigmoid)
+### Función Logística (Sigmoid) [43]
 
 $$P(y=1|x) = \\frac{1}{1 + e^{-(\\beta_0 + \\beta_1 x_1 + \\beta_2 x_2 + ... + \\beta_n x_n)}}$$
 
@@ -895,7 +903,7 @@ Donde:
 - $x_1, x_2, ..., x_n$ son las variables independientes (edad, género, tarifa, etc.)
 - $e$ es la base del logaritmo natural (aproximadamente 2.71828)
 
-Esta función transforma cualquier valor de entrada en un rango entre 0 y 1, ideal para representar probabilidades.
+Esta función transforma cualquier valor de entrada en un rango entre 0 y 1, ideal para representar probabilidades [43].
             """,
                             class_name="text-gray-200 bg-purple-900/20 p-4 rounded-xl border border-purple-500/30 mb-4 overflow-x-auto",
                         ),
@@ -906,13 +914,13 @@ Esta función transforma cualquier valor de entrada en un rango entre 0 y 1, ide
                         ),
                         rx.vstack(
                             rx.text(
-                                "El problema del Titanic es una excelente introducción al mundo del machine learning, la ciencia de datos y la estadística. En este ejercicio, aplicamos todas estas técnicas para predecir un suceso histórico real, dividiéndolo en tres etapas fundamentales:",
+                                "El problema del Titanic es una excelente introducción al mundo del machine learning, la ciencia de datos y la estadística [42][47]. En este ejercicio, aplicamos todas estas técnicas para predecir un suceso histórico real, dividiéndolo en tres etapas fundamentales:",
                                 class_name="text-gray-200 mb-4",
                             ),
                             rx.unordered_list(
-                                rx.list_item("Limpieza de datos", class_name="text-gray-200"),
-                                rx.list_item("Optimización y validación estadística", class_name="text-gray-200"),
-                                rx.list_item("Creación del modelo predictivo", class_name="text-gray-200"),
+                                rx.list_item("Limpieza de datos [24]", class_name="text-gray-200"),
+                                rx.list_item("Optimización y validación estadística [22][23]", class_name="text-gray-200"),
+                                rx.list_item("Creación del modelo predictivo [43]", class_name="text-gray-200"),
                                 spacing="2",
                                 class_name="mb-4",
                             ),
@@ -931,11 +939,11 @@ Esta función transforma cualquier valor de entrada en un rango entre 0 y 1, ide
                                 class_name="p-4 bg-purple-900/20 rounded-xl border border-purple-500/30 mb-4",
                             ),
                             rx.text(
-                                "Sin embargo, es importante notar que, debido a la antigüedad de los datos, enfrentamos desafíos con información faltante o errónea, lo que podría afectar la precisión de nuestras predicciones.",
+                                "Sin embargo, es importante notar que, debido a la antigüedad de los datos [48][49], enfrentamos desafíos con información faltante o errónea, lo que podría afectar la precisión de nuestras predicciones.",
                                 class_name="text-gray-200 mb-4",
                             ),
                             rx.text(
-                                "A pesar de identificar patrones claros, ninguna variable garantizaba una supervivencia del 100%, recordándonos la naturaleza trágica e impredecible de este acontecimiento histórico.",
+                                "A pesar de identificar patrones claros, ninguna variable garantizaba una supervivencia del 100% [42], recordándonos la naturaleza trágica e impredecible de este acontecimiento histórico [48].",
                                 class_name="text-gray-200 mb-4 font-bold",
                             ),
                             align="start",
